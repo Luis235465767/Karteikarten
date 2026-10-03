@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Physiologie – Karteikarten & Quiz</title>
+<meta name="description" content="Karteikarten und Quiz für Physiologie mit Wiederholungssystem">
+<link rel="stylesheet" href="css/app.css">
+<script type="module" src="js/app.js"></script>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="headrow">
+    <h1>Physiologie</h1>
+    <button class="link" id="menuOpen" style="margin-top:14px">Fortschritt</button>
+  </div>
+  <p>Atmung, Kreislauf, Herz, Niere, Lymphsystem, Blut und Magen aus deinen Lernzetteln.</p>
+  <p class="status" id="status" data-zustand="warten" role="status" aria-live="polite"><span class="dot"></span><span id="statusText">Wird geladen …</span></p>
+  <div id="alerts"></div>
+  <div class="tabs" role="tablist">
+    <button role="tab" id="t-cards" aria-selected="true">Karteikarten</button>
+    <button role="tab" id="t-quiz" aria-selected="false">Quiz</button>
+  </div>
+</header>
+
+<section id="v-cards">
+  <div class="chips" id="chips-cards"></div>
+  <div class="bar">
+    <label>Üben: <select id="mode" style="font:inherit;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:3px 6px"><option value="due">Fällige Karten</option><option value="all">Alle Karten</option></select></label>
+    <span><button class="link" id="shuffle">Mischen</button> <button class="link" id="resetCards">Fortschritt zurücksetzen</button></span>
+  </div>
+  <div class="progress"><i id="prog"></i></div>
+  <p id="stats" style="margin:-6px 0 14px;color:var(--muted);font-size:.9rem"></p>
+  <div id="deck">
+    <div class="stage">
+      <div class="card" id="card" tabindex="0" role="button" aria-label="Karte umdrehen">
+        <div class="face front"><div class="meta"><span id="fSys"></span><span id="fPos"></span></div><div class="q" id="fQ"></div><div class="hint" id="fHint">Tippen zum Umdrehen</div></div>
+        <div class="face back"><div class="meta"><span id="bSys"></span><span id="bPos"></span></div><div class="aq" id="bQ"></div><p class="a" id="bA"></p></div>
+      </div>
+    </div>
+    <div class="controls">
+      <button class="btn again" id="again">Nicht gewusst</button>
+      <button class="btn known" id="known">Gewusst</button>
+    </div>
+  </div>
+  <div class="done" id="done" hidden>
+    <h2 id="doneTitle">Für heute geschafft</h2>
+    <p id="doneText"></p>
+    <div class="row"><button class="btn" id="redoAll">Trotzdem alle Karten üben</button></div>
+  </div>
+</section>
+
+<section id="v-quiz" hidden>
+  <div class="chips" id="chips-quiz"></div>
+  <div class="score"><span>Richtig: <b id="sc">0</b> von <b id="st">0</b> beantwortet</span><button class="link" id="resetQuiz">Neu starten</button></div>
+  <h2 class="sec">Multiple Choice</h2>
+  <div id="mc"></div>
+  <h2 class="sec">Offene Fragen</h2>
+  <p style="color:var(--muted);margin-top:-4px">Erst selbst formulieren, dann Lösung aufklappen.</p>
+  <div id="open"></div>
+</section>
+</div>
+
+<dialog id="menu" aria-labelledby="menuTitel">
+  <div class="dlg">
+    <h2 id="menuTitel">Fortschritt</h2>
+    <p id="menuStand" class="klein"></p>
+    <h3>Sichern und übertragen</h3>
+    <p class="klein">Exportiert deinen Lernstand als Datei. Beim Import kannst du ersetzen oder mit dem aktuellen Stand zusammenführen. Auch Dateien aus der alten claude.ai-Version werden erkannt.</p>
+    <div class="row">
+      <button class="btn" id="exportBtn">Exportieren</button>
+      <button class="btn" id="importBtn">Importieren …</button>
+      <input type="file" id="importFile" accept="application/json,.json" class="sr" tabindex="-1">
+    </div>
+    <h3>Synchronisieren</h3>
+    <div id="syncBereich"><p class="klein">Die Synchronisierung über ein privates GitHub-Gist folgt.</p></div>
+    <div class="row" style="justify-content:flex-end"><button class="btn" id="menuClose">Schließen</button></div>
+  </div>
+</dialog>
+
+<dialog id="importDlg" aria-labelledby="importTitel">
+  <div class="dlg">
+    <h2 id="importTitel">Fortschritt importieren</h2>
+    <div id="importInfo"></div>
+    <div class="row" style="justify-content:flex-end">
+      <button class="btn" id="importAbbrechen">Abbrechen</button>
+      <button class="btn" id="importMerge">Zusammenführen</button>
+      <button class="btn known" id="importErsetzen">Ersetzen</button>
+    </div>
+  </div>
+</dialog>
+</body>
+</html>
