@@ -1,0 +1,1612 @@
+{
+  "hinweis": "Eingefrorene Zuordnung der alten Array-Indizes (claude.ai-Version) zu den neuen IDs. Nie ändern.",
+  "karten": [
+    {
+      "index": 0,
+      "id": "A-001",
+      "frage": "Welche zwei Formen der Atmung unterscheidet man?"
+    },
+    {
+      "index": 1,
+      "id": "A-002",
+      "frage": "Aus welchen zwei funktionellen Anteilen besteht das Atmungssystem?"
+    },
+    {
+      "index": 2,
+      "id": "A-003",
+      "frage": "Welche Organe gehören zum Atmungssystem?"
+    },
+    {
+      "index": 3,
+      "id": "A-004",
+      "frage": "Wie ist die äußere Nase aufgebaut?"
+    },
+    {
+      "index": 4,
+      "id": "A-005",
+      "frage": "Was ist das Vestibulum nasi und welche Funktion haben die Vibrissae?"
+    },
+    {
+      "index": 5,
+      "id": "A-006",
+      "frage": "Wie ist die Nasenscheidewand aufgebaut?"
+    },
+    {
+      "index": 6,
+      "id": "A-007",
+      "frage": "Welche vier Funktionen hat die Nasenhöhle?"
+    },
+    {
+      "index": 7,
+      "id": "A-008",
+      "frage": "Welche Nasennebenhöhlen gibt es?"
+    },
+    {
+      "index": 8,
+      "id": "A-009",
+      "frage": "Welche Funktionen haben die Nasennebenhöhlen?"
+    },
+    {
+      "index": 9,
+      "id": "A-010",
+      "frage": "Warum sind Entzündungen der Nasennebenhöhlen klinisch relevant?"
+    },
+    {
+      "index": 10,
+      "id": "A-011",
+      "frage": "Was ist der Pharynx und wo beginnt er?"
+    },
+    {
+      "index": 11,
+      "id": "A-012",
+      "frage": "In welche drei Etagen wird der Rachen unterteilt?"
+    },
+    {
+      "index": 12,
+      "id": "A-013",
+      "frage": "Was mündet in die Pars nasalis und was liegt dort?"
+    },
+    {
+      "index": 13,
+      "id": "A-014",
+      "frage": "Warum ist der Schluckakt in der Pars oralis so komplex?"
+    },
+    {
+      "index": 14,
+      "id": "A-015",
+      "frage": "Was kennzeichnet die Pars laryngea?"
+    },
+    {
+      "index": 15,
+      "id": "A-016",
+      "frage": "Was ist der Kehlkopf (Larynx)?"
+    },
+    {
+      "index": 16,
+      "id": "A-017",
+      "frage": "Welche Funktionen hat der Kehlkopf?"
+    },
+    {
+      "index": 17,
+      "id": "A-018",
+      "frage": "Welche vier Knorpel bilden das formgebende Kehlkopfgerüst?"
+    },
+    {
+      "index": 18,
+      "id": "A-019",
+      "frage": "Welche drei kleinen, paarigen Knorpel gehören zusätzlich zum Kehlkopf?"
+    },
+    {
+      "index": 19,
+      "id": "A-020",
+      "frage": "Wie ist die Trachea aufgebaut?"
+    },
+    {
+      "index": 20,
+      "id": "A-021",
+      "frage": "Womit ist die Trachea ausgekleidet und welche Aufgabe hat das?"
+    },
+    {
+      "index": 21,
+      "id": "A-022",
+      "frage": "Auf welcher Höhe teilt sich die Trachea (Bifurkation)?"
+    },
+    {
+      "index": 22,
+      "id": "A-023",
+      "frage": "Warum landen aspirierte Fremdkörper meist im rechten Hauptbronchus?"
+    },
+    {
+      "index": 23,
+      "id": "A-024",
+      "frage": "In wie viele Lappenbronchien teilen sich die Hauptbronchien?"
+    },
+    {
+      "index": 24,
+      "id": "A-025",
+      "frage": "Was sind Bronchioli und wie ist ihre Wand aufgebaut?"
+    },
+    {
+      "index": 25,
+      "id": "A-026",
+      "frage": "Welche Aufgaben haben Trachea und Bronchien?"
+    },
+    {
+      "index": 26,
+      "id": "A-027",
+      "frage": "Wie viele Lappen und Segmente haben die Lungenflügel?"
+    },
+    {
+      "index": 27,
+      "id": "A-028",
+      "frage": "Was tritt am Lungenhilus ein und aus?"
+    },
+    {
+      "index": 28,
+      "id": "A-029",
+      "frage": "Welche Flächen der Lunge unterscheidet man?"
+    },
+    {
+      "index": 29,
+      "id": "A-030",
+      "frage": "Warum verfärben sich Hiluslymphknoten im Laufe des Lebens dunkel?"
+    },
+    {
+      "index": 30,
+      "id": "A-031",
+      "frage": "Aus welchen Blättern besteht die Pleura?"
+    },
+    {
+      "index": 31,
+      "id": "A-032",
+      "frage": "Welche Funktion hat der Pleuraspalt?"
+    },
+    {
+      "index": 32,
+      "id": "A-033",
+      "frage": "Wozu dienen die Reserveräume der Pleura?"
+    },
+    {
+      "index": 33,
+      "id": "A-034",
+      "frage": "Was passiert bei einem Pneumothorax?"
+    },
+    {
+      "index": 34,
+      "id": "A-035",
+      "frage": "Welche Kennzahlen haben die Alveolen?"
+    },
+    {
+      "index": 35,
+      "id": "A-036",
+      "frage": "Was ist der Unterschied zwischen Pneumozyten Typ I und Typ II?"
+    },
+    {
+      "index": 36,
+      "id": "A-037",
+      "frage": "Was ist Surfactant und warum ist er bei Frühgeborenen wichtig?"
+    },
+    {
+      "index": 37,
+      "id": "A-038",
+      "frage": "Welche Aufgaben haben Alveolarmakrophagen?"
+    },
+    {
+      "index": 38,
+      "id": "A-039",
+      "frage": "Welche drei Reinigungsmechanismen hat die Lunge?"
+    },
+    {
+      "index": 39,
+      "id": "A-040",
+      "frage": "Wie funktioniert die mukoziliäre Clearance?"
+    },
+    {
+      "index": 40,
+      "id": "A-041",
+      "frage": "Aus welchen Schichten besteht das Bronchialsekret?"
+    },
+    {
+      "index": 41,
+      "id": "A-042",
+      "frage": "Wie ist das Bronchialsekret zusammengesetzt?"
+    },
+    {
+      "index": 42,
+      "id": "A-043",
+      "frage": "Wo ist die Husten-Clearance wirksam?"
+    },
+    {
+      "index": 43,
+      "id": "A-044",
+      "frage": "Wodurch wird Husten ausgelöst?"
+    },
+    {
+      "index": 44,
+      "id": "A-045",
+      "frage": "In welchen fünf Phasen läuft ein Hustenstoß ab?"
+    },
+    {
+      "index": 45,
+      "id": "A-046",
+      "frage": "Welche Patienten sind besonders aspirationsgefährdet?"
+    },
+    {
+      "index": 46,
+      "id": "A-047",
+      "frage": "Wie funktioniert die alveoläre Clearance?"
+    },
+    {
+      "index": 47,
+      "id": "A-048",
+      "frage": "Wie läuft die Einatmung ab?"
+    },
+    {
+      "index": 48,
+      "id": "A-049",
+      "frage": "Wie läuft die Ausatmung ab?"
+    },
+    {
+      "index": 49,
+      "id": "A-050",
+      "frage": "Was ist das Atemzugvolumen und was ist der Totraum?"
+    },
+    {
+      "index": 50,
+      "id": "A-051",
+      "frage": "Wie berechnet man das Atemminutenvolumen?"
+    },
+    {
+      "index": 51,
+      "id": "A-052",
+      "frage": "Wie groß sind inspiratorisches und exspiratorisches Reservevolumen?"
+    },
+    {
+      "index": 52,
+      "id": "A-053",
+      "frage": "Was ist die Vitalkapazität?"
+    },
+    {
+      "index": 53,
+      "id": "A-054",
+      "frage": "Was ist die funktionelle Residualkapazität?"
+    },
+    {
+      "index": 54,
+      "id": "A-055",
+      "frage": "Was sind Residualvolumen und Totalkapazität?"
+    },
+    {
+      "index": 55,
+      "id": "A-056",
+      "frage": "Wovon hängen die Lungenvolumina ab und wie misst man sie?"
+    },
+    {
+      "index": 56,
+      "id": "A-057",
+      "frage": "Wovon hängt die Menge des Gasaustauschs ab?"
+    },
+    {
+      "index": 57,
+      "id": "A-058",
+      "frage": "Welche Schichten bilden die Blut-Luft-Schranke?"
+    },
+    {
+      "index": 58,
+      "id": "A-059",
+      "frage": "Wo sitzt das Atemzentrum und was steuert es?"
+    },
+    {
+      "index": 59,
+      "id": "A-060",
+      "frage": "Welche Atemreize gibt es?"
+    },
+    {
+      "index": 60,
+      "id": "A-061",
+      "frage": "Wo liegen die peripheren Chemorezeptoren und wie wird ihr Signal geleitet?"
+    },
+    {
+      "index": 61,
+      "id": "A-062",
+      "frage": "Wann wird die Atmung gesteigert und mit welchem Effekt?"
+    },
+    {
+      "index": 62,
+      "id": "A-063",
+      "frage": "Welche Rolle spielt die Lunge im Säure-Basen-Haushalt?"
+    },
+    {
+      "index": 63,
+      "id": "K-001",
+      "frage": "Woraus besteht das Kreislaufsystem?"
+    },
+    {
+      "index": 64,
+      "id": "K-002",
+      "frage": "Wie unterscheiden sich Arterien, Kapillaren und Venen funktionell?"
+    },
+    {
+      "index": 65,
+      "id": "K-003",
+      "frage": "Welche Herzhälfte versorgt welchen Kreislauf?"
+    },
+    {
+      "index": 66,
+      "id": "K-004",
+      "frage": "Beschreibe den Weg des Blutes im Körperkreislauf."
+    },
+    {
+      "index": 67,
+      "id": "K-005",
+      "frage": "Beschreibe den Weg des Blutes im Lungenkreislauf."
+    },
+    {
+      "index": 68,
+      "id": "K-006",
+      "frage": "Was ist der Truncus brachiocephalicus?"
+    },
+    {
+      "index": 69,
+      "id": "K-007",
+      "frage": "Welche Gebiete versorgen A. carotis externa und interna?"
+    },
+    {
+      "index": 70,
+      "id": "K-008",
+      "frage": "Wie verläuft die arterielle Versorgung des Arms?"
+    },
+    {
+      "index": 71,
+      "id": "K-009",
+      "frage": "In welche Äste teilt sich der Truncus coeliacus?"
+    },
+    {
+      "index": 72,
+      "id": "K-010",
+      "frage": "Was versorgen A. mesenterica superior, inferior und die Aa. renales?"
+    },
+    {
+      "index": 73,
+      "id": "K-011",
+      "frage": "Wie verläuft die arterielle Versorgung des Beins?"
+    },
+    {
+      "index": 74,
+      "id": "K-012",
+      "frage": "Was drainieren V. jugularis, V. cava superior und V. cava inferior?"
+    },
+    {
+      "index": 75,
+      "id": "K-013",
+      "frage": "Welche oberflächlichen Venen an Arm und Bein sollte man kennen?"
+    },
+    {
+      "index": 76,
+      "id": "K-014",
+      "frage": "Was ist der Pfortaderkreislauf?"
+    },
+    {
+      "index": 77,
+      "id": "K-015",
+      "frage": "Wodurch wird die Blutströmung ermöglicht?"
+    },
+    {
+      "index": 78,
+      "id": "K-016",
+      "frage": "Was gehört zum Hochdrucksystem?"
+    },
+    {
+      "index": 79,
+      "id": "K-017",
+      "frage": "Was gehört zum Niederdrucksystem und welche Besonderheit hat es?"
+    },
+    {
+      "index": 80,
+      "id": "K-018",
+      "frage": "Aus welchen drei Schichten besteht die Wand von Arterien und Venen?"
+    },
+    {
+      "index": 81,
+      "id": "K-019",
+      "frage": "Was ist der Blutdruck und was ist der Normwert?"
+    },
+    {
+      "index": 82,
+      "id": "K-020",
+      "frage": "Wie entwickelt sich der Blutdruck bei Kindern?"
+    },
+    {
+      "index": 83,
+      "id": "K-021",
+      "frage": "Unterschied zwischen elastischem und muskulärem Arterientyp?"
+    },
+    {
+      "index": 84,
+      "id": "K-022",
+      "frage": "Welche Gefäßveränderungen treten im Alter auf?"
+    },
+    {
+      "index": 85,
+      "id": "K-023",
+      "frage": "Wie funktioniert die Blutdruckmessung nach Riva-Rocci?"
+    },
+    {
+      "index": 86,
+      "id": "K-024",
+      "frage": "An welchen Stellen ist der Puls tastbar und wie hoch sollte er sein?"
+    },
+    {
+      "index": 87,
+      "id": "K-025",
+      "frage": "Wie sind Kapillaren aufgebaut und warum fließt das Blut dort langsam?"
+    },
+    {
+      "index": 88,
+      "id": "K-026",
+      "frage": "Wie unterscheiden sich gefensterte und dichte Kapillaren?"
+    },
+    {
+      "index": 89,
+      "id": "K-027",
+      "frage": "Wie werden Gefäße funktionell eingeteilt?"
+    },
+    {
+      "index": 90,
+      "id": "K-028",
+      "frage": "Was ist Diffusion?"
+    },
+    {
+      "index": 91,
+      "id": "K-029",
+      "frage": "Wie funktionieren Filtration und Reabsorption an der Kapillare?"
+    },
+    {
+      "index": 92,
+      "id": "K-030",
+      "frage": "Wie viel Flüssigkeit wird täglich filtriert und reabsorbiert?"
+    },
+    {
+      "index": 93,
+      "id": "K-031",
+      "frage": "Warum heißen Venen Kapazitätsgefäße und wie ist ihre Wand aufgebaut?"
+    },
+    {
+      "index": 94,
+      "id": "K-032",
+      "frage": "Wie hoch ist der Venendruck?"
+    },
+    {
+      "index": 95,
+      "id": "K-033",
+      "frage": "Welche Mechanismen unterstützen den venösen Rückstrom?"
+    },
+    {
+      "index": 96,
+      "id": "K-034",
+      "frage": "Auf welchen drei Wegen wird die Gefäßweite reguliert?"
+    },
+    {
+      "index": 97,
+      "id": "K-035",
+      "frage": "Wie wirkt der Sympathikus über α- und β-Rezeptoren auf die Gefäße?"
+    },
+    {
+      "index": 98,
+      "id": "K-036",
+      "frage": "Welche lokalen Faktoren wirken gefäßerweiternd (Autoregulation)?"
+    },
+    {
+      "index": 99,
+      "id": "K-037",
+      "frage": "Welche humoralen Substanzen verengen bzw. erweitern Gefäße?"
+    },
+    {
+      "index": 100,
+      "id": "K-038",
+      "frage": "Was ist das Ziel der Kreislaufregulation und wo sitzt die zentrale Steuerung?"
+    },
+    {
+      "index": 101,
+      "id": "H-001",
+      "frage": "Was ist das Herz und wo liegt es?"
+    },
+    {
+      "index": 102,
+      "id": "H-002",
+      "frage": "Wie ist das Herz grob gegliedert?"
+    },
+    {
+      "index": 103,
+      "id": "H-003",
+      "frage": "Welche Herzklappen gibt es?"
+    },
+    {
+      "index": 104,
+      "id": "H-004",
+      "frage": "Welche Funktion haben Papillarmuskeln und Sehnenfäden?"
+    },
+    {
+      "index": 105,
+      "id": "H-005",
+      "frage": "Was mündet in den rechten Vorhof?"
+    },
+    {
+      "index": 106,
+      "id": "H-006",
+      "frage": "Was mündet in den linken Vorhof?"
+    },
+    {
+      "index": 107,
+      "id": "H-007",
+      "frage": "Welche Herzkammer hat die dickste Wand und warum?"
+    },
+    {
+      "index": 108,
+      "id": "H-008",
+      "frage": "Aus welchen Schichten besteht die Herzwand?"
+    },
+    {
+      "index": 109,
+      "id": "H-009",
+      "frage": "Wie ist der Herzbeutel aufgebaut?"
+    },
+    {
+      "index": 110,
+      "id": "H-010",
+      "frage": "Welche Gebiete versorgen die Koronararterien?"
+    },
+    {
+      "index": 111,
+      "id": "H-011",
+      "frage": "Wohin fließt das Blut der Koronarvenen ab?"
+    },
+    {
+      "index": 112,
+      "id": "H-012",
+      "frage": "Was passiert in der Anspannungsphase der Systole?"
+    },
+    {
+      "index": 113,
+      "id": "H-013",
+      "frage": "Was passiert in der Austreibungsphase?"
+    },
+    {
+      "index": 114,
+      "id": "H-014",
+      "frage": "Was passiert in der Entspannungsphase der Diastole?"
+    },
+    {
+      "index": 115,
+      "id": "H-015",
+      "frage": "Was passiert in der Füllungsphase?"
+    },
+    {
+      "index": 116,
+      "id": "H-016",
+      "frage": "Was bedeutet es, dass das Herz autonom arbeitet?"
+    },
+    {
+      "index": 117,
+      "id": "H-017",
+      "frage": "In welcher Reihenfolge läuft die Erregung durch das Herz?"
+    },
+    {
+      "index": 118,
+      "id": "H-018",
+      "frage": "Wo liegt der Sinusknoten und welche Aufgabe hat er?"
+    },
+    {
+      "index": 119,
+      "id": "H-019",
+      "frage": "Wo liegt der AV-Knoten und welche Aufgabe hat er?"
+    },
+    {
+      "index": 120,
+      "id": "H-020",
+      "frage": "In welchen Strukturen kann Erregung gebildet werden?"
+    },
+    {
+      "index": 121,
+      "id": "H-021",
+      "frage": "Was bedeuten Chronotropie, Inotropie und Dromotropie?"
+    },
+    {
+      "index": 122,
+      "id": "H-022",
+      "frage": "Welche Transmitter nutzen Sympathikus und Parasympathikus am Herzen?"
+    },
+    {
+      "index": 123,
+      "id": "H-023",
+      "frage": "Was ist die Vorlast?"
+    },
+    {
+      "index": 124,
+      "id": "H-024",
+      "frage": "Was ist die Nachlast?"
+    },
+    {
+      "index": 125,
+      "id": "H-025",
+      "frage": "Was besagt der Frank-Starling-Mechanismus?"
+    },
+    {
+      "index": 126,
+      "id": "H-026",
+      "frage": "Wie berechnet man das Herzminutenvolumen und wie hoch ist es in Ruhe?"
+    },
+    {
+      "index": 127,
+      "id": "H-027",
+      "frage": "Was ist das Restvolumen des Herzens?"
+    },
+    {
+      "index": 128,
+      "id": "H-028",
+      "frage": "Wie passt sich das Herz an Belastung an?"
+    },
+    {
+      "index": 129,
+      "id": "H-029",
+      "frage": "Welche Herzfrequenzen sind bei Kindern normal?"
+    },
+    {
+      "index": 130,
+      "id": "H-030",
+      "frage": "Wie verändert sich die Herzleistung im Alter?"
+    },
+    {
+      "index": 131,
+      "id": "H-031",
+      "frage": "Was misst das EKG und welche Ableitungen gibt es?"
+    },
+    {
+      "index": 132,
+      "id": "N-001",
+      "frage": "Woraus besteht das Harnsystem?"
+    },
+    {
+      "index": 133,
+      "id": "N-002",
+      "frage": "Welche Funktionen hat die Niere?"
+    },
+    {
+      "index": 134,
+      "id": "N-003",
+      "frage": "Was sind harnpflichtige Substanzen?"
+    },
+    {
+      "index": 135,
+      "id": "N-004",
+      "frage": "Wo liegen die Nieren und wie groß sind sie?"
+    },
+    {
+      "index": 136,
+      "id": "N-005",
+      "frage": "Welche drei Zonen hat die Niere?"
+    },
+    {
+      "index": 137,
+      "id": "N-006",
+      "frage": "Was ist ein Nierenlappen?"
+    },
+    {
+      "index": 138,
+      "id": "N-007",
+      "frage": "Wie verläuft die arterielle Versorgung der Niere?"
+    },
+    {
+      "index": 139,
+      "id": "N-008",
+      "frage": "Wie fließt das venöse Blut aus der Niere ab?"
+    },
+    {
+      "index": 140,
+      "id": "N-009",
+      "frage": "Was ist das Nephron?"
+    },
+    {
+      "index": 141,
+      "id": "N-010",
+      "frage": "Wie ist das Nierenkörperchen aufgebaut und was passiert dort?"
+    },
+    {
+      "index": 142,
+      "id": "N-011",
+      "frage": "Was ist Primärharn und wie viel entsteht?"
+    },
+    {
+      "index": 143,
+      "id": "N-012",
+      "frage": "Wie viel des Primärharns wird rückresorbiert?"
+    },
+    {
+      "index": 144,
+      "id": "N-013",
+      "frage": "Aus welchen Abschnitten besteht das Nierenkanälchen?"
+    },
+    {
+      "index": 145,
+      "id": "N-014",
+      "frage": "Welche Aufgabe haben die Sammelrohre?"
+    },
+    {
+      "index": 146,
+      "id": "N-015",
+      "frage": "Aus welchen drei Bestandteilen besteht der juxtaglomeruläre Apparat?"
+    },
+    {
+      "index": 147,
+      "id": "N-016",
+      "frage": "Wo liegt der juxtaglomeruläre Apparat?"
+    },
+    {
+      "index": 148,
+      "id": "N-017",
+      "frage": "Was bewirkt Erythropoetin und wann wird es gebildet?"
+    },
+    {
+      "index": 149,
+      "id": "N-018",
+      "frage": "Was ist die renale Anämie?"
+    },
+    {
+      "index": 150,
+      "id": "N-019",
+      "frage": "Wie wird Vitamin D aktiviert?"
+    },
+    {
+      "index": 151,
+      "id": "N-020",
+      "frage": "Welche Wirkungen hat Calcitriol?"
+    },
+    {
+      "index": 152,
+      "id": "N-021",
+      "frage": "Wodurch wird die 1α-Hydroxylase gesteigert bzw. gehemmt?"
+    },
+    {
+      "index": 153,
+      "id": "N-022",
+      "frage": "Welche Folgen hat eine chronische Niereninsuffizienz für den Knochen?"
+    },
+    {
+      "index": 154,
+      "id": "N-023",
+      "frage": "Welche Hormone wirken auf die Niere?"
+    },
+    {
+      "index": 155,
+      "id": "N-024",
+      "frage": "Wie ist das Körperwasser verteilt?"
+    },
+    {
+      "index": 156,
+      "id": "N-025",
+      "frage": "Wie setzt sich die tägliche Wasserabgabe zusammen?"
+    },
+    {
+      "index": 157,
+      "id": "N-026",
+      "frage": "Wie setzt sich die tägliche Wasseraufnahme zusammen?"
+    },
+    {
+      "index": 158,
+      "id": "N-027",
+      "frage": "Was ist Oxidationswasser?"
+    },
+    {
+      "index": 159,
+      "id": "N-028",
+      "frage": "Wodurch wird das RAAS aktiviert?"
+    },
+    {
+      "index": 160,
+      "id": "N-029",
+      "frage": "Beschreibe die Kaskade des RAAS."
+    },
+    {
+      "index": 161,
+      "id": "N-030",
+      "frage": "Welche Wirkungen hat Angiotensin II?"
+    },
+    {
+      "index": 162,
+      "id": "N-031",
+      "frage": "Wie wirken Aldosteron und ADH (Adiuretin)?"
+    },
+    {
+      "index": 163,
+      "id": "N-032",
+      "frage": "Wie verändert sich die Niere im Alter?"
+    },
+    {
+      "index": 164,
+      "id": "N-033",
+      "frage": "Was gehört zu den ableitenden Harnwegen und womit sind sie ausgekleidet?"
+    },
+    {
+      "index": 165,
+      "id": "N-034",
+      "frage": "Wie viele Nierenkelche hat eine Niere und was machen sie?"
+    },
+    {
+      "index": 166,
+      "id": "N-035",
+      "frage": "Wie ist der Harnleiter aufgebaut?"
+    },
+    {
+      "index": 167,
+      "id": "N-036",
+      "frage": "Wo liegt die Harnblase und was sind ihre Nachbarn?"
+    },
+    {
+      "index": 168,
+      "id": "N-037",
+      "frage": "Wann tritt Harndrang auf und wie viel fasst die Blase?"
+    },
+    {
+      "index": 169,
+      "id": "N-038",
+      "frage": "Welche Schließmuskeln verschließen die Harnblase?"
+    },
+    {
+      "index": 170,
+      "id": "N-039",
+      "frage": "Wie läuft die Miktion ab?"
+    },
+    {
+      "index": 171,
+      "id": "N-040",
+      "frage": "Wie unterscheidet sich die Harnröhre bei Frau und Mann?"
+    },
+    {
+      "index": 172,
+      "id": "L-001",
+      "frage": "Was gehört zum lymphatischen System und welche Aufgaben hat es?"
+    },
+    {
+      "index": 173,
+      "id": "L-002",
+      "frage": "Welche Organe sind primäre lymphatische Organe und was passiert dort?"
+    },
+    {
+      "index": 174,
+      "id": "L-003",
+      "frage": "Welche Organe sind sekundäre lymphatische Organe und was passiert dort?"
+    },
+    {
+      "index": 175,
+      "id": "L-004",
+      "frage": "Worauf reagieren die einzelnen sekundären lymphatischen Organe?"
+    },
+    {
+      "index": 176,
+      "id": "L-005",
+      "frage": "Wo befindet sich rotes Knochenmark in welchem Lebensalter?"
+    },
+    {
+      "index": 177,
+      "id": "L-006",
+      "frage": "Welche Zellen bildet das rote Knochenmark?"
+    },
+    {
+      "index": 178,
+      "id": "L-007",
+      "frage": "Wo liegt der Thymus und wie verändert er sich?"
+    },
+    {
+      "index": 179,
+      "id": "L-008",
+      "frage": "Wie unterscheiden sich Lymphkapillaren von Blutkapillaren?"
+    },
+    {
+      "index": 180,
+      "id": "L-009",
+      "frage": "Was ist die Cisterna chyli und wohin führt der Ductus thoracicus?"
+    },
+    {
+      "index": 181,
+      "id": "L-010",
+      "frage": "Welches Gebiet drainiert der Ductus lymphaticus dexter?"
+    },
+    {
+      "index": 182,
+      "id": "L-011",
+      "frage": "Woraus besteht Lymphe?"
+    },
+    {
+      "index": 183,
+      "id": "L-012",
+      "frage": "Welche Aufgaben haben Lymphknoten?"
+    },
+    {
+      "index": 184,
+      "id": "L-013",
+      "frage": "Warum entsteht nach Lymphknotenentfernung ein Lymphödem und was hilft?"
+    },
+    {
+      "index": 185,
+      "id": "L-014",
+      "frage": "Welche Lymphknotengruppen sind besonders wichtig?"
+    },
+    {
+      "index": 186,
+      "id": "L-015",
+      "frage": "Wo liegt die Milz und wie groß ist sie?"
+    },
+    {
+      "index": 187,
+      "id": "L-016",
+      "frage": "Was ist der Unterschied zwischen roter und weißer Pulpa?"
+    },
+    {
+      "index": 188,
+      "id": "L-017",
+      "frage": "Welche Aufgaben hat die Milz?"
+    },
+    {
+      "index": 189,
+      "id": "L-018",
+      "frage": "Was sind Splenomegalie und Milzruptur?"
+    },
+    {
+      "index": 190,
+      "id": "L-019",
+      "frage": "Was ist der Waldeyer-Rachenring und welche Aufgaben hat er?"
+    },
+    {
+      "index": 191,
+      "id": "L-020",
+      "frage": "Was ist die Rachenmandel und welche Erkrankung ist typisch?"
+    },
+    {
+      "index": 192,
+      "id": "L-021",
+      "frage": "Wo liegen die Gaumenmandeln und was sind Tonsillensteine?"
+    },
+    {
+      "index": 193,
+      "id": "L-022",
+      "frage": "Welche Erkrankungen betreffen die Gaumenmandeln?"
+    },
+    {
+      "index": 194,
+      "id": "L-023",
+      "frage": "Wo liegt die Zungenmandel und welche Aufgabe hat sie?"
+    },
+    {
+      "index": 195,
+      "id": "L-024",
+      "frage": "Was ist MALT und wie wirkt es?"
+    },
+    {
+      "index": 196,
+      "id": "L-025",
+      "frage": "Wie wird MALT eingeteilt und was zählt dazu?"
+    },
+    {
+      "index": 197,
+      "id": "B-001",
+      "frage": "Welche Aufgaben hat das Blut?"
+    },
+    {
+      "index": 198,
+      "id": "B-002",
+      "frage": "Wie groß ist das Blutvolumen?"
+    },
+    {
+      "index": 199,
+      "id": "B-003",
+      "frage": "Was ist der Hämatokrit?"
+    },
+    {
+      "index": 200,
+      "id": "B-004",
+      "frage": "Woraus besteht das Blutplasma?"
+    },
+    {
+      "index": 201,
+      "id": "B-005",
+      "frage": "In welche Gruppen lassen sich Plasmaproteine trennen und welche Funktionen haben sie?"
+    },
+    {
+      "index": 202,
+      "id": "B-006",
+      "frage": "Was sind die wichtigsten Fakten zu Erythrozyten?"
+    },
+    {
+      "index": 203,
+      "id": "B-007",
+      "frage": "Was kennzeichnet Leukozyten?"
+    },
+    {
+      "index": 204,
+      "id": "B-008",
+      "frage": "Was sind Granulozyten?"
+    },
+    {
+      "index": 205,
+      "id": "B-009",
+      "frage": "Welche Aufgaben haben neutrophile, eosinophile und basophile Granulozyten?"
+    },
+    {
+      "index": 206,
+      "id": "B-010",
+      "frage": "Was sind Monozyten?"
+    },
+    {
+      "index": 207,
+      "id": "B-011",
+      "frage": "Was sind Lymphozyten und wie werden sie eingeteilt?"
+    },
+    {
+      "index": 208,
+      "id": "B-012",
+      "frage": "Wo befinden sich die Lymphozyten?"
+    },
+    {
+      "index": 209,
+      "id": "B-013",
+      "frage": "Was sind die wichtigsten Fakten zu Thrombozyten?"
+    },
+    {
+      "index": 210,
+      "id": "B-014",
+      "frage": "Worauf beruhen die Blutgruppen?"
+    },
+    {
+      "index": 211,
+      "id": "B-015",
+      "frage": "Wie sind die AB0-Blutgruppen in Deutschland verteilt?"
+    },
+    {
+      "index": 212,
+      "id": "B-016",
+      "frage": "Welche Antikörper hat man im Serum bei welcher Blutgruppe?"
+    },
+    {
+      "index": 213,
+      "id": "B-017",
+      "frage": "Was ist das Rhesus-System?"
+    },
+    {
+      "index": 214,
+      "id": "B-018",
+      "frage": "Wer ist Universalspender und wer Universalempfänger?"
+    },
+    {
+      "index": 215,
+      "id": "B-019",
+      "frage": "Aus welchen vier Prozessen besteht die Blutstillung?"
+    },
+    {
+      "index": 216,
+      "id": "B-020",
+      "frage": "Wie läuft die primäre (zelluläre) Hämostase ab?"
+    },
+    {
+      "index": 217,
+      "id": "B-021",
+      "frage": "Wie läuft die plasmatische Gerinnung ab?"
+    },
+    {
+      "index": 218,
+      "id": "B-022",
+      "frage": "Was ist die Fibrinolyse?"
+    },
+    {
+      "index": 219,
+      "id": "M-001",
+      "frage": "Wie ist die Magenwand von innen nach außen aufgebaut?"
+    },
+    {
+      "index": 220,
+      "id": "M-002",
+      "frage": "Womit ist der Magen oben und unten verbunden?"
+    },
+    {
+      "index": 221,
+      "id": "M-003",
+      "frage": "Welche Hauptaufgaben hat der Magen?"
+    },
+    {
+      "index": 222,
+      "id": "M-004",
+      "frage": "Was sind Kardia und Fundus?"
+    },
+    {
+      "index": 223,
+      "id": "M-005",
+      "frage": "Welcher Magenabschnitt ist der größte und was passiert dort?"
+    },
+    {
+      "index": 224,
+      "id": "M-006",
+      "frage": "Welche Aufgaben haben Antrum und Pylorus?"
+    },
+    {
+      "index": 225,
+      "id": "M-007",
+      "frage": "Was bilden die Belegzellen?"
+    },
+    {
+      "index": 226,
+      "id": "M-008",
+      "frage": "Was bilden die Hauptzellen?"
+    },
+    {
+      "index": 227,
+      "id": "M-009",
+      "frage": "Was bilden G-Zellen und ECL-Zellen?"
+    },
+    {
+      "index": 228,
+      "id": "M-010",
+      "frage": "Was enthält der Magensaft und welche Funktionen hat er?"
+    },
+    {
+      "index": 229,
+      "id": "M-011",
+      "frage": "Welche drei Substanzen stimulieren die Magensäuresekretion?"
+    },
+    {
+      "index": 230,
+      "id": "M-012",
+      "frage": "Wie schützt sich die Magenwand vor der eigenen Säure?"
+    },
+    {
+      "index": 231,
+      "id": "M-013",
+      "frage": "Wie wird die Magenentleerung reguliert?"
+    },
+    {
+      "index": 232,
+      "id": "M-014",
+      "frage": "Welchen Einfluss hat fettreiche Nahrung auf die Magenentleerung?"
+    },
+    {
+      "index": 233,
+      "id": "M-015",
+      "frage": "Was passiert mit der Nahrung im Magen?"
+    },
+    {
+      "index": 234,
+      "id": "M-016",
+      "frage": "Wie werden Proteine im Magen verdaut?"
+    },
+    {
+      "index": 235,
+      "id": "M-017",
+      "frage": "Wie werden Fette im Magen verdaut?"
+    },
+    {
+      "index": 236,
+      "id": "M-018",
+      "frage": "Wo beginnt die Kohlenhydratverdauung und was passiert im Magen?"
+    }
+  ],
+  "mc": [
+    {
+      "index": 0,
+      "id": "A-mc-001",
+      "frage": "Auf Höhe welches Wirbels teilt sich die Trachea?"
+    },
+    {
+      "index": 1,
+      "id": "A-mc-002",
+      "frage": "Welcher Hauptbronchus ist steiler und weiter?"
+    },
+    {
+      "index": 2,
+      "id": "A-mc-003",
+      "frage": "Wie viele Segmente hat die linke Lunge?"
+    },
+    {
+      "index": 3,
+      "id": "A-mc-004",
+      "frage": "Welche Zellen produzieren Surfactant?"
+    },
+    {
+      "index": 4,
+      "id": "A-mc-005",
+      "frage": "Wie groß ist die Vitalkapazität ungefähr?"
+    },
+    {
+      "index": 5,
+      "id": "A-mc-006",
+      "frage": "Wie groß ist das Residualvolumen?"
+    },
+    {
+      "index": 6,
+      "id": "A-mc-007",
+      "frage": "Wie hoch ist das Atemminutenvolumen in Ruhe?"
+    },
+    {
+      "index": 7,
+      "id": "A-mc-008",
+      "frage": "Welche Muskeln sind für die Ruheeinatmung verantwortlich?"
+    },
+    {
+      "index": 8,
+      "id": "A-mc-009",
+      "frage": "Wo liegt das Atemzentrum?"
+    },
+    {
+      "index": 9,
+      "id": "A-mc-010",
+      "frage": "Über welche Hirnnerven gelangen Signale der peripheren Chemorezeptoren zum Atemzentrum?"
+    },
+    {
+      "index": 10,
+      "id": "A-mc-011",
+      "frage": "Welche Veränderung steigert die Atmung NICHT?"
+    },
+    {
+      "index": 11,
+      "id": "A-mc-012",
+      "frage": "Welcher Knorpel gehört NICHT zum formgebenden Kehlkopfgerüst?"
+    },
+    {
+      "index": 12,
+      "id": "A-mc-013",
+      "frage": "In welche Rachenetage mündet die Tuba auditiva?"
+    },
+    {
+      "index": 13,
+      "id": "A-mc-014",
+      "frage": "Welche Clearance wirkt in den kleinen Bronchien?"
+    },
+    {
+      "index": 14,
+      "id": "A-mc-015",
+      "frage": "Wie lange kann die alveoläre Clearance dauern?"
+    },
+    {
+      "index": 15,
+      "id": "A-mc-016",
+      "frage": "Wie viele Alveolen haben beide Lungen zusammen?"
+    },
+    {
+      "index": 16,
+      "id": "A-mc-017",
+      "frage": "Welche Funktion haben die Nasennebenhöhlen NICHT?"
+    },
+    {
+      "index": 17,
+      "id": "A-mc-018",
+      "frage": "Welche Schicht gehört NICHT zur Blut-Luft-Schranke?"
+    },
+    {
+      "index": 18,
+      "id": "A-mc-019",
+      "frage": "Was passiert bei einem Pneumothorax?"
+    },
+    {
+      "index": 19,
+      "id": "K-mc-001",
+      "frage": "Welche Herzhälfte ist die Pumpe des Körperkreislaufs?"
+    },
+    {
+      "index": 20,
+      "id": "K-mc-002",
+      "frage": "Welcher Gefäßwandschicht fehlt den Kapillaren?"
+    },
+    {
+      "index": 21,
+      "id": "K-mc-003",
+      "frage": "Welche Gefäße nennt man Kapazitätsgefäße?"
+    },
+    {
+      "index": 22,
+      "id": "K-mc-004",
+      "frage": "Welche Gefäße sind Windkesselgefäße?"
+    },
+    {
+      "index": 23,
+      "id": "K-mc-005",
+      "frage": "Wie wirkt der Sympathikus über α-Rezeptoren auf die Gefäße?"
+    },
+    {
+      "index": 24,
+      "id": "K-mc-006",
+      "frage": "Wie viel Flüssigkeit wird täglich an den Kapillaren filtriert bzw. reabsorbiert?"
+    },
+    {
+      "index": 25,
+      "id": "K-mc-007",
+      "frage": "Welche Substanz wirkt gefäßverengend?"
+    },
+    {
+      "index": 26,
+      "id": "K-mc-008",
+      "frage": "Wohin führt die Pfortader das Blut?"
+    },
+    {
+      "index": 27,
+      "id": "K-mc-009",
+      "frage": "In welche Arterien teilt sich die A. poplitea?"
+    },
+    {
+      "index": 28,
+      "id": "K-mc-010",
+      "frage": "Welche Gefäße gehen aus dem Truncus brachiocephalicus hervor?"
+    },
+    {
+      "index": 29,
+      "id": "K-mc-011",
+      "frage": "Welcher Blutdruck gilt als normal?"
+    },
+    {
+      "index": 30,
+      "id": "K-mc-012",
+      "frage": "Welcher Druck treibt die Flüssigkeit im venösen Kapillarschenkel zurück ins Gefäß?"
+    },
+    {
+      "index": 31,
+      "id": "K-mc-013",
+      "frage": "Was unterstützt den venösen Rückstrom NICHT?"
+    },
+    {
+      "index": 32,
+      "id": "H-mc-001",
+      "frage": "Welche Herzklappe hat zwei Segel?"
+    },
+    {
+      "index": 33,
+      "id": "H-mc-002",
+      "frage": "Welche Struktur ist der primäre Schrittmacher des Herzens?"
+    },
+    {
+      "index": 34,
+      "id": "H-mc-003",
+      "frage": "Was ist die Hauptaufgabe des AV-Knotens?"
+    },
+    {
+      "index": 35,
+      "id": "H-mc-004",
+      "frage": "Was beschreibt die Dromotropie?"
+    },
+    {
+      "index": 36,
+      "id": "H-mc-005",
+      "frage": "Wie hoch ist das Herzminutenvolumen in Ruhe?"
+    },
+    {
+      "index": 37,
+      "id": "H-mc-006",
+      "frage": "Wie ist der Zustand der Klappen in der Anspannungsphase?"
+    },
+    {
+      "index": 38,
+      "id": "H-mc-007",
+      "frage": "Was besagt der Frank-Starling-Mechanismus?"
+    },
+    {
+      "index": 39,
+      "id": "H-mc-008",
+      "frage": "Was entspricht der Nachlast?"
+    },
+    {
+      "index": 40,
+      "id": "H-mc-009",
+      "frage": "Wohin münden die Koronarvenen?"
+    },
+    {
+      "index": 41,
+      "id": "H-mc-010",
+      "frage": "Welchen Transmitter setzt der Parasympathikus am Herzen frei?"
+    },
+    {
+      "index": 42,
+      "id": "H-mc-011",
+      "frage": "Welche Herzfrequenz ist bei Säuglingen normal?"
+    },
+    {
+      "index": 43,
+      "id": "N-mc-001",
+      "frage": "Wie viel Primärharn entsteht pro Tag?"
+    },
+    {
+      "index": 44,
+      "id": "N-mc-002",
+      "frage": "Wie hoch ist die glomeruläre Filtrationsrate?"
+    },
+    {
+      "index": 45,
+      "id": "N-mc-003",
+      "frage": "Wo wird Renin gebildet?"
+    },
+    {
+      "index": 46,
+      "id": "N-mc-004",
+      "frage": "Wo wird ACE hauptsächlich gebildet?"
+    },
+    {
+      "index": 47,
+      "id": "N-mc-005",
+      "frage": "Wie wirkt Aldosteron?"
+    },
+    {
+      "index": 48,
+      "id": "N-mc-006",
+      "frage": "Welche ist die aktive Form des Vitamin D?"
+    },
+    {
+      "index": 49,
+      "id": "N-mc-007",
+      "frage": "Ab welcher Füllmenge tritt Harndrang auf?"
+    },
+    {
+      "index": 50,
+      "id": "N-mc-008",
+      "frage": "Welcher Schließmuskel ist willkürlich steuerbar?"
+    },
+    {
+      "index": 51,
+      "id": "N-mc-009",
+      "frage": "Wie viel Wasser gibt der Körper täglich über die Atemluft ab?"
+    },
+    {
+      "index": 52,
+      "id": "N-mc-010",
+      "frage": "Um wie viel sinkt die Nephronzahl zwischen 30 und 70 Jahren?"
+    },
+    {
+      "index": 53,
+      "id": "N-mc-011",
+      "frage": "Was misst die Macula densa?"
+    },
+    {
+      "index": 54,
+      "id": "N-mc-012",
+      "frage": "Wo liegen die Nieren?"
+    },
+    {
+      "index": 55,
+      "id": "L-mc-001",
+      "frage": "Wohin mündet der Ductus thoracicus?"
+    },
+    {
+      "index": 56,
+      "id": "L-mc-002",
+      "frage": "Welches Organ ist ein primäres lymphatisches Organ?"
+    },
+    {
+      "index": 57,
+      "id": "L-mc-003",
+      "frage": "Worauf reagiert die Milz?"
+    },
+    {
+      "index": 58,
+      "id": "L-mc-004",
+      "frage": "Wo werden alte Erythrozyten in der Milz abgebaut?"
+    },
+    {
+      "index": 59,
+      "id": "L-mc-005",
+      "frage": "Was bildet das MALT vor allem?"
+    },
+    {
+      "index": 60,
+      "id": "L-mc-006",
+      "frage": "Auf welcher Höhe liegt die Cisterna chyli?"
+    },
+    {
+      "index": 61,
+      "id": "L-mc-007",
+      "frage": "Welche Erkrankung betrifft typischerweise die Rachenmandel bei Kindern?"
+    },
+    {
+      "index": 62,
+      "id": "B-mc-001",
+      "frage": "Wie hoch ist der normale Hämatokrit?"
+    },
+    {
+      "index": 63,
+      "id": "B-mc-002",
+      "frage": "Wie lange leben Erythrozyten?"
+    },
+    {
+      "index": 64,
+      "id": "B-mc-003",
+      "frage": "Welchen Anteil der Leukozyten machen Lymphozyten aus?"
+    },
+    {
+      "index": 65,
+      "id": "B-mc-004",
+      "frage": "Was ist die Hauptaufgabe der eosinophilen Granulozyten?"
+    },
+    {
+      "index": 66,
+      "id": "B-mc-005",
+      "frage": "Welche Zellen bilden Antikörper?"
+    },
+    {
+      "index": 67,
+      "id": "B-mc-006",
+      "frage": "Welche Blutgruppe ist Universalspender?"
+    },
+    {
+      "index": 68,
+      "id": "B-mc-007",
+      "frage": "Welche Antikörper hat ein Mensch mit Blutgruppe A im Serum?"
+    },
+    {
+      "index": 69,
+      "id": "B-mc-008",
+      "frage": "Wann entstehen Rhesus-Antikörper?"
+    },
+    {
+      "index": 70,
+      "id": "B-mc-009",
+      "frage": "Wie viele Thrombozyten enthält ein µl Blut?"
+    },
+    {
+      "index": 71,
+      "id": "B-mc-010",
+      "frage": "Was entsteht in der Fibrinolyse aus Plasminogen?"
+    },
+    {
+      "index": 72,
+      "id": "B-mc-011",
+      "frage": "Was ist das Endprodukt der plasmatischen Gerinnung?"
+    },
+    {
+      "index": 73,
+      "id": "M-mc-001",
+      "frage": "Welche Zellen bilden Salzsäure?"
+    },
+    {
+      "index": 74,
+      "id": "M-mc-002",
+      "frage": "Was bilden die Hauptzellen?"
+    },
+    {
+      "index": 75,
+      "id": "M-mc-003",
+      "frage": "Wo wird Vitamin B12 mithilfe des Intrinsic Factors aufgenommen?"
+    },
+    {
+      "index": 76,
+      "id": "M-mc-004",
+      "frage": "Welcher ist der größte Magenabschnitt?"
+    },
+    {
+      "index": 77,
+      "id": "M-mc-005",
+      "frage": "Über welchen Abschnitt geht der Magen ins Duodenum über?"
+    },
+    {
+      "index": 78,
+      "id": "M-mc-006",
+      "frage": "Was setzen ECL-Zellen frei?"
+    },
+    {
+      "index": 79,
+      "id": "M-mc-007",
+      "frage": "Welche Nahrung verlangsamt die Magenentleerung?"
+    },
+    {
+      "index": 80,
+      "id": "M-mc-008",
+      "frage": "Was neutralisiert die Säure an der Magenwand?"
+    },
+    {
+      "index": 81,
+      "id": "M-mc-009",
+      "frage": "Welche Schicht der Magenwand liegt ganz innen?"
+    },
+    {
+      "index": 82,
+      "id": "M-mc-010",
+      "frage": "Welche Substanz stimuliert die Magensäuresekretion NICHT?"
+    },
+    {
+      "index": 83,
+      "id": "M-mc-011",
+      "frage": "Wo beginnt die Kohlenhydratverdauung?"
+    }
+  ]
+}

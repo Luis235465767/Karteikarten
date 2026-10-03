@@ -1,0 +1,235 @@
+{
+  "thema": "M",
+  "karten": [
+    {
+      "id": "M-001",
+      "frage": "Wie ist die Magenwand von innen nach außen aufgebaut?",
+      "antwort": "Mukosa, Submukosa, Muskularis und Serosa bzw. Adventitia."
+    },
+    {
+      "id": "M-002",
+      "frage": "Womit ist der Magen oben und unten verbunden?",
+      "antwort": "Oben mit dem Ösophagus über die Kardia, unten mit dem Duodenum über den Pylorus."
+    },
+    {
+      "id": "M-003",
+      "frage": "Welche Hauptaufgaben hat der Magen?",
+      "antwort": "Speicherung, Durchmischung und Ansäuerung der Nahrung sowie die beginnende Verdauung."
+    },
+    {
+      "id": "M-004",
+      "frage": "Was sind Kardia und Fundus?",
+      "antwort": "Die Kardia ist der Übergangsbereich zwischen Ösophagus und Magen, der Fundus der kuppelförmige obere Abschnitt."
+    },
+    {
+      "id": "M-005",
+      "frage": "Welcher Magenabschnitt ist der größte und was passiert dort?",
+      "antwort": "Der Corpus; hier wird der Magensaft produziert."
+    },
+    {
+      "id": "M-006",
+      "frage": "Welche Aufgaben haben Antrum und Pylorus?",
+      "antwort": "Als unterer Magenteil sorgen sie für die mechanische Durchmischung der Nahrung und regulieren die Weitergabe ins Duodenum."
+    },
+    {
+      "id": "M-007",
+      "frage": "Was bilden die Belegzellen?",
+      "antwort": "Salzsäure (HCl), die für das saure Milieu sorgt, und den Intrinsic Factor, der für die Vitamin-B12-Aufnahme im terminalen Ileum nötig ist."
+    },
+    {
+      "id": "M-008",
+      "frage": "Was bilden die Hauptzellen?",
+      "antwort": "Pepsinogen, das zu Pepsin aktiviert wird und die Proteinverdauung beginnt."
+    },
+    {
+      "id": "M-009",
+      "frage": "Was bilden G-Zellen und ECL-Zellen?",
+      "antwort": "G-Zellen bilden Gastrin, das die Magensäuresekretion fördert. ECL-Zellen bilden Histamin, das die Belegzellen stimuliert."
+    },
+    {
+      "id": "M-010",
+      "frage": "Was enthält der Magensaft und welche Funktionen hat er?",
+      "antwort": "Salzsäure (niedriger pH-Wert) und Pepsinogen bzw. Pepsin. Er unterstützt die Proteinverdauung und wehrt Mikroorganismen ab."
+    },
+    {
+      "id": "M-011",
+      "frage": "Welche drei Substanzen stimulieren die Magensäuresekretion?",
+      "antwort": "Acetylcholin (Parasympathikus), Gastrin (G-Zellen) und Histamin (ECL-Zellen)."
+    },
+    {
+      "id": "M-012",
+      "frage": "Wie schützt sich die Magenwand vor der eigenen Säure?",
+      "antwort": "Schleim bildet eine Barriere zwischen Magenwand und Säure, Bicarbonat neutralisiert die Säure, und das intakte Epithel verhindert ihr Eindringen."
+    },
+    {
+      "id": "M-013",
+      "frage": "Wie wird die Magenentleerung reguliert?",
+      "antwort": "Der Pylorus reguliert die Weitergabe des Chymus. Beeinflusst wird die Entleerung durch Zusammensetzung, Fettgehalt, Säuregehalt und Volumen der Nahrung sowie durch Signale aus dem Duodenum."
+    },
+    {
+      "id": "M-014",
+      "frage": "Welchen Einfluss hat fettreiche Nahrung auf die Magenentleerung?",
+      "antwort": "Sie verlangsamt die Magenentleerung."
+    },
+    {
+      "id": "M-015",
+      "frage": "Was passiert mit der Nahrung im Magen?",
+      "antwort": "Speicherung, mechanische Durchmischung, Vermischung mit Magensaft, Ansäuerung und Beginn der Proteinverdauung. Daraus entsteht Chymus, der portionsweise über den Pylorus ins Duodenum abgegeben wird."
+    },
+    {
+      "id": "M-016",
+      "frage": "Wie werden Proteine im Magen verdaut?",
+      "antwort": "Die Salzsäure denaturiert die Proteine, Pepsinogen wird zu Pepsin aktiviert und spaltet sie. Weiter geht es im Dünndarm durch Enzyme des Pankreas."
+    },
+    {
+      "id": "M-017",
+      "frage": "Wie werden Fette im Magen verdaut?",
+      "antwort": "Durch die Magenlipase, der größere Teil der Fettverdauung findet aber im Dünndarm statt."
+    },
+    {
+      "id": "M-018",
+      "frage": "Wo beginnt die Kohlenhydratverdauung und was passiert im Magen?",
+      "antwort": "Bereits im Mund durch die α-Amylase. Im Magen wird sie durch die Säure eingeschränkt."
+    }
+  ],
+  "mc": [
+    {
+      "id": "M-mc-001",
+      "frage": "Welche Zellen bilden Salzsäure?",
+      "richtig": "Belegzellen",
+      "falsch": [
+        "Hauptzellen",
+        "G-Zellen",
+        "ECL-Zellen"
+      ],
+      "erklaerung": "Sie bilden zusätzlich den Intrinsic Factor."
+    },
+    {
+      "id": "M-mc-002",
+      "frage": "Was bilden die Hauptzellen?",
+      "richtig": "Pepsinogen",
+      "falsch": [
+        "Gastrin",
+        "Histamin",
+        "Intrinsic Factor"
+      ],
+      "erklaerung": "Pepsinogen wird zu Pepsin aktiviert."
+    },
+    {
+      "id": "M-mc-003",
+      "frage": "Wo wird Vitamin B12 mithilfe des Intrinsic Factors aufgenommen?",
+      "richtig": "Im terminalen Ileum",
+      "falsch": [
+        "Im Magen",
+        "Im Duodenum",
+        "Im Kolon"
+      ],
+      "erklaerung": "Der Intrinsic Factor stammt aus den Belegzellen."
+    },
+    {
+      "id": "M-mc-004",
+      "frage": "Welcher ist der größte Magenabschnitt?",
+      "richtig": "Corpus",
+      "falsch": [
+        "Fundus",
+        "Antrum",
+        "Kardia"
+      ],
+      "erklaerung": "Im Corpus wird der Magensaft gebildet."
+    },
+    {
+      "id": "M-mc-005",
+      "frage": "Über welchen Abschnitt geht der Magen ins Duodenum über?",
+      "richtig": "Pylorus",
+      "falsch": [
+        "Kardia",
+        "Fundus",
+        "Corpus"
+      ],
+      "erklaerung": "Die Kardia ist der Übergang vom Ösophagus."
+    },
+    {
+      "id": "M-mc-006",
+      "frage": "Was setzen ECL-Zellen frei?",
+      "richtig": "Histamin",
+      "falsch": [
+        "Gastrin",
+        "Pepsin",
+        "Bicarbonat"
+      ],
+      "erklaerung": "Histamin stimuliert die Belegzellen."
+    },
+    {
+      "id": "M-mc-007",
+      "frage": "Welche Nahrung verlangsamt die Magenentleerung?",
+      "richtig": "Fettreiche Nahrung",
+      "falsch": [
+        "Flüssigkeit",
+        "Kleine Portionen",
+        "Kohlenhydratarme Nahrung"
+      ],
+      "erklaerung": "Auch Säuregehalt, Volumen und Signale aus dem Duodenum spielen mit."
+    },
+    {
+      "id": "M-mc-008",
+      "frage": "Was neutralisiert die Säure an der Magenwand?",
+      "richtig": "Bicarbonat",
+      "falsch": [
+        "Pepsin",
+        "Histamin",
+        "Gastrin"
+      ],
+      "erklaerung": "Zusammen mit Schleim und intaktem Epithel."
+    },
+    {
+      "id": "M-mc-009",
+      "frage": "Welche Schicht der Magenwand liegt ganz innen?",
+      "richtig": "Mukosa",
+      "falsch": [
+        "Submukosa",
+        "Muskularis",
+        "Serosa"
+      ],
+      "erklaerung": "Von innen: Mukosa, Submukosa, Muskularis, Serosa/Adventitia."
+    },
+    {
+      "id": "M-mc-010",
+      "frage": "Welche Substanz stimuliert die Magensäuresekretion NICHT?",
+      "richtig": "Bicarbonat",
+      "falsch": [
+        "Acetylcholin",
+        "Gastrin",
+        "Histamin"
+      ],
+      "erklaerung": "Bicarbonat neutralisiert Säure."
+    },
+    {
+      "id": "M-mc-011",
+      "frage": "Wo beginnt die Kohlenhydratverdauung?",
+      "richtig": "Im Mund",
+      "falsch": [
+        "Im Magen",
+        "Im Duodenum",
+        "Im Dickdarm"
+      ],
+      "erklaerung": "Durch die α-Amylase; im Magen wird sie durch die Säure gebremst."
+    }
+  ],
+  "offen": [
+    {
+      "id": "M-of-001",
+      "frage": "Beschreibe den Weg der Nahrung durch den Magen.",
+      "loesung": "Speicherung, mechanische Durchmischung, Vermischung mit Magensaft, Ansäuerung, Beginn der Proteinverdauung, Bildung von Chymus und portionsweise Abgabe über den Pylorus ins Duodenum."
+    },
+    {
+      "id": "M-of-002",
+      "frage": "Nenne die vier Zelltypen des Magens und ihre Produkte.",
+      "loesung": "Belegzellen: HCl und Intrinsic Factor. Hauptzellen: Pepsinogen. G-Zellen: Gastrin. ECL-Zellen: Histamin."
+    },
+    {
+      "id": "M-of-003",
+      "frage": "Wie schützt sich der Magen davor, sich selbst zu verdauen?",
+      "loesung": "Schleim als Barriere zwischen Magenwand und Säure, Bicarbonat zur Neutralisation und ein intaktes Epithel, das das Eindringen der Säure verhindert."
+    }
+  ]
+}

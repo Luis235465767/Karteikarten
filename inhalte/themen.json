@@ -1,0 +1,67 @@
+{
+  "themen": [
+    {
+      "kuerzel": "A",
+      "name": "Atmung",
+      "datei": "atmung.json",
+      "farbe": {
+        "hell": "#127a78",
+        "dunkel": "#3fb3ae"
+      }
+    },
+    {
+      "kuerzel": "K",
+      "name": "Kreislauf & Gefäße",
+      "datei": "kreislauf.json",
+      "farbe": {
+        "hell": "#3a4ea0",
+        "dunkel": "#8295e6"
+      }
+    },
+    {
+      "kuerzel": "H",
+      "name": "Herz",
+      "datei": "herz.json",
+      "farbe": {
+        "hell": "#bf3a2b",
+        "dunkel": "#ee7a68"
+      }
+    },
+    {
+      "kuerzel": "N",
+      "name": "Harnsystem",
+      "datei": "harnsystem.json",
+      "farbe": {
+        "hell": "#a8700f",
+        "dunkel": "#e0a93f"
+      }
+    },
+    {
+      "kuerzel": "L",
+      "name": "Lymphsystem",
+      "datei": "lymphsystem.json",
+      "farbe": {
+        "hell": "#4a7a26",
+        "dunkel": "#8cc063"
+      }
+    },
+    {
+      "kuerzel": "B",
+      "name": "Blut",
+      "datei": "blut.json",
+      "farbe": {
+        "hell": "#8c2556",
+        "dunkel": "#e07aa8"
+      }
+    },
+    {
+      "kuerzel": "M",
+      "name": "Magen",
+      "datei": "magen.json",
+      "farbe": {
+        "hell": "#6b4fa0",
+        "dunkel": "#b39ae8"
+      }
+    }
+  ]
+}

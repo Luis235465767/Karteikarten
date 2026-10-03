@@ -1,0 +1,361 @@
+{
+  "thema": "N",
+  "karten": [
+    {
+      "id": "N-001",
+      "frage": "Woraus besteht das Harnsystem?",
+      "antwort": "Aus beiden Nieren, beiden Harnleitern, der Harnblase und der Harnröhre. Die Harnwege sammeln den in den Nieren gebildeten Harn und leiten ihn aus."
+    },
+    {
+      "id": "N-002",
+      "frage": "Welche Funktionen hat die Niere?",
+      "antwort": "Ausscheidung harnpflichtiger Substanzen und Fremdstoffe (z. B. Medikamente), Regulation von Wasser-, Elektrolyt- und Säure-Basen-Haushalt sowie Hormonbildung (Erythropoetin, Renin, Vitamin-D-Hormon)."
+    },
+    {
+      "id": "N-003",
+      "frage": "Was sind harnpflichtige Substanzen?",
+      "antwort": "Stoffwechselprodukte, die den Körper nur über den Urin verlassen können, z. B. Harnstoff, Kreatinin und Harnsäure."
+    },
+    {
+      "id": "N-004",
+      "frage": "Wo liegen die Nieren und wie groß sind sie?",
+      "antwort": "Links und rechts der Wirbelsäule dicht unter dem Zwerchfell im Retroperitonealraum; bohnenförmig, 10–12 cm lang, 5–6 cm breit, 3 cm dick, umgeben von einer Fettkapsel."
+    },
+    {
+      "id": "N-005",
+      "frage": "Welche drei Zonen hat die Niere?",
+      "antwort": "Nierenrinde (Cortex, außen), Nierenmark (Medulla, 12–18 Markpyramiden mit Papillen zum Hilus) und Nierenbecken (aus 8–12 Nierenkelchen)."
+    },
+    {
+      "id": "N-006",
+      "frage": "Was ist ein Nierenlappen?",
+      "antwort": "Eine Markpyramide mit der dazugehörigen Nierenrinde."
+    },
+    {
+      "id": "N-007",
+      "frage": "Wie verläuft die arterielle Versorgung der Niere?",
+      "antwort": "Aorta → A. renalis → Aa. interlobares → Aa. arcuatae → Aa. interlobulares → Vas afferens → Glomerulus → Vas efferens → Kapillarnetz der Rinde."
+    },
+    {
+      "id": "N-008",
+      "frage": "Wie fließt das venöse Blut aus der Niere ab?",
+      "antwort": "Vv. interlobulares → Vv. arcuatae → Vv. interlobares → V. renalis → V. cava inferior."
+    },
+    {
+      "id": "N-009",
+      "frage": "Was ist das Nephron?",
+      "antwort": "Die Funktionseinheit der Niere aus Nierenkörperchen und Nierenkanälchen (Tubulusapparat); ca. 2–2,5 Mio. insgesamt. Sammelrohre zählen nicht dazu."
+    },
+    {
+      "id": "N-010",
+      "frage": "Wie ist das Nierenkörperchen aufgebaut und was passiert dort?",
+      "antwort": "Es liegt in der Rinde und besteht aus Kapillarknäuel (Glomerulus) und Bowman-Kapsel. Hier wird das Blut filtriert; Poren halten große Plasmaproteine und Blutzellen zurück."
+    },
+    {
+      "id": "N-011",
+      "frage": "Was ist Primärharn und wie viel entsteht?",
+      "antwort": "Zellfreie Lösung mit Ionen und kleinen Molekülen in plasmaähnlicher Konzentration; ca. 180 l pro Tag (GFR ca. 120 ml/min)."
+    },
+    {
+      "id": "N-012",
+      "frage": "Wie viel des Primärharns wird rückresorbiert?",
+      "antwort": "Etwa 178 l; nur ca. 1,5–2 l werden als Endharn ausgeschieden, der Harn wird also in den Kanälchen stark konzentriert."
+    },
+    {
+      "id": "N-013",
+      "frage": "Aus welchen Abschnitten besteht das Nierenkanälchen?",
+      "antwort": "Proximaler Tubulus, Intermediärtubulus mit Henle-Schleife, distaler Tubulus; danach folgt das Sammelrohr."
+    },
+    {
+      "id": "N-014",
+      "frage": "Welche Aufgabe haben die Sammelrohre?",
+      "antwort": "Sie liegen in den Markpyramiden, sammeln den Harn mehrerer Nephrone und leiten ihn zu den Nierenkelchen."
+    },
+    {
+      "id": "N-015",
+      "frage": "Aus welchen drei Bestandteilen besteht der juxtaglomeruläre Apparat?",
+      "antwort": "Macula densa (misst NaCl im distalen Tubulus), juxtaglomeruläre Zellen der Arteriola afferens (bilden und speichern Renin) und extraglomeruläre Mesangiumzellen (Lacis-Zellen, leiten Signale weiter)."
+    },
+    {
+      "id": "N-016",
+      "frage": "Wo liegt der juxtaglomeruläre Apparat?",
+      "antwort": "Am Gefäßpol des Glomerulus, wo die Arteriola afferens eintritt und der distale Tubulus am Glomerulus vorbeiführt."
+    },
+    {
+      "id": "N-017",
+      "frage": "Was bewirkt Erythropoetin und wann wird es gebildet?",
+      "antwort": "Bei O₂-Mangel in der Niere bilden peritubuläre Fibroblasten EPO. Es stimuliert im Knochenmark die Erythrozytenbildung und verbessert so den O₂-Transport (negative Rückkopplung)."
+    },
+    {
+      "id": "N-018",
+      "frage": "Was ist die renale Anämie?",
+      "antwort": "Bei chronischer Niereninsuffizienz sinkt die EPO-Produktion, es entsteht eine Anämie; Therapie mit rekombinantem Erythropoetin."
+    },
+    {
+      "id": "N-019",
+      "frage": "Wie wird Vitamin D aktiviert?",
+      "antwort": "Haut: 7-Dehydrocholesterin + UVB → Vitamin D₃. Leber: → 25-Hydroxyvitamin D (Calcidiol, Speicherform). Niere (1α-Hydroxylase): → 1,25-Dihydroxyvitamin D (Calcitriol, aktive Form). Merksatz: Leber speichert, Niere aktiviert."
+    },
+    {
+      "id": "N-020",
+      "frage": "Welche Wirkungen hat Calcitriol?",
+      "antwort": "Steigert die Kalzium- und Phosphataufnahme im Darm, fördert die Knochenmineralisation und hemmt bei ausreichendem Kalzium die Parathormon-Ausschüttung."
+    },
+    {
+      "id": "N-021",
+      "frage": "Wodurch wird die 1α-Hydroxylase gesteigert bzw. gehemmt?",
+      "antwort": "Gesteigert durch Parathormon, niedriges Kalzium und niedriges Phosphat. Gehemmt durch FGF23, hohes Phosphat und Calcitriol selbst."
+    },
+    {
+      "id": "N-022",
+      "frage": "Welche Folgen hat eine chronische Niereninsuffizienz für den Knochen?",
+      "antwort": "Weniger Calcitriol, dadurch weniger Kalziumaufnahme, Parathormon steigt (sekundärer Hyperparathyreoidismus), es entsteht eine renale Osteodystrophie."
+    },
+    {
+      "id": "N-023",
+      "frage": "Welche Hormone wirken auf die Niere?",
+      "antwort": "U. a. ADH, Aldosteron, Renin, Parathormon und Kalzitonin."
+    },
+    {
+      "id": "N-024",
+      "frage": "Wie ist das Körperwasser verteilt?",
+      "antwort": "Etwa 2/3 intrazellulär, der Rest extrazellulär in drei Räumen: Plasmaraum (intravasal), Interstitium (inkl. Lymphe) und transzellulärer Raum (Liquor, Speichel, Verdauungssäfte, Schweiß, Endharn)."
+    },
+    {
+      "id": "N-025",
+      "frage": "Wie setzt sich die tägliche Wasserabgabe zusammen?",
+      "antwort": "Urin ca. 1.500 ml, Atemluft 500 ml, Haut (Schwitzen) 300 ml, Stuhl 200 ml, zusammen ca. 2,5 l."
+    },
+    {
+      "id": "N-026",
+      "frage": "Wie setzt sich die tägliche Wasseraufnahme zusammen?",
+      "antwort": "Trinken ca. 1.500 ml, feste Nahrung ca. 600 ml und Oxidationswasser ca. 400 ml, zusammen ca. 2,5 l."
+    },
+    {
+      "id": "N-027",
+      "frage": "Was ist Oxidationswasser?",
+      "antwort": "Wasser, das bei der biologischen Oxidation (Abbau) der Nahrungsstoffe entsteht, ca. 400 ml pro Tag."
+    },
+    {
+      "id": "N-028",
+      "frage": "Wodurch wird das RAAS aktiviert?",
+      "antwort": "Durch verminderte Nierendurchblutung bei niedrigem Blutdruck, niedrigem Natrium oder Flüssigkeitsmangel, etwa bei Blutung, Durchfall, Erbrechen oder Schwitzen."
+    },
+    {
+      "id": "N-029",
+      "frage": "Beschreibe die Kaskade des RAAS.",
+      "antwort": "Die Niere setzt Renin frei. Renin wandelt Angiotensinogen aus der Leber in Angiotensin I um; ACE (v. a. aus der Lunge) wandelt dieses in Angiotensin II um."
+    },
+    {
+      "id": "N-030",
+      "frage": "Welche Wirkungen hat Angiotensin II?",
+      "antwort": "Starke Vasokonstriktion und damit Blutdrucksteigerung, Freisetzung von Aldosteron aus der Nebennierenrinde und von ADH aus der Hypophyse."
+    },
+    {
+      "id": "N-031",
+      "frage": "Wie wirken Aldosteron und ADH (Adiuretin)?",
+      "antwort": "Aldosteron steigert die Na⁺- und damit Wasserrückresorption am Tubulus. ADH vermindert die Wasserausscheidung in den Sammelrohren. Beides normalisiert das extrazelluläre Volumen."
+    },
+    {
+      "id": "N-032",
+      "frage": "Wie verändert sich die Niere im Alter?",
+      "antwort": "Zwischen 30 und 70 Jahren sinkt die Nephronzahl um ca. 35 %. Filtration, Sekretion und Rückresorption nehmen ab, was bei Medikamenten mit renaler Ausscheidung zu beachten ist."
+    },
+    {
+      "id": "N-033",
+      "frage": "Was gehört zu den ableitenden Harnwegen und womit sind sie ausgekleidet?",
+      "antwort": "Nierenkelche, Nierenbecken, Harnleiter, Harnblase und Harnröhre; ausgekleidet mit Übergangsepithel."
+    },
+    {
+      "id": "N-034",
+      "frage": "Wie viele Nierenkelche hat eine Niere und was machen sie?",
+      "antwort": "Etwa zehn. Jeder umgibt trichterförmig mehrere Papillen, fängt den Harn auf und leitet ihn ins Nierenbecken."
+    },
+    {
+      "id": "N-035",
+      "frage": "Wie ist der Harnleiter aufgebaut?",
+      "antwort": "Paarig, 25–30 cm lang, 4–7 mm Durchmesser, sternförmiges Lumen. Er mündet schräg in die Blase; die Mündung wirkt als Ventil gegen Rückfluss."
+    },
+    {
+      "id": "N-036",
+      "frage": "Wo liegt die Harnblase und was sind ihre Nachbarn?",
+      "antwort": "Im kleinen Becken hinter der Symphyse. Dorsal bei der Frau Scheide und Gebärmutter, beim Mann Enddarm. Kaudal bei der Frau Beckenboden, beim Mann Prostata."
+    },
+    {
+      "id": "N-037",
+      "frage": "Wann tritt Harndrang auf und wie viel fasst die Blase?",
+      "antwort": "Harndrang ab 250–500 ml; maximal bis 1.500 ml (dann bis Nabelhöhe). Sie füllt sich um ca. 50 ml pro Stunde."
+    },
+    {
+      "id": "N-038",
+      "frage": "Welche Schließmuskeln verschließen die Harnblase?",
+      "antwort": "M. sphincter internus und M. sphincter externus; der externe besteht aus quergestreifter Beckenbodenmuskulatur und ist willkürlich steuerbar."
+    },
+    {
+      "id": "N-039",
+      "frage": "Wie läuft die Miktion ab?",
+      "antwort": "Der M. detrusor vesicae kontrahiert, verschließt dabei die Harnleiter, beide Schließmuskeln erschlaffen und der Harn tritt in die Harnröhre. Speicherung ist passiv (Sympathikus), Entleerung aktiv und willkürlich."
+    },
+    {
+      "id": "N-040",
+      "frage": "Wie unterscheidet sich die Harnröhre bei Frau und Mann?",
+      "antwort": "Frau: 2,5–4 cm, mündet in den Scheidenvorhof. Mann: 20–25 cm; nach ca. 3 cm mündet der Samenleiter (Harn-Samen-Röhre), umgeben von Prostata und Schwellkörpern."
+    }
+  ],
+  "mc": [
+    {
+      "id": "N-mc-001",
+      "frage": "Wie viel Primärharn entsteht pro Tag?",
+      "richtig": "ca. 180 l",
+      "falsch": [
+        "ca. 18 l",
+        "ca. 2 l",
+        "ca. 1.800 l"
+      ],
+      "erklaerung": "Davon werden ca. 178 l rückresorbiert."
+    },
+    {
+      "id": "N-mc-002",
+      "frage": "Wie hoch ist die glomeruläre Filtrationsrate?",
+      "richtig": "ca. 120 ml/min",
+      "falsch": [
+        "ca. 12 ml/min",
+        "ca. 1,2 l/min",
+        "ca. 50 ml/h"
+      ],
+      "erklaerung": "Entspricht 180 l/Tag."
+    },
+    {
+      "id": "N-mc-003",
+      "frage": "Wo wird Renin gebildet?",
+      "richtig": "In den juxtaglomerulären Zellen der Arteriola afferens",
+      "falsch": [
+        "In der Macula densa",
+        "In der Leber",
+        "In der Lunge"
+      ],
+      "erklaerung": "Die Macula densa misst die NaCl-Konzentration."
+    },
+    {
+      "id": "N-mc-004",
+      "frage": "Wo wird ACE hauptsächlich gebildet?",
+      "richtig": "In der Lunge",
+      "falsch": [
+        "In der Niere",
+        "In der Leber",
+        "In der Nebenniere"
+      ],
+      "erklaerung": "ACE wandelt Angiotensin I in Angiotensin II um."
+    },
+    {
+      "id": "N-mc-005",
+      "frage": "Wie wirkt Aldosteron?",
+      "richtig": "Steigert die Na⁺- und Wasserrückresorption am Tubulus",
+      "falsch": [
+        "Senkt den Blutdruck",
+        "Steigert die Erythrozytenbildung",
+        "Hemmt die Reninfreisetzung direkt"
+      ],
+      "erklaerung": "Es wird aus der Nebennierenrinde freigesetzt."
+    },
+    {
+      "id": "N-mc-006",
+      "frage": "Welche ist die aktive Form des Vitamin D?",
+      "richtig": "Calcitriol",
+      "falsch": [
+        "Calcidiol",
+        "Cholecalciferol",
+        "7-Dehydrocholesterin"
+      ],
+      "erklaerung": "Leber speichert (Calcidiol), Niere aktiviert (Calcitriol)."
+    },
+    {
+      "id": "N-mc-007",
+      "frage": "Ab welcher Füllmenge tritt Harndrang auf?",
+      "richtig": "250–500 ml",
+      "falsch": [
+        "50–100 ml",
+        "1.000–1.500 ml",
+        "2.000 ml"
+      ],
+      "erklaerung": "Maximal fasst die Blase ca. 1.500 ml."
+    },
+    {
+      "id": "N-mc-008",
+      "frage": "Welcher Schließmuskel ist willkürlich steuerbar?",
+      "richtig": "M. sphincter externus",
+      "falsch": [
+        "M. sphincter internus",
+        "M. detrusor vesicae",
+        "Beide Sphinkteren"
+      ],
+      "erklaerung": "Er besteht aus quergestreifter Beckenbodenmuskulatur."
+    },
+    {
+      "id": "N-mc-009",
+      "frage": "Wie viel Wasser gibt der Körper täglich über die Atemluft ab?",
+      "richtig": "ca. 500 ml",
+      "falsch": [
+        "ca. 50 ml",
+        "ca. 1.500 ml",
+        "ca. 200 ml"
+      ],
+      "erklaerung": "Urin 1.500, Haut 300, Stuhl 200 ml."
+    },
+    {
+      "id": "N-mc-010",
+      "frage": "Um wie viel sinkt die Nephronzahl zwischen 30 und 70 Jahren?",
+      "richtig": "ca. 35 %",
+      "falsch": [
+        "ca. 5 %",
+        "ca. 70 %",
+        "gar nicht"
+      ],
+      "erklaerung": "Wichtig für die Medikamentendosierung."
+    },
+    {
+      "id": "N-mc-011",
+      "frage": "Was misst die Macula densa?",
+      "richtig": "Die NaCl-Konzentration im distalen Tubulus",
+      "falsch": [
+        "Den Blutdruck in der Aorta",
+        "Den O₂-Gehalt",
+        "Die Harnmenge in der Blase"
+      ],
+      "erklaerung": "Sie reguliert Filtration und Reninfreisetzung."
+    },
+    {
+      "id": "N-mc-012",
+      "frage": "Wo liegen die Nieren?",
+      "richtig": "Retroperitoneal",
+      "falsch": [
+        "Intraperitoneal",
+        "Im kleinen Becken",
+        "Im Mediastinum"
+      ],
+      "erklaerung": "Dicht unter dem Zwerchfell beidseits der Wirbelsäule."
+    }
+  ],
+  "offen": [
+    {
+      "id": "N-of-001",
+      "frage": "Erkläre das RAAS von Auslöser bis Wirkung.",
+      "loesung": "Niedriger Blutdruck, Natriummangel oder Volumenmangel → Renin aus dem JGA → Angiotensinogen wird zu Angiotensin I → ACE (Lunge) bildet Angiotensin II → Vasokonstriktion, Aldosteron (Na⁺/Wasser-Rückresorption) und ADH (weniger Wasserausscheidung) → Blutdruck und Volumen steigen."
+    },
+    {
+      "id": "N-of-002",
+      "frage": "Beschreibe die Bildung und Aktivierung von Vitamin D.",
+      "loesung": "Haut: UVB wandelt 7-Dehydrocholesterin in Vitamin D₃. Leber: 25-Hydroxylierung zu Calcidiol (Speicherform). Niere: 1α-Hydroxylierung zu Calcitriol (aktive Form), das Kalziumaufnahme und Knochenmineralisation fördert."
+    },
+    {
+      "id": "N-of-003",
+      "frage": "Wie wird aus 180 l Primärharn etwa 1,5–2 l Endharn?",
+      "loesung": "Im Glomerulus wird ein zellfreies Filtrat gebildet. In proximalem Tubulus, Henle-Schleife, distalem Tubulus und Sammelrohr werden ca. 178 l Wasser und viele Stoffe rückresorbiert, gesteuert u. a. durch Aldosteron und ADH."
+    },
+    {
+      "id": "N-of-004",
+      "frage": "Beschreibe den Ablauf der Miktion.",
+      "loesung": "Der M. detrusor vesicae kontrahiert und verschließt die Harnleitermündungen, M. sphincter internus und externus erschlaffen (externus willkürlich), der Harn fließt in die Harnröhre."
+    }
+  ]
+}

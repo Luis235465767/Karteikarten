@@ -1,0 +1,221 @@
+{
+  "thema": "L",
+  "karten": [
+    {
+      "id": "L-001",
+      "frage": "Was gehört zum lymphatischen System und welche Aufgaben hat es?",
+      "antwort": "Lymphbahnen, Lymphknoten, Milz, Thymus, lymphatisches Gewebe des Darms (Peyer-Plaques) und der lymphatische Rachenring. Aufgaben: Immunabwehr, Fetttransport und Flüssigkeitsrücktransport."
+    },
+    {
+      "id": "L-002",
+      "frage": "Welche Organe sind primäre lymphatische Organe und was passiert dort?",
+      "antwort": "Rotes Knochenmark (Bildung der Vorläufer, Reifung der B-Lymphozyten) und Thymus (Reifung und Selektion der T-Lymphozyten). Hier lernen Lymphozyten, eigen von fremd zu unterscheiden."
+    },
+    {
+      "id": "L-003",
+      "frage": "Welche Organe sind sekundäre lymphatische Organe und was passiert dort?",
+      "antwort": "Lymphknoten, Milz, Rachenring, MALT und Immunsystem der Haut. Hier finden Antigenerkennung, Vermehrung der Lymphozyten und Differenzierung in Effektor-, Gedächtnis- und regulatorische Zellen statt."
+    },
+    {
+      "id": "L-004",
+      "frage": "Worauf reagieren die einzelnen sekundären lymphatischen Organe?",
+      "antwort": "Lymphknoten auf Antigene aus der Lymphe, Milz auf Antigene aus dem Blut, Rachenring auf Keime über Mund und Nase, MALT auf Antigene, die die Schleimhaut passieren."
+    },
+    {
+      "id": "L-005",
+      "frage": "Wo befindet sich rotes Knochenmark in welchem Lebensalter?",
+      "antwort": "Neugeborene: in allen Knochen. Kindheit/Jugend: zunehmend durch gelbes Fettmark ersetzt (reversibel). Erwachsene: v. a. Wirbel, Rippen, Brustbein, Becken, Schädel und proximale Humerus/Femur."
+    },
+    {
+      "id": "L-006",
+      "frage": "Welche Zellen bildet das rote Knochenmark?",
+      "antwort": "Alle Blutzellreihen: Erythrozyten, Granulozyten, Monozyten, Thrombozyten und Lymphozyten."
+    },
+    {
+      "id": "L-007",
+      "frage": "Wo liegt der Thymus und wie verändert er sich?",
+      "antwort": "Hinter dem Brustbein im vorderen oberen Mediastinum. Er wächst bis zur Pubertät, ist bei Kleinkindern relativ besonders groß und wird danach teilweise durch Fett ersetzt; funktionelles Gewebe bleibt erhalten."
+    },
+    {
+      "id": "L-008",
+      "frage": "Wie unterscheiden sich Lymphkapillaren von Blutkapillaren?",
+      "antwort": "Lymphkapillaren beginnen blind im Gewebe und vereinigen sich zu Lymphgefäßen und Lymphstämmen."
+    },
+    {
+      "id": "L-009",
+      "frage": "Was ist die Cisterna chyli und wohin führt der Ductus thoracicus?",
+      "antwort": "Zusammenfluss von Lenden- und Darmlymphstämmen auf Höhe L1/L2. Daraus geht der Ductus thoracicus hervor, der in den linken Venenwinkel mündet."
+    },
+    {
+      "id": "L-010",
+      "frage": "Welches Gebiet drainiert der Ductus lymphaticus dexter?",
+      "antwort": "Das rechte obere Körperviertel; er mündet in den rechten Venenwinkel. Der Ductus thoracicus drainiert den ganzen übrigen Körper."
+    },
+    {
+      "id": "L-011",
+      "frage": "Woraus besteht Lymphe?",
+      "antwort": "Aus interstitieller Flüssigkeit mit Wasser, Elektrolyten, Proteinen und Zellen. Darmlymphe enthält zusätzlich Nahrungsfette als Chylomikronen; nach den Lymphknoten mehr Lymphozyten und Immunglobuline."
+    },
+    {
+      "id": "L-012",
+      "frage": "Welche Aufgaben haben Lymphknoten?",
+      "antwort": "Sie filtern die Lymphe, erkennen und verarbeiten Antigene und Erreger (Makrophagen) und aktivieren B-Lymphozyten zur Antikörperbildung."
+    },
+    {
+      "id": "L-013",
+      "frage": "Warum entsteht nach Lymphknotenentfernung ein Lymphödem und was hilft?",
+      "antwort": "Der Lymphabfluss der Extremität ist gestört, z. B. nach Brustkrebs-OP oder durch Tumor. Bewegung und Hochlagerung fördern den Rückfluss."
+    },
+    {
+      "id": "L-014",
+      "frage": "Welche Lymphknotengruppen sind besonders wichtig?",
+      "antwort": "Zervikale, axilläre und inguinale Lymphknoten."
+    },
+    {
+      "id": "L-015",
+      "frage": "Wo liegt die Milz und wie groß ist sie?",
+      "antwort": "Im linken Oberbauch direkt unter dem Zwerchfell, intraperitoneal; ca. 11 × 7 × 4 cm. Anders als Lymphknoten ist sie in den Blutkreislauf eingebunden (A./V. lienalis am Hilus)."
+    },
+    {
+      "id": "L-016",
+      "frage": "Was ist der Unterschied zwischen roter und weißer Pulpa?",
+      "antwort": "Rote Pulpa: blutdurchströmtes Netzwerk, in dem alte Erythrozyten hängen bleiben und abgebaut werden. Weiße Pulpa: Milzknötchen um Zentralarterien mit Lymphozyten und Makrophagen, immunologische Aufgaben."
+    },
+    {
+      "id": "L-017",
+      "frage": "Welche Aufgaben hat die Milz?",
+      "antwort": "Filter für Antigene im Blut, Abbau alter Erythrozyten und Thrombozyten, Thrombozytenspeicher sowie Blutbildung beim Fetus (und pathologisch beim Erwachsenen)."
+    },
+    {
+      "id": "L-018",
+      "frage": "Was sind Splenomegalie und Milzruptur?",
+      "antwort": "Splenomegalie: Vergrößerung der Milz, unterhalb des Rippenbogens tastbar. Milzruptur: Riss von Gewebe und ggf. Kapsel mit lebensgefährlicher innerer Blutung."
+    },
+    {
+      "id": "L-019",
+      "frage": "Was ist der Waldeyer-Rachenring und welche Aufgaben hat er?",
+      "antwort": "Lymphatisches Gewebe im Mund-Nasen-Rachen-Raum (Rachen-, Gaumen-, Zungen- und Tubenmandeln, Seitenstränge). Er erkennt und wehrt Erreger ab und aktiviert B-Lymphozyten."
+    },
+    {
+      "id": "L-020",
+      "frage": "Was ist die Rachenmandel und welche Erkrankung ist typisch?",
+      "antwort": "Unpaares lymphatisches Gewebe am Dach/Hinterwand des Nasenrachens, verhindert das Eindringen von Bakterien. Typisch bei Kindern ist die adenoide Hyperplasie: behinderte Nasenatmung, Mundatmung, ausgetrocknete Schleimhaut, Katarrhe."
+    },
+    {
+      "id": "L-021",
+      "frage": "Wo liegen die Gaumenmandeln und was sind Tonsillensteine?",
+      "antwort": "Paarig in der Fossa tonsillaris zwischen vorderem und hinterem Gaumenbogen. In ihren Krypten können sich Leukozyten, Epithelzellen, Bakterien und Speisereste einlagern und Tonsillensteine bilden."
+    },
+    {
+      "id": "L-022",
+      "frage": "Welche Erkrankungen betreffen die Gaumenmandeln?",
+      "antwort": "Tonsillitis bzw. Angina tonsillaris, Scharlach, Diphtherie, infektiöse Mononukleose; außerdem Mundgeruch."
+    },
+    {
+      "id": "L-023",
+      "frage": "Wo liegt die Zungenmandel und welche Aufgabe hat sie?",
+      "antwort": "Unpaar in der Schleimhaut des Zungengrunds, auf der Zungenmuskulatur. Immunologische Überwachung des hinteren Mundraums."
+    },
+    {
+      "id": "L-024",
+      "frage": "Was ist MALT und wie wirkt es?",
+      "antwort": "Schleimhautassoziiertes lymphatisches Gewebe v. a. in Verdauungs-, Harn- und Atemtrakt. M-Zellen nehmen Antigene auf; Lymphozyten bilden v. a. sekretorisches IgA, das das Einnisten von Bakterien verhindert."
+    },
+    {
+      "id": "L-025",
+      "frage": "Wie wird MALT eingeteilt und was zählt dazu?",
+      "antwort": "NALT (Nase), BALT (Bronchien), GALT (Magen-Darm), VALT (Vulva/Vagina). Dazu zählen auch Tonsillen, Peyer-Plaques und die Appendix."
+    }
+  ],
+  "mc": [
+    {
+      "id": "L-mc-001",
+      "frage": "Wohin mündet der Ductus thoracicus?",
+      "richtig": "In den linken Venenwinkel",
+      "falsch": [
+        "In den rechten Venenwinkel",
+        "In die V. cava inferior",
+        "In die Cisterna chyli"
+      ],
+      "erklaerung": "Er entspringt aus der Cisterna chyli."
+    },
+    {
+      "id": "L-mc-002",
+      "frage": "Welches Organ ist ein primäres lymphatisches Organ?",
+      "richtig": "Thymus",
+      "falsch": [
+        "Milz",
+        "Lymphknoten",
+        "Gaumenmandel"
+      ],
+      "erklaerung": "Das zweite ist das rote Knochenmark."
+    },
+    {
+      "id": "L-mc-003",
+      "frage": "Worauf reagiert die Milz?",
+      "richtig": "Auf Antigene aus dem Blut",
+      "falsch": [
+        "Auf Antigene aus der Lymphe",
+        "Nur auf Keime aus dem Mund",
+        "Auf Antigene der Haut"
+      ],
+      "erklaerung": "Lymphknoten reagieren auf Antigene aus der Lymphe."
+    },
+    {
+      "id": "L-mc-004",
+      "frage": "Wo werden alte Erythrozyten in der Milz abgebaut?",
+      "richtig": "Rote Pulpa",
+      "falsch": [
+        "Weiße Pulpa",
+        "Milzhilus",
+        "Milzkapsel"
+      ],
+      "erklaerung": "Die weiße Pulpa hat immunologische Aufgaben."
+    },
+    {
+      "id": "L-mc-005",
+      "frage": "Was bildet das MALT vor allem?",
+      "richtig": "Sekretorisches IgA",
+      "falsch": [
+        "Erythrozyten",
+        "Surfactant",
+        "Renin"
+      ],
+      "erklaerung": "Es verhindert das Einnisten von Bakterien im Epithel."
+    },
+    {
+      "id": "L-mc-006",
+      "frage": "Auf welcher Höhe liegt die Cisterna chyli?",
+      "richtig": "L1/L2",
+      "falsch": [
+        "Th5",
+        "C7",
+        "S1"
+      ],
+      "erklaerung": "Zusammenfluss von Lenden- und Darmlymphstämmen."
+    },
+    {
+      "id": "L-mc-007",
+      "frage": "Welche Erkrankung betrifft typischerweise die Rachenmandel bei Kindern?",
+      "richtig": "Adenoide Hyperplasie",
+      "falsch": [
+        "Splenomegalie",
+        "Tonsillensteine",
+        "Lymphödem"
+      ],
+      "erklaerung": "Folge: behinderte Nasenatmung."
+    }
+  ],
+  "offen": [
+    {
+      "id": "L-of-001",
+      "frage": "Warum entsteht nach einer Lymphknotenentfernung ein Lymphödem und was kann man therapeutisch tun?",
+      "loesung": "Die ca. 2 l Lymphe pro Tag können aus der Extremität nicht mehr ausreichend abfließen, Flüssigkeit staut sich im Interstitium. Bewegung und Hochlagerung fördern den Lymphrückfluss."
+    },
+    {
+      "id": "L-of-002",
+      "frage": "Vergleiche primäre und sekundäre lymphatische Organe.",
+      "loesung": "Primär (Knochenmark, Thymus): Bildung und Reifung der Lymphozyten, Lernen von eigen/fremd. Sekundär (Lymphknoten, Milz, Rachenring, MALT): Antigenkontakt, Vermehrung und Differenzierung reifer Lymphozyten."
+    }
+  ]
+}

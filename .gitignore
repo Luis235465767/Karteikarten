@@ -1,0 +1,4 @@
+node_modules/
+.DS_Store
+# Persönlicher Lernstand gehört nie ins Repo
+*fortschritt*.json

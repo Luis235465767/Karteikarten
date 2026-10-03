@@ -1,0 +1,357 @@
+{
+  "thema": "K",
+  "karten": [
+    {
+      "id": "K-001",
+      "frage": "Woraus besteht das Kreislaufsystem?",
+      "antwort": "Aus dem Herz als Pumpe und dem geschlossenen Gefäßsystem mit zwei Teilkreisläufen: Körperkreislauf und Lungenkreislauf."
+    },
+    {
+      "id": "K-002",
+      "frage": "Wie unterscheiden sich Arterien, Kapillaren und Venen funktionell?",
+      "antwort": "Arterien führen Blut vom Herzen weg, Venen zum Herzen hin (jeweils unabhängig vom O₂-Gehalt). Kapillaren verbinden beide und dienen dem Stoff- und Gasaustausch; Venen sind zudem Blutreservoir."
+    },
+    {
+      "id": "K-003",
+      "frage": "Welche Herzhälfte versorgt welchen Kreislauf?",
+      "antwort": "Linker Vorhof und linke Kammer sind die Pumpe des großen Körperkreislaufs, rechter Vorhof und rechte Kammer die des kleinen Lungenkreislaufs."
+    },
+    {
+      "id": "K-004",
+      "frage": "Beschreibe den Weg des Blutes im Körperkreislauf.",
+      "antwort": "Linke Kammer → Aortenklappe → Aorta → Arterien → Arteriolen → Kapillaren (O₂/Nährstoffe raus, CO₂ rein) → Venolen und Venen → obere/untere Hohlvene → rechter Vorhof."
+    },
+    {
+      "id": "K-005",
+      "frage": "Beschreibe den Weg des Blutes im Lungenkreislauf.",
+      "antwort": "Rechte Kammer → Truncus pulmonalis → Aa. pulmonales → Lungenkapillaren (O₂-Aufnahme, CO₂-Abgabe) → Vv. pulmonales → linker Vorhof → linke Kammer."
+    },
+    {
+      "id": "K-006",
+      "frage": "Was ist der Truncus brachiocephalicus?",
+      "antwort": "Ein Gefäßstamm aus dem Aortenbogen, der sich in die rechte A. subclavia und die rechte A. carotis communis teilt."
+    },
+    {
+      "id": "K-007",
+      "frage": "Welche Gebiete versorgen A. carotis externa und interna?",
+      "antwort": "Externa: Gesicht und äußerer Schädel. Interna: Gehirn."
+    },
+    {
+      "id": "K-008",
+      "frage": "Wie verläuft die arterielle Versorgung des Arms?",
+      "antwort": "A. subclavia → A. axillaris → A. brachialis, die sich in der Ellenbeuge in A. radialis und A. ulnaris teilt. Beide sind über den Arcus palmaris der Hand verbunden."
+    },
+    {
+      "id": "K-009",
+      "frage": "In welche Äste teilt sich der Truncus coeliacus?",
+      "antwort": "A. hepatica (Leber, Galle, Magen, Duodenum, Pankreas), A. gastrica sinistra (Magen) und A. lienalis (Milz)."
+    },
+    {
+      "id": "K-010",
+      "frage": "Was versorgen A. mesenterica superior, inferior und die Aa. renales?",
+      "antwort": "Superior: Dünndarm, Pankreas und Dickdarm. Inferior: restlicher Dickdarm ohne unteres Rektumdrittel. Aa. renales: Nieren."
+    },
+    {
+      "id": "K-011",
+      "frage": "Wie verläuft die arterielle Versorgung des Beins?",
+      "antwort": "Aorta teilt sich auf LWS-Höhe in die Aa. iliacae communes → A. iliaca externa → A. femoralis → A. poplitea → unterhalb der Kniekehle A. tibialis anterior (endet als A. dorsalis pedis) und A. tibialis posterior."
+    },
+    {
+      "id": "K-012",
+      "frage": "Was drainieren V. jugularis, V. cava superior und V. cava inferior?",
+      "antwort": "V. jugularis: Kopf (verläuft mit A. carotis). V. cava superior: Kopf und obere Extremität. V. cava inferior: Eingeweide und untere Extremität."
+    },
+    {
+      "id": "K-013",
+      "frage": "Welche oberflächlichen Venen an Arm und Bein sollte man kennen?",
+      "antwort": "Arm: V. basilica, V. cephalica, V. mediana cubiti. Bein: V. saphena magna und V. saphena parva."
+    },
+    {
+      "id": "K-014",
+      "frage": "Was ist der Pfortaderkreislauf?",
+      "antwort": "Nährstoffreiches venöses Blut der Bauchorgane fließt über die V. portae erst durch die Leber (Lebersinusoide), bevor es zum rechten Herzen gelangt. Es passiert also zwei hintereinandergeschaltete Kapillarsysteme."
+    },
+    {
+      "id": "K-015",
+      "frage": "Wodurch wird die Blutströmung ermöglicht?",
+      "antwort": "Durch Druckdifferenzen: Blut fließt vom zentralen Hochdrucksystem zum peripheren Niederdrucksystem."
+    },
+    {
+      "id": "K-016",
+      "frage": "Was gehört zum Hochdrucksystem?",
+      "antwort": "Linke Kammer während der Systole sowie Arterien und Arteriolen des Körperkreislaufs; ca. 60–100 mmHg, daher dicke Gefäßwände."
+    },
+    {
+      "id": "K-017",
+      "frage": "Was gehört zum Niederdrucksystem und welche Besonderheit hat es?",
+      "antwort": "Vorhöfe, rechte Kammer, linke Kammer in der Diastole, Kapillaren und Venen sowie der Lungenkreislauf; ca. 5–10 mmHg. Die weitgestellten, dünnwandigen Venen speichern den Großteil des Blutvolumens, das bei Bedarf verschoben werden kann."
+    },
+    {
+      "id": "K-018",
+      "frage": "Aus welchen drei Schichten besteht die Wand von Arterien und Venen?",
+      "antwort": "Tunica interna/Intima (zum Lumen, Stoff- und Gasaustausch), Tunica media (glatte Muskulatur, kollagene und elastische Fasern) und Tunica externa/Adventitia (kollagene und elastische Fasern)."
+    },
+    {
+      "id": "K-019",
+      "frage": "Was ist der Blutdruck und was ist der Normwert?",
+      "antwort": "Der Druck, den das Blut auf die Gefäßwände ausübt; normal ca. 120/80 mmHg (systolisch/diastolisch)."
+    },
+    {
+      "id": "K-020",
+      "frage": "Wie entwickelt sich der Blutdruck bei Kindern?",
+      "antwort": "Er steigt mit dem Alter: 1. Lebensmonat ca. 85/55, mit 1 Jahr 95/65, mit 6 Jahren 105/65, mit 10–13 Jahren 110/65 mmHg."
+    },
+    {
+      "id": "K-021",
+      "frage": "Unterschied zwischen elastischem und muskulärem Arterientyp?",
+      "antwort": "Elastischer Typ: Media reich an elastischen Fasern, kehrt nach Dehnung zurück; herznahe Gefäße wie Aorta, A. carotis, Lungenarterien. Muskulärer Typ: Media mit hohem Muskelanteil; mittlere und kleine herzferne Arterien."
+    },
+    {
+      "id": "K-022",
+      "frage": "Welche Gefäßveränderungen treten im Alter auf?",
+      "antwort": "Ab ca. 30 Jahren nimmt die Elastizität ab; arteriosklerotische Veränderungen führen zu steigendem Blutdruck und verzögerter Blutdruckregulation (orthostatische Probleme)."
+    },
+    {
+      "id": "K-023",
+      "frage": "Wie funktioniert die Blutdruckmessung nach Riva-Rocci?",
+      "antwort": "Die Manschette drückt die A. brachialis ab; beim Ablassen ist das erste pulsierende Geräusch der systolische Wert, das Verschwinden der Geräusche (keine Verwirbelung mehr) der diastolische Wert."
+    },
+    {
+      "id": "K-024",
+      "frage": "An welchen Stellen ist der Puls tastbar und wie hoch sollte er sein?",
+      "antwort": "A. carotis communis (Hals), A. radialis (Handgelenk), A. femoralis (Leiste), A. poplitea (Kniekehle), A. dorsalis pedis (Fußrücken). Normal 60–100/min."
+    },
+    {
+      "id": "K-025",
+      "frage": "Wie sind Kapillaren aufgebaut und warum fließt das Blut dort langsam?",
+      "antwort": "Sie haben keine Tunica media, nur eine Endothelschicht. Wegen des großen Gesamtquerschnitts fließt das Blut sehr langsam (0,5 mm/s), was den Stoffaustausch begünstigt."
+    },
+    {
+      "id": "K-026",
+      "frage": "Wie unterscheiden sich gefensterte und dichte Kapillaren?",
+      "antwort": "Gefensterte (z. B. Leber) lassen viele Substanzen außer Blutzellen und Plasmaeiweißen frei passieren. Dichte (z. B. Nervensystem) erlauben nur selektiven Transport durch die Zellen."
+    },
+    {
+      "id": "K-027",
+      "frage": "Wie werden Gefäße funktionell eingeteilt?",
+      "antwort": "Windkesselgefäße (Aorta, große Arterien), Widerstandsgefäße vor Organen, Sphinktergefäße vor Kapillarbetten, Austauschgefäße (Kapillaren), Kapazitätsgefäße (Venen) und Shunt-Gefäße (Kurzschlüsse zwischen Arterien und Venen)."
+    },
+    {
+      "id": "K-028",
+      "frage": "Was ist Diffusion?",
+      "antwort": "Wanderung gelöster Teilchen vom Ort hoher zum Ort niedriger Konzentration; treibende Kraft ist das Konzentrationsgefälle."
+    },
+    {
+      "id": "K-029",
+      "frage": "Wie funktionieren Filtration und Reabsorption an der Kapillare?",
+      "antwort": "Arteriell überwiegt der hydrostatische Druck (Blutdruck) und presst Flüssigkeit ins Gewebe. Venös überwiegt der kolloidosmotische Druck der Plasmaproteine und zieht Flüssigkeit zurück."
+    },
+    {
+      "id": "K-030",
+      "frage": "Wie viel Flüssigkeit wird täglich filtriert und reabsorbiert?",
+      "antwort": "Ca. 20 l filtriert, 18 l reabsorbiert. Die übrigen 2 l nimmt das Lymphsystem auf und leitet sie ins venöse System zurück."
+    },
+    {
+      "id": "K-031",
+      "frage": "Warum heißen Venen Kapazitätsgefäße und wie ist ihre Wand aufgebaut?",
+      "antwort": "Sie enthalten mehr als 2/3 des Blutvolumens. Ihre Media besteht überwiegend aus kollagenen Fasern; die Wand ist dünn und sehr dehnbar."
+    },
+    {
+      "id": "K-032",
+      "frage": "Wie hoch ist der Venendruck?",
+      "antwort": "Im Liegen durchschnittlich 15–20 mmHg, in herznahen Venen nur 2–4 mmHg."
+    },
+    {
+      "id": "K-033",
+      "frage": "Welche Mechanismen unterstützen den venösen Rückstrom?",
+      "antwort": "Venenklappen (paarige Intimafalten), Skelettmuskelpumpe, Übertragung der Pulsation benachbarter Arterien und die Sogwirkung des Herzens zu Beginn der Diastole."
+    },
+    {
+      "id": "K-034",
+      "frage": "Auf welchen drei Wegen wird die Gefäßweite reguliert?",
+      "antwort": "Nerval (vegetatives Nervensystem), humoral (gefäßaktive Substanzen im Blut) und autoregulatorisch (lokal im Organ)."
+    },
+    {
+      "id": "K-035",
+      "frage": "Wie wirkt der Sympathikus über α- und β-Rezeptoren auf die Gefäße?",
+      "antwort": "α-Rezeptoren: Vasokonstriktion, v. a. in Niere und Haut. β-Rezeptoren: Vasodilatation, z. B. in der Muskulatur."
+    },
+    {
+      "id": "K-036",
+      "frage": "Welche lokalen Faktoren wirken gefäßerweiternd (Autoregulation)?",
+      "antwort": "O₂-Mangel, ATP-Spaltprodukte, CO₂, K⁺-Ionen und ein niedriger pH-Wert."
+    },
+    {
+      "id": "K-037",
+      "frage": "Welche humoralen Substanzen verengen bzw. erweitern Gefäße?",
+      "antwort": "Verengend: Angiotensin II. Erweiternd: Bradykinin und Histamin. Katecholamine (Adrenalin, Noradrenalin) haben je nach Rezeptor unterschiedliche Wirkungen."
+    },
+    {
+      "id": "K-038",
+      "frage": "Was ist das Ziel der Kreislaufregulation und wo sitzt die zentrale Steuerung?",
+      "antwort": "Bedarfsgerechte Versorgung der Organe, wobei Blut zu aktiven Organen auf Kosten ruhender umverteilt wird. Die zentrale Steuerung liegt im verlängerten Mark und in der Brücke."
+    }
+  ],
+  "mc": [
+    {
+      "id": "K-mc-001",
+      "frage": "Welche Herzhälfte ist die Pumpe des Körperkreislaufs?",
+      "richtig": "Die linke",
+      "falsch": [
+        "Die rechte",
+        "Beide abwechselnd",
+        "Die Vorhöfe"
+      ],
+      "erklaerung": "Die rechte Hälfte versorgt den Lungenkreislauf."
+    },
+    {
+      "id": "K-mc-002",
+      "frage": "Welcher Gefäßwandschicht fehlt den Kapillaren?",
+      "richtig": "Tunica media",
+      "falsch": [
+        "Tunica interna",
+        "Endothel",
+        "Basalmembran"
+      ],
+      "erklaerung": "Kapillaren bestehen nur aus Endothel (auf Basalmembran)."
+    },
+    {
+      "id": "K-mc-003",
+      "frage": "Welche Gefäße nennt man Kapazitätsgefäße?",
+      "richtig": "Venen",
+      "falsch": [
+        "Arterien",
+        "Kapillaren",
+        "Arteriolen"
+      ],
+      "erklaerung": "Sie enthalten über 2/3 des Blutvolumens."
+    },
+    {
+      "id": "K-mc-004",
+      "frage": "Welche Gefäße sind Windkesselgefäße?",
+      "richtig": "Aorta und große Arterien",
+      "falsch": [
+        "Kapillaren",
+        "Venolen",
+        "Kleine muskuläre Arterien"
+      ],
+      "erklaerung": "Elastischer Typ, dehnt sich beim Auswurf."
+    },
+    {
+      "id": "K-mc-005",
+      "frage": "Wie wirkt der Sympathikus über α-Rezeptoren auf die Gefäße?",
+      "richtig": "Vasokonstriktion, v. a. in Haut und Niere",
+      "falsch": [
+        "Vasodilatation in der Muskulatur",
+        "Keine Wirkung",
+        "Vasodilatation in der Haut"
+      ],
+      "erklaerung": "Über β-Rezeptoren wirkt er gefäßerweiternd."
+    },
+    {
+      "id": "K-mc-006",
+      "frage": "Wie viel Flüssigkeit wird täglich an den Kapillaren filtriert bzw. reabsorbiert?",
+      "richtig": "20 l / 18 l",
+      "falsch": [
+        "180 l / 178 l",
+        "10 l / 9 l",
+        "2 l / 1,5 l"
+      ],
+      "erklaerung": "Die restlichen 2 l fließen als Lymphe ab."
+    },
+    {
+      "id": "K-mc-007",
+      "frage": "Welche Substanz wirkt gefäßverengend?",
+      "richtig": "Angiotensin II",
+      "falsch": [
+        "Bradykinin",
+        "Histamin",
+        "CO₂"
+      ],
+      "erklaerung": "Die anderen drei wirken gefäßerweiternd."
+    },
+    {
+      "id": "K-mc-008",
+      "frage": "Wohin führt die Pfortader das Blut?",
+      "richtig": "Zur Leber",
+      "falsch": [
+        "Zur Milz",
+        "Zur Niere",
+        "Direkt zum rechten Herzen"
+      ],
+      "erklaerung": "Zwei Kapillarsysteme hintereinander."
+    },
+    {
+      "id": "K-mc-009",
+      "frage": "In welche Arterien teilt sich die A. poplitea?",
+      "richtig": "A. tibialis anterior und posterior",
+      "falsch": [
+        "A. radialis und ulnaris",
+        "A. iliaca interna und externa",
+        "A. femoralis und dorsalis pedis"
+      ],
+      "erklaerung": "Die A. tibialis anterior endet als A. dorsalis pedis."
+    },
+    {
+      "id": "K-mc-010",
+      "frage": "Welche Gefäße gehen aus dem Truncus brachiocephalicus hervor?",
+      "richtig": "Rechte A. subclavia und rechte A. carotis communis",
+      "falsch": [
+        "Linke A. subclavia und linke A. carotis",
+        "Beide Aa. carotides",
+        "A. axillaris und A. brachialis"
+      ],
+      "erklaerung": "Links entspringen die Gefäße direkt aus dem Aortenbogen."
+    },
+    {
+      "id": "K-mc-011",
+      "frage": "Welcher Blutdruck gilt als normal?",
+      "richtig": "120/80 mmHg",
+      "falsch": [
+        "140/100 mmHg",
+        "100/40 mmHg",
+        "160/90 mmHg"
+      ],
+      "erklaerung": "Systolisch/diastolisch."
+    },
+    {
+      "id": "K-mc-012",
+      "frage": "Welcher Druck treibt die Flüssigkeit im venösen Kapillarschenkel zurück ins Gefäß?",
+      "richtig": "Kolloidosmotischer Druck",
+      "falsch": [
+        "Hydrostatischer Druck",
+        "Intrapleuraler Druck",
+        "Venendruck"
+      ],
+      "erklaerung": "Er entsteht durch die Plasmaproteine."
+    },
+    {
+      "id": "K-mc-013",
+      "frage": "Was unterstützt den venösen Rückstrom NICHT?",
+      "richtig": "Vasokonstriktion der Arteriolen",
+      "falsch": [
+        "Venenklappen",
+        "Skelettmuskelpumpe",
+        "Sogwirkung des Herzens"
+      ],
+      "erklaerung": "Auch die Pulsation benachbarter Arterien hilft."
+    }
+  ],
+  "offen": [
+    {
+      "id": "K-of-001",
+      "frage": "Beschreibe den Weg eines Erythrozyten vom linken Ventrikel durch den Körper zurück in den linken Ventrikel.",
+      "loesung": "LV → Aorta → Arterien → Arteriolen → Kapillaren → Venolen → Venen → V. cava → RA → Trikuspidalklappe → RV → Pulmonalklappe → Truncus pulmonalis → Lungenkapillaren → Vv. pulmonales → LA → Mitralklappe → LV."
+    },
+    {
+      "id": "K-of-002",
+      "frage": "Erkläre Filtration und Reabsorption an der Kapillare und die Rolle der Lymphe.",
+      "loesung": "Arteriell überwiegt der hydrostatische Druck, Flüssigkeit wird ins Gewebe filtriert (ca. 20 l/Tag). Venös überwiegt der kolloidosmotische Druck, ca. 18 l werden reabsorbiert. Die restlichen 2 l führt das Lymphsystem zurück."
+    },
+    {
+      "id": "K-of-003",
+      "frage": "Welche Mechanismen fördern den venösen Rückstrom? Warum ist das für die Physiotherapie relevant?",
+      "loesung": "Venenklappen, Skelettmuskelpumpe, Pulsation benachbarter Arterien und die Sogwirkung des Herzens. Bewegung und Muskelaktivität unterstützen damit direkt den Rückstrom, z. B. zur Thromboseprophylaxe."
+    }
+  ]
+}

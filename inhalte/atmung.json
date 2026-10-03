@@ -1,0 +1,563 @@
+{
+  "thema": "A",
+  "karten": [
+    {
+      "id": "A-001",
+      "frage": "Welche zwei Formen der Atmung unterscheidet man?",
+      "antwort": "Äußere Atmung (Lungenatmung): O₂-Aufnahme in die Lunge und CO₂-Abgabe aus dem Blut an die Luft. Innere Atmung (Gewebeatmung): Verbrennungsvorgänge in den Zellen, bei denen O₂ aus dem Blut aufgenommen und CO₂ abgegeben wird."
+    },
+    {
+      "id": "A-002",
+      "frage": "Aus welchen zwei funktionellen Anteilen besteht das Atmungssystem?",
+      "antwort": "Luftleitungssystem (Nase bis Bronchialbaum) und Diffusionssystem (Gasaustauschfläche der Alveolen)."
+    },
+    {
+      "id": "A-003",
+      "frage": "Welche Organe gehören zum Atmungssystem?",
+      "antwort": "Nase und Nasenhöhle, Nasennebenhöhlen, Rachen (Pharynx), Kehlkopf (Larynx), Luftröhre (Trachea), Bronchialbaum, Lunge und der Brustkorb (Thorax), der wegen seiner Bedeutung für die Atemmechanik dazugezählt wird."
+    },
+    {
+      "id": "A-004",
+      "frage": "Wie ist die äußere Nase aufgebaut?",
+      "antwort": "Aus dem Os nasale, den knorpeligen Nasenflügeln und einigen kleineren Knorpelstücken; überzogen von Gesichtshaut."
+    },
+    {
+      "id": "A-005",
+      "frage": "Was ist das Vestibulum nasi und welche Funktion haben die Vibrissae?",
+      "antwort": "Der Nasenvorhof, über den die Nasenlöcher (Nares) in die Nasenhöhle (Cavitas nasi) führen. Seine Haare, die Vibrissae, schützen vor eindringenden Fremdkörpern."
+    },
+    {
+      "id": "A-006",
+      "frage": "Wie ist die Nasenscheidewand aufgebaut?",
+      "antwort": "Das Septum nasi teilt die Nasenhöhle in zwei Höhlen ohne direkte Verbindung. Hinten/oben besteht es aus Knochen, vorne/unten aus einer Knorpellamelle."
+    },
+    {
+      "id": "A-007",
+      "frage": "Welche vier Funktionen hat die Nasenhöhle?",
+      "antwort": "Befeuchtung, Erwärmung und Reinigung der Atemluft sowie Geruchswahrnehmung."
+    },
+    {
+      "id": "A-008",
+      "frage": "Welche Nasennebenhöhlen gibt es?",
+      "antwort": "Stirnhöhle (Sinus frontalis), Siebbeinzellen (Sinus ethmoidales), Keilbeinhöhle (Sinus sphenoidalis) und Kieferhöhle (Sinus maxillaris). Es sind paarige, pneumatisierte Räume mit Verbindung zur Nasenhöhle."
+    },
+    {
+      "id": "A-009",
+      "frage": "Welche Funktionen haben die Nasennebenhöhlen?",
+      "antwort": "Gewichtsersparnis des Schädels, Erwärmung der Atemluft und Funktion als Resonanzorgan."
+    },
+    {
+      "id": "A-010",
+      "frage": "Warum sind Entzündungen der Nasennebenhöhlen klinisch relevant?",
+      "antwort": "Durch die Verbindung zur Nasenhöhle sind sie bei Infekten häufig mitbetroffen, und wegen der Nähe zu Augenhöhle und Schädelgrube kann sich eine Infektion dorthin ausbreiten."
+    },
+    {
+      "id": "A-011",
+      "frage": "Was ist der Pharynx und wo beginnt er?",
+      "antwort": "Ein muskulärer Schlauch hinter Nase und Mundraum bis zu Kehlkopf und Speiseröhre, durch den Luft, Nahrung und Flüssigkeit transportiert werden. Er beginnt hinter den Choanen (innere Nasenlöcher)."
+    },
+    {
+      "id": "A-012",
+      "frage": "In welche drei Etagen wird der Rachen unterteilt?",
+      "antwort": "Pars nasalis (Epipharynx), Pars oralis (Mesopharynx) und Pars laryngea (Hypopharynx)."
+    },
+    {
+      "id": "A-013",
+      "frage": "Was mündet in die Pars nasalis und was liegt dort?",
+      "antwort": "Beidseits die Ohrtrompete (Tuba auditiva), die den Rachen mit dem Mittelohr verbindet und den Druckausgleich ermöglicht. Am Rachendach liegt die Rachenmandel (Tonsilla pharyngealis)."
+    },
+    {
+      "id": "A-014",
+      "frage": "Warum ist der Schluckakt in der Pars oralis so komplex?",
+      "antwort": "Hier kreuzen sich Luft- und Nahrungsweg. Komplizierte Bewegungsabläufe sind nötig, damit Nahrung nicht in die Luftwege gerät."
+    },
+    {
+      "id": "A-015",
+      "frage": "Was kennzeichnet die Pars laryngea?",
+      "antwort": "Unterster und längster Rachenabschnitt; beginnt am Kehldeckel, zieht hinter dem Ringknorpel zur Speiseröhre. Hier liegt der Eingang zum Kehlkopf und damit zu den unteren Luftwegen."
+    },
+    {
+      "id": "A-016",
+      "frage": "Was ist der Kehlkopf (Larynx)?",
+      "antwort": "Ein Verschlussapparat aus Knorpel, Muskeln und Faserzügen, der die Trachea vom Ösophagus trennt. Er sitzt auf der Luftröhre und ist als Adamsapfel tastbar."
+    },
+    {
+      "id": "A-017",
+      "frage": "Welche Funktionen hat der Kehlkopf?",
+      "antwort": "Schutz der unteren Atemwege (Verschluss beim Schlucken, Hustenreflex), Stimmbildung (Phonation), Unterstützung der Bauchpresse und Pforte der Atemluft."
+    },
+    {
+      "id": "A-018",
+      "frage": "Welche vier Knorpel bilden das formgebende Kehlkopfgerüst?",
+      "antwort": "Cartilago cricoidea (Ringknorpel), Cartilago thyroidea (Schildknorpel), Cartilago epiglottica (Kehldeckelknorpel) und Cartilagines arytaenoideae (Stellknorpel)."
+    },
+    {
+      "id": "A-019",
+      "frage": "Welche drei kleinen, paarigen Knorpel gehören zusätzlich zum Kehlkopf?",
+      "antwort": "Cartilagines cuneiformes (Keilknorpel), corniculatae (Hörnchenknorpel) und triticeae (Weizenknorpel). Sie sind nicht an der Formgebung beteiligt."
+    },
+    {
+      "id": "A-020",
+      "frage": "Wie ist die Trachea aufgebaut?",
+      "antwort": "10–12 cm lang, beginnt unter dem Ringknorpel, 16–20 hufeisenförmige Knorpelspangen mit elastischen Bändern. Hinten eine bindegewebige Muskelplatte mit Kontakt zur Speiseröhre."
+    },
+    {
+      "id": "A-021",
+      "frage": "Womit ist die Trachea ausgekleidet und welche Aufgabe hat das?",
+      "antwort": "Mit Flimmerepithel und Becherzellen. Die Flimmerhärchen transportieren Fremdkörper und Sekret Richtung Rachen, die Becherzellen bilden Bronchialschleim, der die Atemluft anfeuchtet."
+    },
+    {
+      "id": "A-022",
+      "frage": "Auf welcher Höhe teilt sich die Trachea (Bifurkation)?",
+      "antwort": "Auf Höhe des 5. Brustwirbels in den rechten und linken Hauptbronchus."
+    },
+    {
+      "id": "A-023",
+      "frage": "Warum landen aspirierte Fremdkörper meist im rechten Hauptbronchus?",
+      "antwort": "Der rechte Hauptbronchus ist steiler, weiter und kürzer als der linke."
+    },
+    {
+      "id": "A-024",
+      "frage": "In wie viele Lappenbronchien teilen sich die Hauptbronchien?",
+      "antwort": "Rechts in drei, links in zwei Lappenbronchien, die sich weiter in Segmentbronchien teilen."
+    },
+    {
+      "id": "A-025",
+      "frage": "Was sind Bronchioli und wie ist ihre Wand aufgebaut?",
+      "antwort": "Kleinste Bronchien mit weniger als 1 mm Durchmesser, ohne Knorpel. Die Wand besteht aus glatter Muskulatur und elastischen Fasern; sie gehen in die Alveolargänge über."
+    },
+    {
+      "id": "A-026",
+      "frage": "Welche Aufgaben haben Trachea und Bronchien?",
+      "antwort": "Zu- und Ableitung sowie Verteilung der Atemluft, außerdem Erwärmung, Anfeuchtung und Reinigung."
+    },
+    {
+      "id": "A-027",
+      "frage": "Wie viele Lappen und Segmente haben die Lungenflügel?",
+      "antwort": "Rechts 3 Lappen (zwei Fissuren) und 10 Segmente; links 2 Lappen (eine Fissur) und 9 Segmente. Links ist die Lunge wegen des Herzens kleiner."
+    },
+    {
+      "id": "A-028",
+      "frage": "Was tritt am Lungenhilus ein und aus?",
+      "antwort": "Bronchien und Arterien treten ein, Venen und Lymphbahnen treten aus."
+    },
+    {
+      "id": "A-029",
+      "frage": "Welche Flächen der Lunge unterscheidet man?",
+      "antwort": "Facies diaphragmatica (zum Zwerchfell), Facies costalis (zu den Rippen) und Facies medialis (zur Körpermitte)."
+    },
+    {
+      "id": "A-030",
+      "frage": "Warum verfärben sich Hiluslymphknoten im Laufe des Lebens dunkel?",
+      "antwort": "Alveolarmakrophagen transportieren Staub aus der Lunge ab, der dort teilweise eingelagert wird. Vergrößerte Lymphknoten können im Röntgen Schatten bilden."
+    },
+    {
+      "id": "A-031",
+      "frage": "Aus welchen Blättern besteht die Pleura?",
+      "antwort": "Pleura visceralis (Lungenfell) überzieht die Lunge; Pleura parietalis (Rippenfell) kleidet Thoraxwand und Zwerchfelloberseite aus. Am Hilus gehen beide ineinander über."
+    },
+    {
+      "id": "A-032",
+      "frage": "Welche Funktion hat der Pleuraspalt?",
+      "antwort": "Die Flüssigkeit im Gleitspalt lässt die Blätter aufeinander gleiten, aber nicht voneinander lösen. Dadurch folgt die Lunge allen Bewegungen des Brustkorbs."
+    },
+    {
+      "id": "A-033",
+      "frage": "Wozu dienen die Reserveräume der Pleura?",
+      "antwort": "Das parietale Blatt ist stellenweise größer als das viszerale. In diese Räume dehnt sich die Lunge bei maximaler Einatmung aus."
+    },
+    {
+      "id": "A-034",
+      "frage": "Was passiert bei einem Pneumothorax?",
+      "antwort": "Bei Verletzung der Pleura kollabiert die Lunge durch ihre Eigenelastizität auf etwa ein Drittel ihres Volumens und kann den Thoraxbewegungen nicht mehr folgen. Beidseitig ist die Atemfunktion aufgehoben."
+    },
+    {
+      "id": "A-035",
+      "frage": "Welche Kennzahlen haben die Alveolen?",
+      "antwort": "Etwa 300 Mio. Alveolen mit ca. 0,2 mm Durchmesser; innere Oberfläche 80–100 m², trainiert bis 130 m². Sie sind der eigentliche Ort des Gasaustauschs."
+    },
+    {
+      "id": "A-036",
+      "frage": "Was ist der Unterschied zwischen Pneumozyten Typ I und Typ II?",
+      "antwort": "Typ I bilden das eigentliche Alveolarepithel und begrenzen die Alveolen. Typ II sind seltener und produzieren Surfactant."
+    },
+    {
+      "id": "A-037",
+      "frage": "Was ist Surfactant und warum ist er bei Frühgeborenen wichtig?",
+      "antwort": "Ein Protein-Lipid-Gemisch, das die Oberflächenspannung der Alveolen senkt. Vor der 32. SSW ist er unvollständig ausgebildet, die Alveolen kollabieren und eine selbstständige Atmung ist nicht möglich."
+    },
+    {
+      "id": "A-038",
+      "frage": "Welche Aufgaben haben Alveolarmakrophagen?",
+      "antwort": "Sie phagozytieren Staub, Schmutz und Surfactantreste, bauen Viren und Bakterien ab und dienen der Selbstreinigung und Abwehr. Sie werden mit dem Sputum ausgehustet."
+    },
+    {
+      "id": "A-039",
+      "frage": "Welche drei Reinigungsmechanismen hat die Lunge?",
+      "antwort": "Tracheobronchiale mukoziliäre Clearance, Husten-Clearance und alveoläre Clearance."
+    },
+    {
+      "id": "A-040",
+      "frage": "Wie funktioniert die mukoziliäre Clearance?",
+      "antwort": "Ein Schleim-Sekretfilm und die mundwärts schlagenden Zilien des Flimmerepithels transportieren Schleim samt Fremdstoffen aus den Atemwegen."
+    },
+    {
+      "id": "A-041",
+      "frage": "Aus welchen Schichten besteht das Bronchialsekret?",
+      "antwort": "Einem dünnflüssigen interziliären Sol (von den Mikrovilli gebildet) und einer darüberliegenden viskoelastischen Gelschicht, auf der Fremdkörper festgehalten und mundwärts transportiert werden."
+    },
+    {
+      "id": "A-042",
+      "frage": "Wie ist das Bronchialsekret zusammengesetzt?",
+      "antwort": "Zu 95 % aus Wasser; der Rest sind Glykoproteine, Immunglobuline, Lysozym, Lipide und anorganische Salze."
+    },
+    {
+      "id": "A-043",
+      "frage": "Wo ist die Husten-Clearance wirksam?",
+      "antwort": "Nur in den oberen Luftwegen bis zu den größeren Bronchien. In den kleineren Bronchien wirkt nur die mukoziliäre Clearance."
+    },
+    {
+      "id": "A-044",
+      "frage": "Wodurch wird Husten ausgelöst?",
+      "antwort": "Reflexartig durch Reizung von Chemo- und Mechanorezeptoren im Tracheobronchialbaum, etwa durch Trockenheit, Kälte, Fremdstoffe, Staub, Speichel oder Gase."
+    },
+    {
+      "id": "A-045",
+      "frage": "In welchen fünf Phasen läuft ein Hustenstoß ab?",
+      "antwort": "Irritationsphase, tiefe Inspiration (ca. 2,5 l), inspiratorische Pause, Kompressionsphase (Epiglottis schließt, Atemmuskeln kontrahieren, Druck steigt) und Expulsionsphase (explosionsartige Austreibung)."
+    },
+    {
+      "id": "A-046",
+      "frage": "Welche Patienten sind besonders aspirationsgefährdet?",
+      "antwort": "Frisch operierte Patienten nach Narkose oder Intubation, lange beatmete Patienten, Patienten nach Schlaganfall und mit schweren neurologischen Erkrankungen."
+    },
+    {
+      "id": "A-047",
+      "frage": "Wie funktioniert die alveoläre Clearance?",
+      "antwort": "Nicht-ziliärer Mukotransport über das Surfactant-System; am wichtigsten sind die Alveolarmakrophagen. Sie ist langsam: 24 Stunden bis 100 Tage."
+    },
+    {
+      "id": "A-048",
+      "frage": "Wie läuft die Einatmung ab?",
+      "antwort": "Aktiv: Zwerchfell und Mm. intercostales externi kontrahieren, Brustraum und Lunge erweitern sich. Gesteuert u. a. durch das ZNS."
+    },
+    {
+      "id": "A-049",
+      "frage": "Wie läuft die Ausatmung ab?",
+      "antwort": "Vorwiegend passiv durch die Eigenelastizität von Lunge und Thorax, wie bei einem Luftballon. Unterstützend wirken Mm. intercostales interni und Bauchmuskulatur."
+    },
+    {
+      "id": "A-050",
+      "frage": "Was ist das Atemzugvolumen und was ist der Totraum?",
+      "antwort": "Ca. 0,5 l pro Atemzug in Ruhe. Nur 2/3 erreichen die Alveolen; der Rest bleibt in Kehlkopf, Trachea und Bronchien (Totraum)."
+    },
+    {
+      "id": "A-051",
+      "frage": "Wie berechnet man das Atemminutenvolumen?",
+      "antwort": "Atemzugvolumen × Atemfrequenz, also 0,5 l × 15/min = 7,5 l/min (Frequenz 14–16/min)."
+    },
+    {
+      "id": "A-052",
+      "frage": "Wie groß sind inspiratorisches und exspiratorisches Reservevolumen?",
+      "antwort": "IRV ca. 2,5 l, ERV ca. 1,5 l."
+    },
+    {
+      "id": "A-053",
+      "frage": "Was ist die Vitalkapazität?",
+      "antwort": "Summe aus Atemzugvolumen, IRV und ERV, ca. 4,5 l. Sie ist der Gesamtspielraum, in dem das Lungenvolumen aktiv verändert werden kann."
+    },
+    {
+      "id": "A-054",
+      "frage": "Was ist die funktionelle Residualkapazität?",
+      "antwort": "Das nach normaler Ausatmung in der Lunge verbleibende Volumen, ca. 3 l (ERV + Residualvolumen)."
+    },
+    {
+      "id": "A-055",
+      "frage": "Was sind Residualvolumen und Totalkapazität?",
+      "antwort": "Residualvolumen: Restluft nach maximaler Ausatmung, ca. 1,5 l. Totalkapazität: Vitalkapazität + Residualvolumen, ca. 6 l."
+    },
+    {
+      "id": "A-056",
+      "frage": "Wovon hängen die Lungenvolumina ab und wie misst man sie?",
+      "antwort": "Von Geschlecht, Körperbau, Alter und Trainingszustand. Gemessen mit dem Spirometer, ausgehend von der Atemruhelage."
+    },
+    {
+      "id": "A-057",
+      "frage": "Wovon hängt die Menge des Gasaustauschs ab?",
+      "antwort": "Je mehr Alveolen belüftet und je mehr Kapillaren durchblutet werden, desto größer ist die Kontaktfläche und damit der Gasaustausch."
+    },
+    {
+      "id": "A-058",
+      "frage": "Welche Schichten bilden die Blut-Luft-Schranke?",
+      "antwort": "Alveolarepithel (Alveolardeckzellen), Basalmembran und Endothel der Blutkapillaren."
+    },
+    {
+      "id": "A-059",
+      "frage": "Wo sitzt das Atemzentrum und was steuert es?",
+      "antwort": "In der Medulla oblongata (Hirnstamm) und im oberen Halsmark. Es steuert Atemrhythmus und Atemfrequenz mit dem Ziel konstanter O₂- und CO₂-Werte."
+    },
+    {
+      "id": "A-060",
+      "frage": "Welche Atemreize gibt es?",
+      "antwort": "Chemische (pCO₂, pH, pO₂ im Blut) und nicht chemische (Hering-Breuer-Reflex, Körpertemperatur, Blutdruck, Hormone)."
+    },
+    {
+      "id": "A-061",
+      "frage": "Wo liegen die peripheren Chemorezeptoren und wie wird ihr Signal geleitet?",
+      "antwort": "Im Glomus caroticum (A. carotis) und in den Glomera aortica. Die Information läuft über N. glossopharyngeus (IX) und N. vagus (X) zum verlängerten Mark."
+    },
+    {
+      "id": "A-062",
+      "frage": "Wann wird die Atmung gesteigert und mit welchem Effekt?",
+      "antwort": "Bei erniedrigtem pH, erhöhtem CO₂ oder erniedrigtem O₂. Es wird mehr O₂ aufgenommen, mehr CO₂ abgeatmet und der pH-Wert normalisiert."
+    },
+    {
+      "id": "A-063",
+      "frage": "Welche Rolle spielt die Lunge im Säure-Basen-Haushalt?",
+      "antwort": "Sie ist neben der Niere das wichtigste Regulationsorgan für die H⁺-Konzentration, indem sie CO₂ abatmet."
+    }
+  ],
+  "mc": [
+    {
+      "id": "A-mc-001",
+      "frage": "Auf Höhe welches Wirbels teilt sich die Trachea?",
+      "richtig": "5. Brustwirbel",
+      "falsch": [
+        "7. Halswirbel",
+        "10. Brustwirbel",
+        "1. Lendenwirbel"
+      ],
+      "erklaerung": "Die Bifurkation liegt auf Höhe Th5."
+    },
+    {
+      "id": "A-mc-002",
+      "frage": "Welcher Hauptbronchus ist steiler und weiter?",
+      "richtig": "Der rechte",
+      "falsch": [
+        "Der linke",
+        "Beide gleich",
+        "Das hängt von der Körperlage ab"
+      ],
+      "erklaerung": "Deshalb landen Fremdkörper meist rechts."
+    },
+    {
+      "id": "A-mc-003",
+      "frage": "Wie viele Segmente hat die linke Lunge?",
+      "richtig": "9",
+      "falsch": [
+        "10",
+        "8",
+        "12"
+      ],
+      "erklaerung": "Links 2 Lappen mit 9, rechts 3 Lappen mit 10 Segmenten."
+    },
+    {
+      "id": "A-mc-004",
+      "frage": "Welche Zellen produzieren Surfactant?",
+      "richtig": "Pneumozyten Typ II",
+      "falsch": [
+        "Pneumozyten Typ I",
+        "Alveolarmakrophagen",
+        "Becherzellen"
+      ],
+      "erklaerung": "Typ I bilden das eigentliche Alveolarepithel."
+    },
+    {
+      "id": "A-mc-005",
+      "frage": "Wie groß ist die Vitalkapazität ungefähr?",
+      "richtig": "4,5 l",
+      "falsch": [
+        "6 l",
+        "3 l",
+        "7,5 l"
+      ],
+      "erklaerung": "AZV 0,5 + IRV 2,5 + ERV 1,5 = 4,5 l."
+    },
+    {
+      "id": "A-mc-006",
+      "frage": "Wie groß ist das Residualvolumen?",
+      "richtig": "1,5 l",
+      "falsch": [
+        "0,5 l",
+        "3 l",
+        "2,5 l"
+      ],
+      "erklaerung": "3 l ist die funktionelle Residualkapazität."
+    },
+    {
+      "id": "A-mc-007",
+      "frage": "Wie hoch ist das Atemminutenvolumen in Ruhe?",
+      "richtig": "7,5 l/min",
+      "falsch": [
+        "5 l/min",
+        "15 l/min",
+        "0,5 l/min"
+      ],
+      "erklaerung": "0,5 l × 15/min."
+    },
+    {
+      "id": "A-mc-008",
+      "frage": "Welche Muskeln sind für die Ruheeinatmung verantwortlich?",
+      "richtig": "Zwerchfell und Mm. intercostales externi",
+      "falsch": [
+        "Mm. intercostales interni",
+        "Bauchmuskulatur",
+        "Nur die Atemhilfsmuskulatur"
+      ],
+      "erklaerung": "Interni und Bauchmuskeln unterstützen die Ausatmung."
+    },
+    {
+      "id": "A-mc-009",
+      "frage": "Wo liegt das Atemzentrum?",
+      "richtig": "Medulla oblongata",
+      "falsch": [
+        "Kleinhirn",
+        "Hypothalamus",
+        "Großhirnrinde"
+      ],
+      "erklaerung": "Zusätzlich beteiligt ist das obere Halsmark."
+    },
+    {
+      "id": "A-mc-010",
+      "frage": "Über welche Hirnnerven gelangen Signale der peripheren Chemorezeptoren zum Atemzentrum?",
+      "richtig": "IX und X",
+      "falsch": [
+        "VII und VIII",
+        "V und VII",
+        "XI und XII"
+      ],
+      "erklaerung": "N. glossopharyngeus und N. vagus."
+    },
+    {
+      "id": "A-mc-011",
+      "frage": "Welche Veränderung steigert die Atmung NICHT?",
+      "richtig": "Anstieg des pH-Werts",
+      "falsch": [
+        "Anstieg des CO₂",
+        "Abfall des O₂",
+        "Abfall des pH-Werts"
+      ],
+      "erklaerung": "Ein steigender pH (Alkalose) würde die Atmung eher dämpfen."
+    },
+    {
+      "id": "A-mc-012",
+      "frage": "Welcher Knorpel gehört NICHT zum formgebenden Kehlkopfgerüst?",
+      "richtig": "Cartilago cuneiformis",
+      "falsch": [
+        "Cartilago cricoidea",
+        "Cartilago thyroidea",
+        "Cartilago epiglottica"
+      ],
+      "erklaerung": "Keil-, Hörnchen- und Weizenknorpel sind nicht formgebend."
+    },
+    {
+      "id": "A-mc-013",
+      "frage": "In welche Rachenetage mündet die Tuba auditiva?",
+      "richtig": "Pars nasalis",
+      "falsch": [
+        "Pars oralis",
+        "Pars laryngea",
+        "Sie mündet in den Kehlkopf"
+      ],
+      "erklaerung": "Sie ermöglicht den Druckausgleich zum Mittelohr."
+    },
+    {
+      "id": "A-mc-014",
+      "frage": "Welche Clearance wirkt in den kleinen Bronchien?",
+      "richtig": "Nur die mukoziliäre Clearance",
+      "falsch": [
+        "Nur die Husten-Clearance",
+        "Beide gleich stark",
+        "Keine"
+      ],
+      "erklaerung": "Husten ist nur bis zu den größeren Bronchien effektiv."
+    },
+    {
+      "id": "A-mc-015",
+      "frage": "Wie lange kann die alveoläre Clearance dauern?",
+      "richtig": "24 Stunden bis 100 Tage",
+      "falsch": [
+        "Wenige Minuten",
+        "1–2 Stunden",
+        "Über ein Jahr"
+      ],
+      "erklaerung": "Sie ist der langsamste Reinigungsmechanismus."
+    },
+    {
+      "id": "A-mc-016",
+      "frage": "Wie viele Alveolen haben beide Lungen zusammen?",
+      "richtig": "ca. 300 Millionen",
+      "falsch": [
+        "ca. 3 Millionen",
+        "ca. 30 Millionen",
+        "ca. 3 Milliarden"
+      ],
+      "erklaerung": "Innere Oberfläche 80–100 m²."
+    },
+    {
+      "id": "A-mc-017",
+      "frage": "Welche Funktion haben die Nasennebenhöhlen NICHT?",
+      "richtig": "Geruchswahrnehmung",
+      "falsch": [
+        "Gewichtsersparnis des Schädels",
+        "Resonanzorgan",
+        "Erwärmung der Atemluft"
+      ],
+      "erklaerung": "Geruchswahrnehmung ist eine Funktion der Nasenhöhle."
+    },
+    {
+      "id": "A-mc-018",
+      "frage": "Welche Schicht gehört NICHT zur Blut-Luft-Schranke?",
+      "richtig": "Pleura visceralis",
+      "falsch": [
+        "Alveolarepithel",
+        "Basalmembran",
+        "Kapillarendothel"
+      ],
+      "erklaerung": "Die Pleura überzieht die Lunge außen."
+    },
+    {
+      "id": "A-mc-019",
+      "frage": "Was passiert bei einem Pneumothorax?",
+      "richtig": "Die Lunge kollabiert durch ihre Eigenelastizität",
+      "falsch": [
+        "Die Lunge überbläht sich",
+        "Der Pleuraspalt verklebt",
+        "Das Zwerchfell reißt"
+      ],
+      "erklaerung": "Das Lungenvolumen sinkt auf etwa ein Drittel."
+    }
+  ],
+  "offen": [
+    {
+      "id": "A-of-001",
+      "frage": "Erkläre den Unterschied zwischen Ein- und Ausatmung.",
+      "loesung": "Die Einatmung ist aktiv: Zwerchfell und Mm. intercostales externi erweitern den Thorax. Die Ausatmung ist in Ruhe passiv durch die Eigenelastizität von Lunge und Thorax; bei forcierter Ausatmung helfen Mm. intercostales interni und Bauchmuskeln."
+    },
+    {
+      "id": "A-of-002",
+      "frage": "Nenne die drei Reinigungsmechanismen der Lunge und wo sie jeweils wirken.",
+      "loesung": "Mukoziliäre Clearance im gesamten Tracheobronchialbaum inkl. kleiner Bronchien; Husten-Clearance nur in oberen Luftwegen bis zu den größeren Bronchien; alveoläre Clearance in den Alveolen über Surfactant und Alveolarmakrophagen (langsam, bis 100 Tage)."
+    },
+    {
+      "id": "A-of-003",
+      "frage": "Was passiert bei einem Pneumothorax und warum?",
+      "loesung": "Die Pleura wird verletzt, Luft gelangt in den Pleuraspalt, die Haftung geht verloren. Durch ihre Eigenelastizität kollabiert die Lunge auf ca. 1/3 und folgt den Thoraxbewegungen nicht mehr."
+    },
+    {
+      "id": "A-of-004",
+      "frage": "Warum können Frühgeborene vor der 32. SSW oft nicht selbstständig atmen?",
+      "loesung": "Die Pneumozyten Typ II bilden noch zu wenig Surfactant. Ohne ihn ist die Oberflächenspannung hoch und die Alveolen kollabieren."
+    },
+    {
+      "id": "A-of-005",
+      "frage": "Beschreibe den Regelkreis der Atmung bei einem CO₂-Anstieg im Blut.",
+      "loesung": "Chemorezeptoren (Glomus caroticum, Glomera aortica) melden über N. IX und X an die Medulla oblongata. Das Atemzentrum steigert über Halsmark und periphere Nerven die Atemtätigkeit, CO₂ wird abgeatmet, der pH normalisiert sich."
+    },
+    {
+      "id": "A-of-006",
+      "frage": "Rechne: Atemfrequenz 12/min, Atemzugvolumen 0,6 l. Wie hoch ist das Atemminutenvolumen?",
+      "loesung": "12 × 0,6 l = 7,2 l/min."
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "physiologie-lernkarten",
+  "private": true,
+  "type": "module",
+  "description": "Karteikarten und Quiz für Physiologie, mit Wiederholungssystem",
+  "scripts": {
+    "test": "node --test",
+    "pruefen": "node scripts/pruefe-inhalte.js"
+  },
+  "engines": { "node": ">=20" }
+}

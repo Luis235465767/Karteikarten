@@ -1,0 +1,250 @@
+{
+  "thema": "B",
+  "karten": [
+    {
+      "id": "B-001",
+      "frage": "Welche Aufgaben hat das Blut?",
+      "antwort": "Transport (O₂, CO₂, Nährstoffe, Hormone, Stoffwechselprodukte, Wärme), Wärmeregulation, Immunabwehr, Flüssigkeitshaushalt, Blutgerinnung und Pufferung im Säure-Basen-Haushalt."
+    },
+    {
+      "id": "B-002",
+      "frage": "Wie groß ist das Blutvolumen?",
+      "antwort": "Etwa 7–8 % des Körpergewichts, bei 70 kg also 4–6 l."
+    },
+    {
+      "id": "B-003",
+      "frage": "Was ist der Hämatokrit?",
+      "antwort": "Der Volumenanteil der Blutzellen am Gesamtblut, ca. 0,40–0,45 (geschlechtsabhängig). Die restlichen 55–60 % sind Plasma."
+    },
+    {
+      "id": "B-004",
+      "frage": "Woraus besteht das Blutplasma?",
+      "antwort": "Klare gelbe Flüssigkeit aus ca. 90 % Wasser, 7 % Plasmaproteinen (Albumin, Globuline), Elektrolyten (z. B. Na⁺, K⁺) und kleinmolekularen Stoffen (Glukose, Hormone, Vitamine)."
+    },
+    {
+      "id": "B-005",
+      "frage": "In welche Gruppen lassen sich Plasmaproteine trennen und welche Funktionen haben sie?",
+      "antwort": "Per Eiweißelektrophorese in Albumine, α1-, α2-, β- und γ-Globuline. Funktionen: Transport, Schutz vor Blutverlust und Abwehr."
+    },
+    {
+      "id": "B-006",
+      "frage": "Was sind die wichtigsten Fakten zu Erythrozyten?",
+      "antwort": "Über 99 % der Blutzellen, ca. 5 Mio./µl. Aufgaben: O₂/CO₂-Transport und pH-Regulation. Gebildet im roten Knochenmark, Lebensdauer 100–120 Tage, danach Abbau durch Phagozytose."
+    },
+    {
+      "id": "B-007",
+      "frage": "Was kennzeichnet Leukozyten?",
+      "antwort": "4.000–10.000/µl, besitzen einen Zellkern, stammen aus dem Knochenmark und dienen der Abwehr. Drei Hauptgruppen: Granulozyten, Monozyten, Lymphozyten."
+    },
+    {
+      "id": "B-008",
+      "frage": "Was sind Granulozyten?",
+      "antwort": "45–75 % der Leukozyten, Mikrophagen der unspezifischen zellulären Abwehr, können ins Gewebe auswandern. Lebensdauer 1–7 Tage, Abbau durch Makrophagen."
+    },
+    {
+      "id": "B-009",
+      "frage": "Welche Aufgaben haben neutrophile, eosinophile und basophile Granulozyten?",
+      "antwort": "Neutrophile: allgemeine Phagozytose. Eosinophile: Parasitenabwehr. Basophile: Freisetzung von Histamin (gefäßerweiternd) und Heparin (gerinnungshemmend)."
+    },
+    {
+      "id": "B-010",
+      "frage": "Was sind Monozyten?",
+      "antwort": "3–7 % der Leukozyten, größte Blutzellen mit nierenförmigem Kern. Sie bleiben 1–3 Tage im Blut und wandeln sich im Gewebe zu Makrophagen um, die Monate leben."
+    },
+    {
+      "id": "B-011",
+      "frage": "Was sind Lymphozyten und wie werden sie eingeteilt?",
+      "antwort": "25–40 % der Leukozyten, kleinste Leukozyten, spezifische Abwehr. T-Lymphozyten (80 %, wirken vor Ort), B-Lymphozyten (15 %, bilden Antikörper), NK-Zellen (5 %, töten virusbefallene Zellen)."
+    },
+    {
+      "id": "B-012",
+      "frage": "Wo befinden sich die Lymphozyten?",
+      "antwort": "Nur ca. 4 % im Blut, ca. 70 % in lymphatischen Organen, ca. 10 % im Knochenmark; der Rest zirkuliert zwischen Gewebe, Lymphe und Blut."
+    },
+    {
+      "id": "B-013",
+      "frage": "Was sind die wichtigsten Fakten zu Thrombozyten?",
+      "antwort": "Kernlose Zellfragmente (1–4 µm), 150.000–400.000/µl, Lebensdauer 5–12 Tage, Abbau v. a. in der Milz. Sie werden durch Gefäßverletzung aktiviert und dienen der Blutstillung."
+    },
+    {
+      "id": "B-014",
+      "frage": "Worauf beruhen die Blutgruppen?",
+      "antwort": "Auf Glykoproteinen (Blutgruppenantigenen) an der Erythrozytenmembran; klinisch wichtig sind das AB0- und das Rhesus-System."
+    },
+    {
+      "id": "B-015",
+      "frage": "Wie sind die AB0-Blutgruppen in Deutschland verteilt?",
+      "antwort": "A 44 %, 0 42 %, B 10 %, AB 4 %."
+    },
+    {
+      "id": "B-016",
+      "frage": "Welche Antikörper hat man im Serum bei welcher Blutgruppe?",
+      "antwort": "A: Anti-B. B: Anti-A. AB: keine. 0: Anti-A und Anti-B. Man hat jeweils Antikörper gegen das Antigen, das auf den eigenen Erythrozyten fehlt."
+    },
+    {
+      "id": "B-017",
+      "frage": "Was ist das Rhesus-System?",
+      "antwort": "Rh-positiv (ca. 85 %) tragen das Antigen D auf den Erythrozyten, Rh-negativ (ca. 15 %) nicht. Anders als im AB0-System entstehen Antikörper erst nach Kontakt mit dem Antigen."
+    },
+    {
+      "id": "B-018",
+      "frage": "Wer ist Universalspender und wer Universalempfänger?",
+      "antwort": "Universalspender: Blutgruppe 0 (Erythrozyten ohne AB0-Antigene). Universalempfänger: AB (keine AB0-Antikörper im Serum). Ideal ist Blut gleicher Gruppe."
+    },
+    {
+      "id": "B-019",
+      "frage": "Aus welchen vier Prozessen besteht die Blutstillung?",
+      "antwort": "Vasokonstriktion, zelluläre Hämostase (Thrombozyten), plasmatische Hämostase (Gerinnung) und Fibrinolyse."
+    },
+    {
+      "id": "B-020",
+      "frage": "Wie läuft die primäre (zelluläre) Hämostase ab?",
+      "antwort": "Thrombozyten heften sich an die verletzte Gefäßwand (Adhäsion) und verkleben zum weißen Thrombus (Aggregation), abgeschlossen in 1–4 Minuten (Blutungszeit). Freigesetztes Serotonin verstärkt die Aggregation und verengt Gefäße."
+    },
+    {
+      "id": "B-021",
+      "frage": "Wie läuft die plasmatische Gerinnung ab?",
+      "antwort": "Als Enzymkaskade, ausgelöst durch einen Endotheldefekt: Prothrombin → Thrombin, das Fibrinogen in Fibrin umwandelt."
+    },
+    {
+      "id": "B-022",
+      "frage": "Was ist die Fibrinolyse?",
+      "antwort": "Sie begrenzt den Thrombus auf den Verletzungsort und löst Fibrin auf: Plasminogenaktivatoren wandeln Plasminogen in Plasmin um. Therapeutisch genutzt bei Thrombosen und Embolien."
+    }
+  ],
+  "mc": [
+    {
+      "id": "B-mc-001",
+      "frage": "Wie hoch ist der normale Hämatokrit?",
+      "richtig": "40–45 %",
+      "falsch": [
+        "10–15 %",
+        "55–60 %",
+        "90 %"
+      ],
+      "erklaerung": "55–60 % sind Plasma."
+    },
+    {
+      "id": "B-mc-002",
+      "frage": "Wie lange leben Erythrozyten?",
+      "richtig": "100–120 Tage",
+      "falsch": [
+        "5–12 Tage",
+        "1–7 Tage",
+        "Mehrere Jahre"
+      ],
+      "erklaerung": "5–12 Tage gilt für Thrombozyten."
+    },
+    {
+      "id": "B-mc-003",
+      "frage": "Welchen Anteil der Leukozyten machen Lymphozyten aus?",
+      "richtig": "25–40 %",
+      "falsch": [
+        "45–75 %",
+        "3–7 %",
+        "über 90 %"
+      ],
+      "erklaerung": "45–75 % sind Granulozyten."
+    },
+    {
+      "id": "B-mc-004",
+      "frage": "Was ist die Hauptaufgabe der eosinophilen Granulozyten?",
+      "richtig": "Abwehr von Parasiten",
+      "falsch": [
+        "Bildung von Antikörpern",
+        "Freisetzung von Heparin",
+        "O₂-Transport"
+      ],
+      "erklaerung": "Basophile setzen Histamin und Heparin frei."
+    },
+    {
+      "id": "B-mc-005",
+      "frage": "Welche Zellen bilden Antikörper?",
+      "richtig": "B-Lymphozyten",
+      "falsch": [
+        "T-Lymphozyten",
+        "NK-Zellen",
+        "Monozyten"
+      ],
+      "erklaerung": "T-Lymphozyten wirken direkt vor Ort."
+    },
+    {
+      "id": "B-mc-006",
+      "frage": "Welche Blutgruppe ist Universalspender?",
+      "richtig": "0",
+      "falsch": [
+        "AB",
+        "A",
+        "B"
+      ],
+      "erklaerung": "AB ist Universalempfänger."
+    },
+    {
+      "id": "B-mc-007",
+      "frage": "Welche Antikörper hat ein Mensch mit Blutgruppe A im Serum?",
+      "richtig": "Anti-B",
+      "falsch": [
+        "Anti-A",
+        "Anti-A und Anti-B",
+        "Keine"
+      ],
+      "erklaerung": "Antikörper richten sich gegen das fehlende Antigen."
+    },
+    {
+      "id": "B-mc-008",
+      "frage": "Wann entstehen Rhesus-Antikörper?",
+      "richtig": "Erst nach Kontakt mit dem Antigen D",
+      "falsch": [
+        "Schon von Geburt an",
+        "Nie",
+        "Nur bei Blutgruppe 0"
+      ],
+      "erklaerung": "Im AB0-System sind sie natürlich vorhanden."
+    },
+    {
+      "id": "B-mc-009",
+      "frage": "Wie viele Thrombozyten enthält ein µl Blut?",
+      "richtig": "150.000–400.000",
+      "falsch": [
+        "4.000–10.000",
+        "ca. 5 Millionen",
+        "1.000–2.000"
+      ],
+      "erklaerung": "4.000–10.000 sind die Leukozyten."
+    },
+    {
+      "id": "B-mc-010",
+      "frage": "Was entsteht in der Fibrinolyse aus Plasminogen?",
+      "richtig": "Plasmin",
+      "falsch": [
+        "Thrombin",
+        "Fibrin",
+        "Prothrombin"
+      ],
+      "erklaerung": "Plasmin löst Fibrinfäden auf."
+    },
+    {
+      "id": "B-mc-011",
+      "frage": "Was ist das Endprodukt der plasmatischen Gerinnung?",
+      "richtig": "Fibrin",
+      "falsch": [
+        "Thrombin",
+        "Plasmin",
+        "Serotonin"
+      ],
+      "erklaerung": "Thrombin wandelt Fibrinogen in Fibrin um."
+    }
+  ],
+  "offen": [
+    {
+      "id": "B-of-001",
+      "frage": "Vergleiche AB0- und Rhesus-System.",
+      "loesung": "AB0: Antigene A/B; Antikörper gegen das fehlende Antigen sind von Natur aus vorhanden. Rhesus: Antigen D (85 % Rh+); Antikörper entstehen erst nach Kontakt. Beide führen bei falscher Transfusion zu Unverträglichkeitsreaktionen."
+    },
+    {
+      "id": "B-of-002",
+      "frage": "Beschreibe den Ablauf der Blutstillung.",
+      "loesung": "Vasokonstriktion, dann primäre Hämostase (Thrombozytenadhäsion und -aggregation zum weißen Thrombus, 1–4 min), plasmatische Gerinnung (Prothrombin → Thrombin, Fibrinogen → Fibrin) und schließlich Fibrinolyse (Plasmin löst Fibrin auf)."
+    }
+  ]
+}

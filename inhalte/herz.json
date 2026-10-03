@@ -1,0 +1,305 @@
+{
+  "thema": "H",
+  "karten": [
+    {
+      "id": "H-001",
+      "frage": "Was ist das Herz und wo liegt es?",
+      "antwort": "Ein muskuläres, kegelförmiges Hohlorgan (ca. 300 g) im Mediastinum zwischen den Lungenflügeln, hinter dem Sternum und vor dem Ösophagus; es liegt kaudal dem Zwerchfell auf. Die Längsachse verläuft schräg, die Herzspitze zeigt nach links unten."
+    },
+    {
+      "id": "H-002",
+      "frage": "Wie ist das Herz grob gegliedert?",
+      "antwort": "Das Septum trennt linke und rechte Herzhälfte; jede besteht aus Vorhof (Atrium) und Kammer (Ventrikel)."
+    },
+    {
+      "id": "H-003",
+      "frage": "Welche Herzklappen gibt es?",
+      "antwort": "Zwei Segelklappen (AV-Klappen) zwischen Vorhöfen und Kammern: Trikuspidalklappe (rechts, 3 Segel) und Mitralklappe (links, 2 Segel). Zwei Taschenklappen: Pulmonalklappe und Aortenklappe mit je drei halbmondförmigen Taschen."
+    },
+    {
+      "id": "H-004",
+      "frage": "Welche Funktion haben Papillarmuskeln und Sehnenfäden?",
+      "antwort": "Sie verankern die Segelklappen in den Kammern und verhindern, dass diese in die Vorhöfe zurückschlagen."
+    },
+    {
+      "id": "H-005",
+      "frage": "Was mündet in den rechten Vorhof?",
+      "antwort": "Obere Hohlvene (Kopf, Hals, Arme, Brustwand), untere Hohlvene (Beine, Rumpf, Bauchorgane) und der Sinus coronarius."
+    },
+    {
+      "id": "H-006",
+      "frage": "Was mündet in den linken Vorhof?",
+      "antwort": "Je zwei linke und zwei rechte Lungenvenen mit O₂-reichem Blut."
+    },
+    {
+      "id": "H-007",
+      "frage": "Welche Herzkammer hat die dickste Wand und warum?",
+      "antwort": "Die linke Kammer, da sie das Blut gegen den hohen Druck in Aorta und Körperkreislauf pumpt."
+    },
+    {
+      "id": "H-008",
+      "frage": "Aus welchen Schichten besteht die Herzwand?",
+      "antwort": "Endokard (Endothel, bildet die Klappen), Myokard (Herzmuskel, in den Vorhöfen dünn, links dicker als rechts) und Epikard (Plattenepithel, außen)."
+    },
+    {
+      "id": "H-009",
+      "frage": "Wie ist der Herzbeutel aufgebaut?",
+      "antwort": "Das Perikard aus straffem Bindegewebe ist mit dem Zwerchfell und seitlich mit dem Lungenfell verwachsen. Zwischen Perikard und Epikard liegen 15–20 ml Flüssigkeit als Gleitfilm."
+    },
+    {
+      "id": "H-010",
+      "frage": "Welche Gebiete versorgen die Koronararterien?",
+      "antwort": "Die linke (Ramus interventricularis anterior und Ramus circumflexus) versorgt linken Vorhof, linke Kammer und den Großteil des Septums. Die rechte versorgt rechten Vorhof, rechte Kammer und einen kleinen Teil des Septums."
+    },
+    {
+      "id": "H-011",
+      "frage": "Wohin fließt das Blut der Koronarvenen ab?",
+      "antwort": "Sie verlaufen parallel zu den Arterien und münden als Sinus coronarius in den rechten Vorhof."
+    },
+    {
+      "id": "H-012",
+      "frage": "Was passiert in der Anspannungsphase der Systole?",
+      "antwort": "Alle Klappen sind geschlossen; der Druck in den Kammern steigt, bis er den Druck in Aorta bzw. Truncus pulmonalis übersteigt und die Taschenklappen öffnen."
+    },
+    {
+      "id": "H-013",
+      "frage": "Was passiert in der Austreibungsphase?",
+      "antwort": "Die Kammern kontrahieren und werfen Blut in Körper- und Lungenkreislauf aus, bis die Taschenklappen wieder schließen. Dann beginnt die Diastole."
+    },
+    {
+      "id": "H-014",
+      "frage": "Was passiert in der Entspannungsphase der Diastole?",
+      "antwort": "Alle Klappen sind geschlossen, der Kammerdruck fällt und der Vorhofdruck steigt, bis sich die Segelklappen öffnen."
+    },
+    {
+      "id": "H-015",
+      "frage": "Was passiert in der Füllungsphase?",
+      "antwort": "Die Segelklappen sind offen, Blut fließt in die erschlafften Kammern, unterstützt durch die Vorhofkontraktion. Steigender Kammerdruck schließt die Segelklappen, die Systole beginnt."
+    },
+    {
+      "id": "H-016",
+      "frage": "Was bedeutet es, dass das Herz autonom arbeitet?",
+      "antwort": "Das Erregungsbildungssystem bildet Aktionspotenziale selbst, unabhängig vom Nervensystem. Das vegetative Nervensystem beeinflusst nur Frequenz, Kraft und Leitung."
+    },
+    {
+      "id": "H-017",
+      "frage": "In welcher Reihenfolge läuft die Erregung durch das Herz?",
+      "antwort": "Sinusknoten → Vorhofmuskulatur → AV-Knoten → His-Bündel → Kammerschenkel (Tawara-Schenkel) → Purkinje-Fasern → Kammermuskulatur."
+    },
+    {
+      "id": "H-018",
+      "frage": "Wo liegt der Sinusknoten und welche Aufgabe hat er?",
+      "antwort": "In der Wand des rechten Vorhofs; er ist der Schrittmacher und erzeugt rhythmische Erregungen, die über beide Vorhöfe laufen."
+    },
+    {
+      "id": "H-019",
+      "frage": "Wo liegt der AV-Knoten und welche Aufgabe hat er?",
+      "antwort": "Am Boden des rechten Vorhofs an der Grenze zu den Kammern. Er verzögert die Erregung, damit sich die Vorhöfe vor den Kammern kontrahieren."
+    },
+    {
+      "id": "H-020",
+      "frage": "In welchen Strukturen kann Erregung gebildet werden?",
+      "antwort": "Im Sinusknoten, AV-Knoten und His-Bündel."
+    },
+    {
+      "id": "H-021",
+      "frage": "Was bedeuten Chronotropie, Inotropie und Dromotropie?",
+      "antwort": "Chronotropie: Herzfrequenz. Inotropie: Schlagkraft und damit Schlagvolumen. Dromotropie: Erregungsleitungsgeschwindigkeit von Vorhof auf Kammer. Der Sympathikus steigert alle drei, der Parasympathikus senkt sie."
+    },
+    {
+      "id": "H-022",
+      "frage": "Welche Transmitter nutzen Sympathikus und Parasympathikus am Herzen?",
+      "antwort": "Sympathikus: Noradrenalin über β-Rezeptoren, unterstützt durch Adrenalin aus dem Nebennierenmark. Parasympathikus (N. vagus): Acetylcholin."
+    },
+    {
+      "id": "H-023",
+      "frage": "Was ist die Vorlast?",
+      "antwort": "Die Kräfte am Ende der Diastole, die die Kammermuskelfasern dehnen, also die Füllung des Herzens vor der Kontraktion (enddiastolische Wandspannung)."
+    },
+    {
+      "id": "H-024",
+      "frage": "Was ist die Nachlast?",
+      "antwort": "Der Widerstand, den das Herz beim Auswurf überwinden muss, praktisch der Druck in Aorta bzw. A. pulmonalis."
+    },
+    {
+      "id": "H-025",
+      "frage": "Was besagt der Frank-Starling-Mechanismus?",
+      "antwort": "Mehr Füllung führt zu stärkerer Dehnung, einer kräftigeren Kontraktion und höherem Schlagvolumen."
+    },
+    {
+      "id": "H-026",
+      "frage": "Wie berechnet man das Herzminutenvolumen und wie hoch ist es in Ruhe?",
+      "antwort": "HZV = Herzfrequenz × Schlagvolumen, in Ruhe 70/min × 70 ml ≈ 4,9 l, also ca. 5 l/min in Körper- und Lungenkreislauf."
+    },
+    {
+      "id": "H-027",
+      "frage": "Was ist das Restvolumen des Herzens?",
+      "antwort": "Die ca. 70 ml, die nach dem Auswurf in den Kammern verbleiben."
+    },
+    {
+      "id": "H-028",
+      "frage": "Wie passt sich das Herz an Belastung an?",
+      "antwort": "Herzfrequenz und Schlagvolumen steigen, damit auch das Herzminutenvolumen, um den erhöhten Bedarf zu decken."
+    },
+    {
+      "id": "H-029",
+      "frage": "Welche Herzfrequenzen sind bei Kindern normal?",
+      "antwort": "Säuglinge 120–160/min, Kleinkinder 90–140/min, Vorschulkinder 80–110/min, Schulkinder 75–100/min. Sie schwankt stärker, bei Fieber oder Anspannung bis 200/min."
+    },
+    {
+      "id": "H-030",
+      "frage": "Wie verändert sich die Herzleistung im Alter?",
+      "antwort": "Die maximale Herzfrequenz sinkt um bis zu 25 %, Herzkraft, Schlagvolumen und HZV nehmen ab. Folge: geringere Belastbarkeit und häufigere Synkopen."
+    },
+    {
+      "id": "H-031",
+      "frage": "Was misst das EKG und welche Ableitungen gibt es?",
+      "antwort": "Die elektrischen Spannungsänderungen der Herzerregung an der Körperoberfläche. Brustwandableitungen (6 Elektroden) und Extremitätenableitungen (je eine Elektrode an Hand- und Fußgelenken)."
+    }
+  ],
+  "mc": [
+    {
+      "id": "H-mc-001",
+      "frage": "Welche Herzklappe hat zwei Segel?",
+      "richtig": "Mitralklappe",
+      "falsch": [
+        "Trikuspidalklappe",
+        "Aortenklappe",
+        "Pulmonalklappe"
+      ],
+      "erklaerung": "Die Trikuspidalklappe hat drei Segel."
+    },
+    {
+      "id": "H-mc-002",
+      "frage": "Welche Struktur ist der primäre Schrittmacher des Herzens?",
+      "richtig": "Sinusknoten",
+      "falsch": [
+        "AV-Knoten",
+        "His-Bündel",
+        "Purkinje-Fasern"
+      ],
+      "erklaerung": "Er liegt in der Wand des rechten Vorhofs."
+    },
+    {
+      "id": "H-mc-003",
+      "frage": "Was ist die Hauptaufgabe des AV-Knotens?",
+      "richtig": "Die Erregung zu verzögern",
+      "falsch": [
+        "Die Erregung zu beschleunigen",
+        "Den Rhythmus vorzugeben",
+        "Die Klappen zu steuern"
+      ],
+      "erklaerung": "So kontrahieren die Vorhöfe vor den Kammern."
+    },
+    {
+      "id": "H-mc-004",
+      "frage": "Was beschreibt die Dromotropie?",
+      "richtig": "Erregungsleitungsgeschwindigkeit",
+      "falsch": [
+        "Herzfrequenz",
+        "Schlagkraft",
+        "Füllung des Herzens"
+      ],
+      "erklaerung": "Chronotropie = Frequenz, Inotropie = Kraft."
+    },
+    {
+      "id": "H-mc-005",
+      "frage": "Wie hoch ist das Herzminutenvolumen in Ruhe?",
+      "richtig": "ca. 5 l/min",
+      "falsch": [
+        "ca. 7,5 l/min",
+        "ca. 1 l/min",
+        "ca. 15 l/min"
+      ],
+      "erklaerung": "70/min × 70 ml ≈ 4,9 l/min."
+    },
+    {
+      "id": "H-mc-006",
+      "frage": "Wie ist der Zustand der Klappen in der Anspannungsphase?",
+      "richtig": "Alle Klappen geschlossen",
+      "falsch": [
+        "Alle Klappen offen",
+        "Segelklappen offen, Taschenklappen zu",
+        "Taschenklappen offen, Segelklappen zu"
+      ],
+      "erklaerung": "Druck baut sich auf, bis die Taschenklappen öffnen."
+    },
+    {
+      "id": "H-mc-007",
+      "frage": "Was besagt der Frank-Starling-Mechanismus?",
+      "richtig": "Mehr Füllung führt zu kräftigerer Kontraktion",
+      "falsch": [
+        "Höhere Frequenz führt zu mehr Füllung",
+        "Mehr Nachlast senkt den Blutdruck",
+        "Der Sympathikus senkt das Schlagvolumen"
+      ],
+      "erklaerung": "Stärkere Dehnung, höheres Schlagvolumen."
+    },
+    {
+      "id": "H-mc-008",
+      "frage": "Was entspricht der Nachlast?",
+      "richtig": "Dem Druck in der Aorta bzw. A. pulmonalis",
+      "falsch": [
+        "Der enddiastolischen Füllung",
+        "Der Herzfrequenz",
+        "Dem Venendruck"
+      ],
+      "erklaerung": "Die Vorlast ist die Füllung."
+    },
+    {
+      "id": "H-mc-009",
+      "frage": "Wohin münden die Koronarvenen?",
+      "richtig": "Über den Sinus coronarius in den rechten Vorhof",
+      "falsch": [
+        "In den linken Vorhof",
+        "In die Aorta",
+        "In die V. cava superior"
+      ],
+      "erklaerung": "Sie verlaufen parallel zu den Arterien."
+    },
+    {
+      "id": "H-mc-010",
+      "frage": "Welchen Transmitter setzt der Parasympathikus am Herzen frei?",
+      "richtig": "Acetylcholin",
+      "falsch": [
+        "Noradrenalin",
+        "Adrenalin",
+        "Histamin"
+      ],
+      "erklaerung": "Der Sympathikus nutzt Noradrenalin."
+    },
+    {
+      "id": "H-mc-011",
+      "frage": "Welche Herzfrequenz ist bei Säuglingen normal?",
+      "richtig": "120–160/min",
+      "falsch": [
+        "60–100/min",
+        "75–100/min",
+        "200–240/min"
+      ],
+      "erklaerung": "Bei Erwachsenen 60–100/min."
+    }
+  ],
+  "offen": [
+    {
+      "id": "H-of-001",
+      "frage": "Beschreibe die vier Phasen des Herzzyklus mit Klappenstellung.",
+      "loesung": "Anspannungsphase (alle zu, Druckanstieg), Austreibungsphase (Taschenklappen offen), Entspannungsphase (alle zu, Druckabfall), Füllungsphase (Segelklappen offen, Vorhofkontraktion)."
+    },
+    {
+      "id": "H-of-002",
+      "frage": "Beschreibe das Erregungsbildungs- und Leitungssystem.",
+      "loesung": "Sinusknoten (Schrittmacher, rechter Vorhof) → Vorhöfe → AV-Knoten (Verzögerung) → His-Bündel → Tawara-Schenkel → Purkinje-Fasern → Kammermuskulatur."
+    },
+    {
+      "id": "H-of-003",
+      "frage": "Wie beeinflussen Sympathikus und Parasympathikus das Herz?",
+      "loesung": "Der Sympathikus (Noradrenalin über β-Rezeptoren, Adrenalin) wirkt positiv chronotrop, inotrop und dromotrop. Der Parasympathikus (N. vagus, Acetylcholin) wirkt negativ auf Frequenz, Kraft und Überleitung."
+    },
+    {
+      "id": "H-of-004",
+      "frage": "Rechne: Herzfrequenz 80/min, Schlagvolumen 75 ml. Wie groß ist das HZV?",
+      "loesung": "80 × 75 ml = 6.000 ml = 6 l/min."
+    }
+  ]
+}

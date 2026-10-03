@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Physiologie – Karteikarten & Quiz</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#eaeef3; --surface:#ffffff; --ink:#15203a; --muted:#5a6680; --line:#d3d9e3; --soft:#f4f6fa;
+  --A:#127a78; --K:#3a4ea0; --H:#bf3a2b; --N:#a8700f; --L:#4a7a26; --B:#8c2556; --M:#6b4fa0;
+  --ok:#237a4b; --bad:#b3332a;
+  --ui:"Atkinson Hyperlegible", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --serif:"Newsreader", Georgia, "Times New Roman", serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){ :root:not([data-theme="light"]){
+  --bg:#10151f; --surface:#1a2130; --ink:#e7ebf3; --muted:#9aa5bb; --line:#2c3547; --soft:#212a3b;
+  --A:#3fb3ae; --K:#8295e6; --H:#ee7a68; --N:#e0a93f; --L:#8cc063; --B:#e07aa8; --M:#b39ae8; --ok:#5cc58a; --bad:#f07a6e; } }
+:root[data-theme="dark"]{
+  --bg:#10151f; --surface:#1a2130; --ink:#e7ebf3; --muted:#9aa5bb; --line:#2c3547; --soft:#212a3b;
+  --A:#3fb3ae; --K:#8295e6; --H:#ee7a68; --N:#e0a93f; --L:#8cc063; --B:#e07aa8; --M:#b39ae8; --ok:#5cc58a; --bad:#f07a6e; }
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--ui);font-size:17px;line-height:1.5;-webkit-font-smoothing:antialiased}
+.wrap{max-width:760px;margin:0 auto;padding:20px 18px 60px}
+header h1{font-family:var(--serif);font-weight:500;font-size:clamp(1.9rem,6vw,2.6rem);line-height:1.1;margin:8px 0 4px;letter-spacing:-.01em}
+header p{margin:0 0 18px;color:var(--muted)}
+.tabs{display:flex;gap:4px;background:var(--soft);border:1px solid var(--line);border-radius:999px;padding:4px;width:fit-content;margin-bottom:16px}
+.tabs button{border:0;background:transparent;color:var(--muted);font:inherit;font-weight:700;padding:8px 18px;border-radius:999px;cursor:pointer}
+.tabs button[aria-selected="true"]{background:var(--surface);color:var(--ink);box-shadow:0 1px 2px rgba(0,0,0,.08)}
+.chips{display:flex;gap:6px;overflow-x:auto;padding-bottom:6px;margin-bottom:10px;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);font:inherit;font-size:.9rem;padding:6px 12px;border-radius:999px;cursor:pointer;display:flex;align-items:center;gap:7px}
+.chip .dot{width:9px;height:9px;border-radius:50%;background:var(--c,var(--ink))}
+.chip[aria-pressed="true"]{border-color:var(--c,var(--ink));background:color-mix(in srgb,var(--c,var(--ink)) 12%,var(--surface))}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin:6px 0 14px;color:var(--muted);font-size:.92rem}
+.bar label{display:flex;align-items:center;gap:6px;cursor:pointer}
+.link{border:0;background:none;color:var(--muted);font:inherit;text-decoration:underline;text-underline-offset:3px;cursor:pointer;padding:4px}
+.progress{height:4px;background:var(--line);border-radius:4px;overflow:hidden;margin-bottom:14px}
+.progress i{display:block;height:100%;background:var(--ok);width:0;transition:width .3s}
+/* card */
+.stage{perspective:1400px}
+.card{position:relative;min-height:340px;cursor:pointer;transform-style:preserve-3d;transition:transform .5s cubic-bezier(.3,.7,.3,1)}
+.card.flipped{transform:rotateY(180deg)}
+.face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;background:var(--surface);border-radius:6px 18px 18px 6px;border-left:10px solid var(--c);padding:26px 26px 22px 28px;display:flex;flex-direction:column;box-shadow:0 1px 0 var(--line),0 12px 30px -18px rgba(20,30,60,.35)}
+.face.back{transform:rotateY(180deg)}
+.meta{display:flex;justify-content:space-between;color:var(--c);font-weight:700;font-size:.88rem;margin-bottom:14px}
+.meta span:last-child{color:var(--muted);font-weight:400}
+.q{font-family:var(--serif);font-size:clamp(1.35rem,4.6vw,1.75rem);line-height:1.3;font-weight:500;margin:auto 0}
+.a{font-family:var(--serif);font-size:clamp(1.08rem,3.6vw,1.22rem);line-height:1.55;margin:0;overflow-y:auto}
+.aq{color:var(--muted);font-size:.92rem;margin-bottom:12px}
+.hint{color:var(--muted);font-size:.85rem;margin-top:16px}
+.controls{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:16px}
+.btn{font:inherit;font-weight:700;border-radius:12px;padding:13px 14px;cursor:pointer;border:1.5px solid var(--line);background:var(--surface);color:var(--ink)}
+.btn.again{border-color:var(--bad);color:var(--bad)}
+.btn.known{background:var(--ok);border-color:var(--ok);color:#fff}
+.btn.nav{padding:13px 16px}
+.btn:disabled{opacity:.4;cursor:default}
+.done{background:var(--surface);border-radius:18px;padding:28px;text-align:center}
+.done h2{font-family:var(--serif);font-weight:500;font-size:1.7rem;margin:0 0 8px}
+.done .row{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+/* quiz */
+.score{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding:10px 0;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);margin-bottom:16px}
+.score b{font-size:1.15rem}
+h2.sec{font-family:var(--serif);font-weight:500;font-size:1.45rem;margin:28px 0 12px}
+.qcard{background:var(--surface);border-radius:14px;padding:18px 18px 16px;margin-bottom:12px;border-left:6px solid var(--c)}
+.qcard .num{color:var(--c);font-weight:700;font-size:.85rem}
+.qcard p.qt{font-family:var(--serif);font-size:1.18rem;line-height:1.4;margin:4px 0 12px}
+.opts{display:grid;gap:7px}
+.opt{text-align:left;font:inherit;background:var(--soft);border:1.5px solid transparent;color:var(--ink);border-radius:10px;padding:10px 12px;cursor:pointer}
+.opt:hover:not(:disabled){border-color:var(--line)}
+.opt:disabled{cursor:default}
+.opt.right{border-color:var(--ok);background:color-mix(in srgb,var(--ok) 14%,var(--surface))}
+.opt.wrong{border-color:var(--bad);background:color-mix(in srgb,var(--bad) 12%,var(--surface))}
+.expl{margin:10px 0 0;color:var(--muted);font-size:.95rem}
+details.open{background:var(--surface);border-radius:14px;padding:16px 18px;margin-bottom:12px;border-left:6px solid var(--c)}
+details.open summary{cursor:pointer;font-family:var(--serif);font-size:1.15rem;line-height:1.4;list-style:none}
+details.open summary::-webkit-details-marker{display:none}
+details.open summary::after{content:"Lösung zeigen";display:block;font-family:var(--ui);font-size:.85rem;color:var(--c);font-weight:700;margin-top:8px}
+details.open[open] summary::after{content:"Lösung ausblenden"}
+details.open .sol{margin:12px 0 0;padding-top:12px;border-top:1px solid var(--line)}
+button:focus-visible,summary:focus-visible,.card:focus-visible{outline:3px solid var(--K);outline-offset:3px}
+[hidden]{display:none!important}
+@media (prefers-reduced-motion:reduce){.card{transition:none}.progress i{transition:none}}
+@media (max-width:480px){.face{padding:22px 20px 18px 22px}.card{min-height:380px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <h1>Physiologie</h1>
+  <p>Atmung, Kreislauf, Herz, Niere, Lymphsystem, Blut und Magen aus deinen Lernzetteln.</p>
+  <p id="saveNote" style="font-size:.85rem;margin-top:-10px">Fortschritt wird auf diesem Gerät gespeichert.</p>
+  <div class="tabs" role="tablist">
+    <button role="tab" id="t-cards" aria-selected="true">Karteikarten</button>
+    <button role="tab" id="t-quiz" aria-selected="false">Quiz</button>
+  </div>
+</header>
+
+<section id="v-cards">
+  <div class="chips" id="chips-cards"></div>
+  <div class="bar">
+    <label>Üben: <select id="mode" style="font:inherit;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:3px 6px"><option value="due">Fällige Karten</option><option value="all">Alle Karten</option></select></label>
+    <span><button class="link" id="shuffle">Mischen</button> <button class="link" id="resetCards">Fortschritt zurücksetzen</button></span>
+  </div>
+  <div class="progress"><i id="prog"></i></div>
+  <p id="stats" style="margin:-6px 0 14px;color:var(--muted);font-size:.9rem"></p>
+  <div id="deck">
+    <div class="stage">
+      <div class="card" id="card" tabindex="0" role="button" aria-label="Karte umdrehen">
+        <div class="face front"><div class="meta"><span id="fSys"></span><span id="fPos"></span></div><div class="q" id="fQ"></div><div class="hint" id="fHint">Tippen zum Umdrehen</div></div>
+        <div class="face back"><div class="meta"><span id="bSys"></span><span id="bPos"></span></div><div class="aq" id="bQ"></div><p class="a" id="bA"></p></div>
+      </div>
+    </div>
+    <div class="controls">
+      <button class="btn again" id="again">Nicht gewusst</button>
+      <button class="btn known" id="known">Gewusst</button>
+    </div>
+  </div>
+  <div class="done" id="done" hidden>
+    <h2 id="doneTitle">Für heute geschafft</h2>
+    <p id="doneText"></p>
+    <div class="row"><button class="btn" id="redoAll">Trotzdem alle Karten üben</button></div>
+  </div>
+</section>
+
+<section id="v-quiz" hidden>
+  <div class="chips" id="chips-quiz"></div>
+  <div class="score"><span>Richtig: <b id="sc">0</b> von <b id="st">0</b> beantwortet</span><button class="link" id="resetQuiz">Neu starten</button></div>
+  <h2 class="sec">Multiple Choice</h2>
+  <div id="mc"></div>
+  <h2 class="sec">Offene Fragen</h2>
+  <p style="color:var(--muted);margin-top:-4px">Erst selbst formulieren, dann Lösung aufklappen.</p>
+  <div id="open"></div>
+</section>
+</div>
+<script>
+const CARDS = [
+["A","Welche zwei Formen der Atmung unterscheidet man?","Äußere Atmung (Lungenatmung): O₂-Aufnahme in die Lunge und CO₂-Abgabe aus dem Blut an die Luft. Innere Atmung (Gewebeatmung): Verbrennungsvorgänge in den Zellen, bei denen O₂ aus dem Blut aufgenommen und CO₂ abgegeben wird."],
+["A","Aus welchen zwei funktionellen Anteilen besteht das Atmungssystem?","Luftleitungssystem (Nase bis Bronchialbaum) und Diffusionssystem (Gasaustauschfläche der Alveolen)."],
+["A","Welche Organe gehören zum Atmungssystem?","Nase und Nasenhöhle, Nasennebenhöhlen, Rachen (Pharynx), Kehlkopf (Larynx), Luftröhre (Trachea), Bronchialbaum, Lunge und der Brustkorb (Thorax), der wegen seiner Bedeutung für die Atemmechanik dazugezählt wird."],
+["A","Wie ist die äußere Nase aufgebaut?","Aus dem Os nasale, den knorpeligen Nasenflügeln und einigen kleineren Knorpelstücken; überzogen von Gesichtshaut."],
+["A","Was ist das Vestibulum nasi und welche Funktion haben die Vibrissae?","Der Nasenvorhof, über den die Nasenlöcher (Nares) in die Nasenhöhle (Cavitas nasi) führen. Seine Haare, die Vibrissae, schützen vor eindringenden Fremdkörpern."],
+["A","Wie ist die Nasenscheidewand aufgebaut?","Das Septum nasi teilt die Nasenhöhle in zwei Höhlen ohne direkte Verbindung. Hinten/oben besteht es aus Knochen, vorne/unten aus einer Knorpellamelle."],
+["A","Welche vier Funktionen hat die Nasenhöhle?","Befeuchtung, Erwärmung und Reinigung der Atemluft sowie Geruchswahrnehmung."],
+["A","Welche Nasennebenhöhlen gibt es?","Stirnhöhle (Sinus frontalis), Siebbeinzellen (Sinus ethmoidales), Keilbeinhöhle (Sinus sphenoidalis) und Kieferhöhle (Sinus maxillaris). Es sind paarige, pneumatisierte Räume mit Verbindung zur Nasenhöhle."],
+["A","Welche Funktionen haben die Nasennebenhöhlen?","Gewichtsersparnis des Schädels, Erwärmung der Atemluft und Funktion als Resonanzorgan."],
+["A","Warum sind Entzündungen der Nasennebenhöhlen klinisch relevant?","Durch die Verbindung zur Nasenhöhle sind sie bei Infekten häufig mitbetroffen, und wegen der Nähe zu Augenhöhle und Schädelgrube kann sich eine Infektion dorthin ausbreiten."],
+["A","Was ist der Pharynx und wo beginnt er?","Ein muskulärer Schlauch hinter Nase und Mundraum bis zu Kehlkopf und Speiseröhre, durch den Luft, Nahrung und Flüssigkeit transportiert werden. Er beginnt hinter den Choanen (innere Nasenlöcher)."],
+["A","In welche drei Etagen wird der Rachen unterteilt?","Pars nasalis (Epipharynx), Pars oralis (Mesopharynx) und Pars laryngea (Hypopharynx)."],
+["A","Was mündet in die Pars nasalis und was liegt dort?","Beidseits die Ohrtrompete (Tuba auditiva), die den Rachen mit dem Mittelohr verbindet und den Druckausgleich ermöglicht. Am Rachendach liegt die Rachenmandel (Tonsilla pharyngealis)."],
+["A","Warum ist der Schluckakt in der Pars oralis so komplex?","Hier kreuzen sich Luft- und Nahrungsweg. Komplizierte Bewegungsabläufe sind nötig, damit Nahrung nicht in die Luftwege gerät."],
+["A","Was kennzeichnet die Pars laryngea?","Unterster und längster Rachenabschnitt; beginnt am Kehldeckel, zieht hinter dem Ringknorpel zur Speiseröhre. Hier liegt der Eingang zum Kehlkopf und damit zu den unteren Luftwegen."],
+["A","Was ist der Kehlkopf (Larynx)?","Ein Verschlussapparat aus Knorpel, Muskeln und Faserzügen, der die Trachea vom Ösophagus trennt. Er sitzt auf der Luftröhre und ist als Adamsapfel tastbar."],
+["A","Welche Funktionen hat der Kehlkopf?","Schutz der unteren Atemwege (Verschluss beim Schlucken, Hustenreflex), Stimmbildung (Phonation), Unterstützung der Bauchpresse und Pforte der Atemluft."],
+["A","Welche vier Knorpel bilden das formgebende Kehlkopfgerüst?","Cartilago cricoidea (Ringknorpel), Cartilago thyroidea (Schildknorpel), Cartilago epiglottica (Kehldeckelknorpel) und Cartilagines arytaenoideae (Stellknorpel)."],
+["A","Welche drei kleinen, paarigen Knorpel gehören zusätzlich zum Kehlkopf?","Cartilagines cuneiformes (Keilknorpel), corniculatae (Hörnchenknorpel) und triticeae (Weizenknorpel). Sie sind nicht an der Formgebung beteiligt."],
+["A","Wie ist die Trachea aufgebaut?","10–12 cm lang, beginnt unter dem Ringknorpel, 16–20 hufeisenförmige Knorpelspangen mit elastischen Bändern. Hinten eine bindegewebige Muskelplatte mit Kontakt zur Speiseröhre."],
+["A","Womit ist die Trachea ausgekleidet und welche Aufgabe hat das?","Mit Flimmerepithel und Becherzellen. Die Flimmerhärchen transportieren Fremdkörper und Sekret Richtung Rachen, die Becherzellen bilden Bronchialschleim, der die Atemluft anfeuchtet."],
+["A","Auf welcher Höhe teilt sich die Trachea (Bifurkation)?","Auf Höhe des 5. Brustwirbels in den rechten und linken Hauptbronchus."],
+["A","Warum landen aspirierte Fremdkörper meist im rechten Hauptbronchus?","Der rechte Hauptbronchus ist steiler, weiter und kürzer als der linke."],
+["A","In wie viele Lappenbronchien teilen sich die Hauptbronchien?","Rechts in drei, links in zwei Lappenbronchien, die sich weiter in Segmentbronchien teilen."],
+["A","Was sind Bronchioli und wie ist ihre Wand aufgebaut?","Kleinste Bronchien mit weniger als 1 mm Durchmesser, ohne Knorpel. Die Wand besteht aus glatter Muskulatur und elastischen Fasern; sie gehen in die Alveolargänge über."],
+["A","Welche Aufgaben haben Trachea und Bronchien?","Zu- und Ableitung sowie Verteilung der Atemluft, außerdem Erwärmung, Anfeuchtung und Reinigung."],
+["A","Wie viele Lappen und Segmente haben die Lungenflügel?","Rechts 3 Lappen (zwei Fissuren) und 10 Segmente; links 2 Lappen (eine Fissur) und 9 Segmente. Links ist die Lunge wegen des Herzens kleiner."],
+["A","Was tritt am Lungenhilus ein und aus?","Bronchien und Arterien treten ein, Venen und Lymphbahnen treten aus."],
+["A","Welche Flächen der Lunge unterscheidet man?","Facies diaphragmatica (zum Zwerchfell), Facies costalis (zu den Rippen) und Facies medialis (zur Körpermitte)."],
+["A","Warum verfärben sich Hiluslymphknoten im Laufe des Lebens dunkel?","Alveolarmakrophagen transportieren Staub aus der Lunge ab, der dort teilweise eingelagert wird. Vergrößerte Lymphknoten können im Röntgen Schatten bilden."],
+["A","Aus welchen Blättern besteht die Pleura?","Pleura visceralis (Lungenfell) überzieht die Lunge; Pleura parietalis (Rippenfell) kleidet Thoraxwand und Zwerchfelloberseite aus. Am Hilus gehen beide ineinander über."],
+["A","Welche Funktion hat der Pleuraspalt?","Die Flüssigkeit im Gleitspalt lässt die Blätter aufeinander gleiten, aber nicht voneinander lösen. Dadurch folgt die Lunge allen Bewegungen des Brustkorbs."],
+["A","Wozu dienen die Reserveräume der Pleura?","Das parietale Blatt ist stellenweise größer als das viszerale. In diese Räume dehnt sich die Lunge bei maximaler Einatmung aus."],
+["A","Was passiert bei einem Pneumothorax?","Bei Verletzung der Pleura kollabiert die Lunge durch ihre Eigenelastizität auf etwa ein Drittel ihres Volumens und kann den Thoraxbewegungen nicht mehr folgen. Beidseitig ist die Atemfunktion aufgehoben."],
+["A","Welche Kennzahlen haben die Alveolen?","Etwa 300 Mio. Alveolen mit ca. 0,2 mm Durchmesser; innere Oberfläche 80–100 m², trainiert bis 130 m². Sie sind der eigentliche Ort des Gasaustauschs."],
+["A","Was ist der Unterschied zwischen Pneumozyten Typ I und Typ II?","Typ I bilden das eigentliche Alveolarepithel und begrenzen die Alveolen. Typ II sind seltener und produzieren Surfactant."],
+["A","Was ist Surfactant und warum ist er bei Frühgeborenen wichtig?","Ein Protein-Lipid-Gemisch, das die Oberflächenspannung der Alveolen senkt. Vor der 32. SSW ist er unvollständig ausgebildet, die Alveolen kollabieren und eine selbstständige Atmung ist nicht möglich."],
+["A","Welche Aufgaben haben Alveolarmakrophagen?","Sie phagozytieren Staub, Schmutz und Surfactantreste, bauen Viren und Bakterien ab und dienen der Selbstreinigung und Abwehr. Sie werden mit dem Sputum ausgehustet."],
+["A","Welche drei Reinigungsmechanismen hat die Lunge?","Tracheobronchiale mukoziliäre Clearance, Husten-Clearance und alveoläre Clearance."],
+["A","Wie funktioniert die mukoziliäre Clearance?","Ein Schleim-Sekretfilm und die mundwärts schlagenden Zilien des Flimmerepithels transportieren Schleim samt Fremdstoffen aus den Atemwegen."],
+["A","Aus welchen Schichten besteht das Bronchialsekret?","Einem dünnflüssigen interziliären Sol (von den Mikrovilli gebildet) und einer darüberliegenden viskoelastischen Gelschicht, auf der Fremdkörper festgehalten und mundwärts transportiert werden."],
+["A","Wie ist das Bronchialsekret zusammengesetzt?","Zu 95 % aus Wasser; der Rest sind Glykoproteine, Immunglobuline, Lysozym, Lipide und anorganische Salze."],
+["A","Wo ist die Husten-Clearance wirksam?","Nur in den oberen Luftwegen bis zu den größeren Bronchien. In den kleineren Bronchien wirkt nur die mukoziliäre Clearance."],
+["A","Wodurch wird Husten ausgelöst?","Reflexartig durch Reizung von Chemo- und Mechanorezeptoren im Tracheobronchialbaum, etwa durch Trockenheit, Kälte, Fremdstoffe, Staub, Speichel oder Gase."],
+["A","In welchen fünf Phasen läuft ein Hustenstoß ab?","Irritationsphase, tiefe Inspiration (ca. 2,5 l), inspiratorische Pause, Kompressionsphase (Epiglottis schließt, Atemmuskeln kontrahieren, Druck steigt) und Expulsionsphase (explosionsartige Austreibung)."],
+["A","Welche Patienten sind besonders aspirationsgefährdet?","Frisch operierte Patienten nach Narkose oder Intubation, lange beatmete Patienten, Patienten nach Schlaganfall und mit schweren neurologischen Erkrankungen."],
+["A","Wie funktioniert die alveoläre Clearance?","Nicht-ziliärer Mukotransport über das Surfactant-System; am wichtigsten sind die Alveolarmakrophagen. Sie ist langsam: 24 Stunden bis 100 Tage."],
+["A","Wie läuft die Einatmung ab?","Aktiv: Zwerchfell und Mm. intercostales externi kontrahieren, Brustraum und Lunge erweitern sich. Gesteuert u. a. durch das ZNS."],
+["A","Wie läuft die Ausatmung ab?","Vorwiegend passiv durch die Eigenelastizität von Lunge und Thorax, wie bei einem Luftballon. Unterstützend wirken Mm. intercostales interni und Bauchmuskulatur."],
+["A","Was ist das Atemzugvolumen und was ist der Totraum?","Ca. 0,5 l pro Atemzug in Ruhe. Nur 2/3 erreichen die Alveolen; der Rest bleibt in Kehlkopf, Trachea und Bronchien (Totraum)."],
+["A","Wie berechnet man das Atemminutenvolumen?","Atemzugvolumen × Atemfrequenz, also 0,5 l × 15/min = 7,5 l/min (Frequenz 14–16/min)."],
+["A","Wie groß sind inspiratorisches und exspiratorisches Reservevolumen?","IRV ca. 2,5 l, ERV ca. 1,5 l."],
+["A","Was ist die Vitalkapazität?","Summe aus Atemzugvolumen, IRV und ERV, ca. 4,5 l. Sie ist der Gesamtspielraum, in dem das Lungenvolumen aktiv verändert werden kann."],
+["A","Was ist die funktionelle Residualkapazität?","Das nach normaler Ausatmung in der Lunge verbleibende Volumen, ca. 3 l (ERV + Residualvolumen)."],
+["A","Was sind Residualvolumen und Totalkapazität?","Residualvolumen: Restluft nach maximaler Ausatmung, ca. 1,5 l. Totalkapazität: Vitalkapazität + Residualvolumen, ca. 6 l."],
+["A","Wovon hängen die Lungenvolumina ab und wie misst man sie?","Von Geschlecht, Körperbau, Alter und Trainingszustand. Gemessen mit dem Spirometer, ausgehend von der Atemruhelage."],
+["A","Wovon hängt die Menge des Gasaustauschs ab?","Je mehr Alveolen belüftet und je mehr Kapillaren durchblutet werden, desto größer ist die Kontaktfläche und damit der Gasaustausch."],
+["A","Welche Schichten bilden die Blut-Luft-Schranke?","Alveolarepithel (Alveolardeckzellen), Basalmembran und Endothel der Blutkapillaren."],
+["A","Wo sitzt das Atemzentrum und was steuert es?","In der Medulla oblongata (Hirnstamm) und im oberen Halsmark. Es steuert Atemrhythmus und Atemfrequenz mit dem Ziel konstanter O₂- und CO₂-Werte."],
+["A","Welche Atemreize gibt es?","Chemische (pCO₂, pH, pO₂ im Blut) und nicht chemische (Hering-Breuer-Reflex, Körpertemperatur, Blutdruck, Hormone)."],
+["A","Wo liegen die peripheren Chemorezeptoren und wie wird ihr Signal geleitet?","Im Glomus caroticum (A. carotis) und in den Glomera aortica. Die Information läuft über N. glossopharyngeus (IX) und N. vagus (X) zum verlängerten Mark."],
+["A","Wann wird die Atmung gesteigert und mit welchem Effekt?","Bei erniedrigtem pH, erhöhtem CO₂ oder erniedrigtem O₂. Es wird mehr O₂ aufgenommen, mehr CO₂ abgeatmet und der pH-Wert normalisiert."],
+["A","Welche Rolle spielt die Lunge im Säure-Basen-Haushalt?","Sie ist neben der Niere das wichtigste Regulationsorgan für die H⁺-Konzentration, indem sie CO₂ abatmet."],
+
+["K","Woraus besteht das Kreislaufsystem?","Aus dem Herz als Pumpe und dem geschlossenen Gefäßsystem mit zwei Teilkreisläufen: Körperkreislauf und Lungenkreislauf."],
+["K","Wie unterscheiden sich Arterien, Kapillaren und Venen funktionell?","Arterien führen Blut vom Herzen weg, Venen zum Herzen hin (jeweils unabhängig vom O₂-Gehalt). Kapillaren verbinden beide und dienen dem Stoff- und Gasaustausch; Venen sind zudem Blutreservoir."],
+["K","Welche Herzhälfte versorgt welchen Kreislauf?","Linker Vorhof und linke Kammer sind die Pumpe des großen Körperkreislaufs, rechter Vorhof und rechte Kammer die des kleinen Lungenkreislaufs."],
+["K","Beschreibe den Weg des Blutes im Körperkreislauf.","Linke Kammer → Aortenklappe → Aorta → Arterien → Arteriolen → Kapillaren (O₂/Nährstoffe raus, CO₂ rein) → Venolen und Venen → obere/untere Hohlvene → rechter Vorhof."],
+["K","Beschreibe den Weg des Blutes im Lungenkreislauf.","Rechte Kammer → Truncus pulmonalis → Aa. pulmonales → Lungenkapillaren (O₂-Aufnahme, CO₂-Abgabe) → Vv. pulmonales → linker Vorhof → linke Kammer."],
+["K","Was ist der Truncus brachiocephalicus?","Ein Gefäßstamm aus dem Aortenbogen, der sich in die rechte A. subclavia und die rechte A. carotis communis teilt."],
+["K","Welche Gebiete versorgen A. carotis externa und interna?","Externa: Gesicht und äußerer Schädel. Interna: Gehirn."],
+["K","Wie verläuft die arterielle Versorgung des Arms?","A. subclavia → A. axillaris → A. brachialis, die sich in der Ellenbeuge in A. radialis und A. ulnaris teilt. Beide sind über den Arcus palmaris der Hand verbunden."],
+["K","In welche Äste teilt sich der Truncus coeliacus?","A. hepatica (Leber, Galle, Magen, Duodenum, Pankreas), A. gastrica sinistra (Magen) und A. lienalis (Milz)."],
+["K","Was versorgen A. mesenterica superior, inferior und die Aa. renales?","Superior: Dünndarm, Pankreas und Dickdarm. Inferior: restlicher Dickdarm ohne unteres Rektumdrittel. Aa. renales: Nieren."],
+["K","Wie verläuft die arterielle Versorgung des Beins?","Aorta teilt sich auf LWS-Höhe in die Aa. iliacae communes → A. iliaca externa → A. femoralis → A. poplitea → unterhalb der Kniekehle A. tibialis anterior (endet als A. dorsalis pedis) und A. tibialis posterior."],
+["K","Was drainieren V. jugularis, V. cava superior und V. cava inferior?","V. jugularis: Kopf (verläuft mit A. carotis). V. cava superior: Kopf und obere Extremität. V. cava inferior: Eingeweide und untere Extremität."],
+["K","Welche oberflächlichen Venen an Arm und Bein sollte man kennen?","Arm: V. basilica, V. cephalica, V. mediana cubiti. Bein: V. saphena magna und V. saphena parva."],
+["K","Was ist der Pfortaderkreislauf?","Nährstoffreiches venöses Blut der Bauchorgane fließt über die V. portae erst durch die Leber (Lebersinusoide), bevor es zum rechten Herzen gelangt. Es passiert also zwei hintereinandergeschaltete Kapillarsysteme."],
+["K","Wodurch wird die Blutströmung ermöglicht?","Durch Druckdifferenzen: Blut fließt vom zentralen Hochdrucksystem zum peripheren Niederdrucksystem."],
+["K","Was gehört zum Hochdrucksystem?","Linke Kammer während der Systole sowie Arterien und Arteriolen des Körperkreislaufs; ca. 60–100 mmHg, daher dicke Gefäßwände."],
+["K","Was gehört zum Niederdrucksystem und welche Besonderheit hat es?","Vorhöfe, rechte Kammer, linke Kammer in der Diastole, Kapillaren und Venen sowie der Lungenkreislauf; ca. 5–10 mmHg. Die weitgestellten, dünnwandigen Venen speichern den Großteil des Blutvolumens, das bei Bedarf verschoben werden kann."],
+["K","Aus welchen drei Schichten besteht die Wand von Arterien und Venen?","Tunica interna/Intima (zum Lumen, Stoff- und Gasaustausch), Tunica media (glatte Muskulatur, kollagene und elastische Fasern) und Tunica externa/Adventitia (kollagene und elastische Fasern)."],
+["K","Was ist der Blutdruck und was ist der Normwert?","Der Druck, den das Blut auf die Gefäßwände ausübt; normal ca. 120/80 mmHg (systolisch/diastolisch)."],
+["K","Wie entwickelt sich der Blutdruck bei Kindern?","Er steigt mit dem Alter: 1. Lebensmonat ca. 85/55, mit 1 Jahr 95/65, mit 6 Jahren 105/65, mit 10–13 Jahren 110/65 mmHg."],
+["K","Unterschied zwischen elastischem und muskulärem Arterientyp?","Elastischer Typ: Media reich an elastischen Fasern, kehrt nach Dehnung zurück; herznahe Gefäße wie Aorta, A. carotis, Lungenarterien. Muskulärer Typ: Media mit hohem Muskelanteil; mittlere und kleine herzferne Arterien."],
+["K","Welche Gefäßveränderungen treten im Alter auf?","Ab ca. 30 Jahren nimmt die Elastizität ab; arteriosklerotische Veränderungen führen zu steigendem Blutdruck und verzögerter Blutdruckregulation (orthostatische Probleme)."],
+["K","Wie funktioniert die Blutdruckmessung nach Riva-Rocci?","Die Manschette drückt die A. brachialis ab; beim Ablassen ist das erste pulsierende Geräusch der systolische Wert, das Verschwinden der Geräusche (keine Verwirbelung mehr) der diastolische Wert."],
+["K","An welchen Stellen ist der Puls tastbar und wie hoch sollte er sein?","A. carotis communis (Hals), A. radialis (Handgelenk), A. femoralis (Leiste), A. poplitea (Kniekehle), A. dorsalis pedis (Fußrücken). Normal 60–100/min."],
+["K","Wie sind Kapillaren aufgebaut und warum fließt das Blut dort langsam?","Sie haben keine Tunica media, nur eine Endothelschicht. Wegen des großen Gesamtquerschnitts fließt das Blut sehr langsam (0,5 mm/s), was den Stoffaustausch begünstigt."],
+["K","Wie unterscheiden sich gefensterte und dichte Kapillaren?","Gefensterte (z. B. Leber) lassen viele Substanzen außer Blutzellen und Plasmaeiweißen frei passieren. Dichte (z. B. Nervensystem) erlauben nur selektiven Transport durch die Zellen."],
+["K","Wie werden Gefäße funktionell eingeteilt?","Windkesselgefäße (Aorta, große Arterien), Widerstandsgefäße vor Organen, Sphinktergefäße vor Kapillarbetten, Austauschgefäße (Kapillaren), Kapazitätsgefäße (Venen) und Shunt-Gefäße (Kurzschlüsse zwischen Arterien und Venen)."],
+["K","Was ist Diffusion?","Wanderung gelöster Teilchen vom Ort hoher zum Ort niedriger Konzentration; treibende Kraft ist das Konzentrationsgefälle."],
+["K","Wie funktionieren Filtration und Reabsorption an der Kapillare?","Arteriell überwiegt der hydrostatische Druck (Blutdruck) und presst Flüssigkeit ins Gewebe. Venös überwiegt der kolloidosmotische Druck der Plasmaproteine und zieht Flüssigkeit zurück."],
+["K","Wie viel Flüssigkeit wird täglich filtriert und reabsorbiert?","Ca. 20 l filtriert, 18 l reabsorbiert. Die übrigen 2 l nimmt das Lymphsystem auf und leitet sie ins venöse System zurück."],
+["K","Warum heißen Venen Kapazitätsgefäße und wie ist ihre Wand aufgebaut?","Sie enthalten mehr als 2/3 des Blutvolumens. Ihre Media besteht überwiegend aus kollagenen Fasern; die Wand ist dünn und sehr dehnbar."],
+["K","Wie hoch ist der Venendruck?","Im Liegen durchschnittlich 15–20 mmHg, in herznahen Venen nur 2–4 mmHg."],
+["K","Welche Mechanismen unterstützen den venösen Rückstrom?","Venenklappen (paarige Intimafalten), Skelettmuskelpumpe, Übertragung der Pulsation benachbarter Arterien und die Sogwirkung des Herzens zu Beginn der Diastole."],
+["K","Auf welchen drei Wegen wird die Gefäßweite reguliert?","Nerval (vegetatives Nervensystem), humoral (gefäßaktive Substanzen im Blut) und autoregulatorisch (lokal im Organ)."],
+["K","Wie wirkt der Sympathikus über α- und β-Rezeptoren auf die Gefäße?","α-Rezeptoren: Vasokonstriktion, v. a. in Niere und Haut. β-Rezeptoren: Vasodilatation, z. B. in der Muskulatur."],
+["K","Welche lokalen Faktoren wirken gefäßerweiternd (Autoregulation)?","O₂-Mangel, ATP-Spaltprodukte, CO₂, K⁺-Ionen und ein niedriger pH-Wert."],
+["K","Welche humoralen Substanzen verengen bzw. erweitern Gefäße?","Verengend: Angiotensin II. Erweiternd: Bradykinin und Histamin. Katecholamine (Adrenalin, Noradrenalin) haben je nach Rezeptor unterschiedliche Wirkungen."],
+["K","Was ist das Ziel der Kreislaufregulation und wo sitzt die zentrale Steuerung?","Bedarfsgerechte Versorgung der Organe, wobei Blut zu aktiven Organen auf Kosten ruhender umverteilt wird. Die zentrale Steuerung liegt im verlängerten Mark und in der Brücke."],
+
+["H","Was ist das Herz und wo liegt es?","Ein muskuläres, kegelförmiges Hohlorgan (ca. 300 g) im Mediastinum zwischen den Lungenflügeln, hinter dem Sternum und vor dem Ösophagus; es liegt kaudal dem Zwerchfell auf. Die Längsachse verläuft schräg, die Herzspitze zeigt nach links unten."],
+["H","Wie ist das Herz grob gegliedert?","Das Septum trennt linke und rechte Herzhälfte; jede besteht aus Vorhof (Atrium) und Kammer (Ventrikel)."],
+["H","Welche Herzklappen gibt es?","Zwei Segelklappen (AV-Klappen) zwischen Vorhöfen und Kammern: Trikuspidalklappe (rechts, 3 Segel) und Mitralklappe (links, 2 Segel). Zwei Taschenklappen: Pulmonalklappe und Aortenklappe mit je drei halbmondförmigen Taschen."],
+["H","Welche Funktion haben Papillarmuskeln und Sehnenfäden?","Sie verankern die Segelklappen in den Kammern und verhindern, dass diese in die Vorhöfe zurückschlagen."],
+["H","Was mündet in den rechten Vorhof?","Obere Hohlvene (Kopf, Hals, Arme, Brustwand), untere Hohlvene (Beine, Rumpf, Bauchorgane) und der Sinus coronarius."],
+["H","Was mündet in den linken Vorhof?","Je zwei linke und zwei rechte Lungenvenen mit O₂-reichem Blut."],
+["H","Welche Herzkammer hat die dickste Wand und warum?","Die linke Kammer, da sie das Blut gegen den hohen Druck in Aorta und Körperkreislauf pumpt."],
+["H","Aus welchen Schichten besteht die Herzwand?","Endokard (Endothel, bildet die Klappen), Myokard (Herzmuskel, in den Vorhöfen dünn, links dicker als rechts) und Epikard (Plattenepithel, außen)."],
+["H","Wie ist der Herzbeutel aufgebaut?","Das Perikard aus straffem Bindegewebe ist mit dem Zwerchfell und seitlich mit dem Lungenfell verwachsen. Zwischen Perikard und Epikard liegen 15–20 ml Flüssigkeit als Gleitfilm."],
+["H","Welche Gebiete versorgen die Koronararterien?","Die linke (Ramus interventricularis anterior und Ramus circumflexus) versorgt linken Vorhof, linke Kammer und den Großteil des Septums. Die rechte versorgt rechten Vorhof, rechte Kammer und einen kleinen Teil des Septums."],
+["H","Wohin fließt das Blut der Koronarvenen ab?","Sie verlaufen parallel zu den Arterien und münden als Sinus coronarius in den rechten Vorhof."],
+["H","Was passiert in der Anspannungsphase der Systole?","Alle Klappen sind geschlossen; der Druck in den Kammern steigt, bis er den Druck in Aorta bzw. Truncus pulmonalis übersteigt und die Taschenklappen öffnen."],
+["H","Was passiert in der Austreibungsphase?","Die Kammern kontrahieren und werfen Blut in Körper- und Lungenkreislauf aus, bis die Taschenklappen wieder schließen. Dann beginnt die Diastole."],
+["H","Was passiert in der Entspannungsphase der Diastole?","Alle Klappen sind geschlossen, der Kammerdruck fällt und der Vorhofdruck steigt, bis sich die Segelklappen öffnen."],
+["H","Was passiert in der Füllungsphase?","Die Segelklappen sind offen, Blut fließt in die erschlafften Kammern, unterstützt durch die Vorhofkontraktion. Steigender Kammerdruck schließt die Segelklappen, die Systole beginnt."],
+["H","Was bedeutet es, dass das Herz autonom arbeitet?","Das Erregungsbildungssystem bildet Aktionspotenziale selbst, unabhängig vom Nervensystem. Das vegetative Nervensystem beeinflusst nur Frequenz, Kraft und Leitung."],
+["H","In welcher Reihenfolge läuft die Erregung durch das Herz?","Sinusknoten → Vorhofmuskulatur → AV-Knoten → His-Bündel → Kammerschenkel (Tawara-Schenkel) → Purkinje-Fasern → Kammermuskulatur."],
+["H","Wo liegt der Sinusknoten und welche Aufgabe hat er?","In der Wand des rechten Vorhofs; er ist der Schrittmacher und erzeugt rhythmische Erregungen, die über beide Vorhöfe laufen."],
+["H","Wo liegt der AV-Knoten und welche Aufgabe hat er?","Am Boden des rechten Vorhofs an der Grenze zu den Kammern. Er verzögert die Erregung, damit sich die Vorhöfe vor den Kammern kontrahieren."],
+["H","In welchen Strukturen kann Erregung gebildet werden?","Im Sinusknoten, AV-Knoten und His-Bündel."],
+["H","Was bedeuten Chronotropie, Inotropie und Dromotropie?","Chronotropie: Herzfrequenz. Inotropie: Schlagkraft und damit Schlagvolumen. Dromotropie: Erregungsleitungsgeschwindigkeit von Vorhof auf Kammer. Der Sympathikus steigert alle drei, der Parasympathikus senkt sie."],
+["H","Welche Transmitter nutzen Sympathikus und Parasympathikus am Herzen?","Sympathikus: Noradrenalin über β-Rezeptoren, unterstützt durch Adrenalin aus dem Nebennierenmark. Parasympathikus (N. vagus): Acetylcholin."],
+["H","Was ist die Vorlast?","Die Kräfte am Ende der Diastole, die die Kammermuskelfasern dehnen, also die Füllung des Herzens vor der Kontraktion (enddiastolische Wandspannung)."],
+["H","Was ist die Nachlast?","Der Widerstand, den das Herz beim Auswurf überwinden muss, praktisch der Druck in Aorta bzw. A. pulmonalis."],
+["H","Was besagt der Frank-Starling-Mechanismus?","Mehr Füllung führt zu stärkerer Dehnung, einer kräftigeren Kontraktion und höherem Schlagvolumen."],
+["H","Wie berechnet man das Herzminutenvolumen und wie hoch ist es in Ruhe?","HZV = Herzfrequenz × Schlagvolumen, in Ruhe 70/min × 70 ml ≈ 4,9 l, also ca. 5 l/min in Körper- und Lungenkreislauf."],
+["H","Was ist das Restvolumen des Herzens?","Die ca. 70 ml, die nach dem Auswurf in den Kammern verbleiben."],
+["H","Wie passt sich das Herz an Belastung an?","Herzfrequenz und Schlagvolumen steigen, damit auch das Herzminutenvolumen, um den erhöhten Bedarf zu decken."],
+["H","Welche Herzfrequenzen sind bei Kindern normal?","Säuglinge 120–160/min, Kleinkinder 90–140/min, Vorschulkinder 80–110/min, Schulkinder 75–100/min. Sie schwankt stärker, bei Fieber oder Anspannung bis 200/min."],
+["H","Wie verändert sich die Herzleistung im Alter?","Die maximale Herzfrequenz sinkt um bis zu 25 %, Herzkraft, Schlagvolumen und HZV nehmen ab. Folge: geringere Belastbarkeit und häufigere Synkopen."],
+["H","Was misst das EKG und welche Ableitungen gibt es?","Die elektrischen Spannungsänderungen der Herzerregung an der Körperoberfläche. Brustwandableitungen (6 Elektroden) und Extremitätenableitungen (je eine Elektrode an Hand- und Fußgelenken)."],
+
+["N","Woraus besteht das Harnsystem?","Aus beiden Nieren, beiden Harnleitern, der Harnblase und der Harnröhre. Die Harnwege sammeln den in den Nieren gebildeten Harn und leiten ihn aus."],
+["N","Welche Funktionen hat die Niere?","Ausscheidung harnpflichtiger Substanzen und Fremdstoffe (z. B. Medikamente), Regulation von Wasser-, Elektrolyt- und Säure-Basen-Haushalt sowie Hormonbildung (Erythropoetin, Renin, Vitamin-D-Hormon)."],
+["N","Was sind harnpflichtige Substanzen?","Stoffwechselprodukte, die den Körper nur über den Urin verlassen können, z. B. Harnstoff, Kreatinin und Harnsäure."],
+["N","Wo liegen die Nieren und wie groß sind sie?","Links und rechts der Wirbelsäule dicht unter dem Zwerchfell im Retroperitonealraum; bohnenförmig, 10–12 cm lang, 5–6 cm breit, 3 cm dick, umgeben von einer Fettkapsel."],
+["N","Welche drei Zonen hat die Niere?","Nierenrinde (Cortex, außen), Nierenmark (Medulla, 12–18 Markpyramiden mit Papillen zum Hilus) und Nierenbecken (aus 8–12 Nierenkelchen)."],
+["N","Was ist ein Nierenlappen?","Eine Markpyramide mit der dazugehörigen Nierenrinde."],
+["N","Wie verläuft die arterielle Versorgung der Niere?","Aorta → A. renalis → Aa. interlobares → Aa. arcuatae → Aa. interlobulares → Vas afferens → Glomerulus → Vas efferens → Kapillarnetz der Rinde."],
+["N","Wie fließt das venöse Blut aus der Niere ab?","Vv. interlobulares → Vv. arcuatae → Vv. interlobares → V. renalis → V. cava inferior."],
+["N","Was ist das Nephron?","Die Funktionseinheit der Niere aus Nierenkörperchen und Nierenkanälchen (Tubulusapparat); ca. 2–2,5 Mio. insgesamt. Sammelrohre zählen nicht dazu."],
+["N","Wie ist das Nierenkörperchen aufgebaut und was passiert dort?","Es liegt in der Rinde und besteht aus Kapillarknäuel (Glomerulus) und Bowman-Kapsel. Hier wird das Blut filtriert; Poren halten große Plasmaproteine und Blutzellen zurück."],
+["N","Was ist Primärharn und wie viel entsteht?","Zellfreie Lösung mit Ionen und kleinen Molekülen in plasmaähnlicher Konzentration; ca. 180 l pro Tag (GFR ca. 120 ml/min)."],
+["N","Wie viel des Primärharns wird rückresorbiert?","Etwa 178 l; nur ca. 1,5–2 l werden als Endharn ausgeschieden, der Harn wird also in den Kanälchen stark konzentriert."],
+["N","Aus welchen Abschnitten besteht das Nierenkanälchen?","Proximaler Tubulus, Intermediärtubulus mit Henle-Schleife, distaler Tubulus; danach folgt das Sammelrohr."],
+["N","Welche Aufgabe haben die Sammelrohre?","Sie liegen in den Markpyramiden, sammeln den Harn mehrerer Nephrone und leiten ihn zu den Nierenkelchen."],
+["N","Aus welchen drei Bestandteilen besteht der juxtaglomeruläre Apparat?","Macula densa (misst NaCl im distalen Tubulus), juxtaglomeruläre Zellen der Arteriola afferens (bilden und speichern Renin) und extraglomeruläre Mesangiumzellen (Lacis-Zellen, leiten Signale weiter)."],
+["N","Wo liegt der juxtaglomeruläre Apparat?","Am Gefäßpol des Glomerulus, wo die Arteriola afferens eintritt und der distale Tubulus am Glomerulus vorbeiführt."],
+["N","Was bewirkt Erythropoetin und wann wird es gebildet?","Bei O₂-Mangel in der Niere bilden peritubuläre Fibroblasten EPO. Es stimuliert im Knochenmark die Erythrozytenbildung und verbessert so den O₂-Transport (negative Rückkopplung)."],
+["N","Was ist die renale Anämie?","Bei chronischer Niereninsuffizienz sinkt die EPO-Produktion, es entsteht eine Anämie; Therapie mit rekombinantem Erythropoetin."],
+["N","Wie wird Vitamin D aktiviert?","Haut: 7-Dehydrocholesterin + UVB → Vitamin D₃. Leber: → 25-Hydroxyvitamin D (Calcidiol, Speicherform). Niere (1α-Hydroxylase): → 1,25-Dihydroxyvitamin D (Calcitriol, aktive Form). Merksatz: Leber speichert, Niere aktiviert."],
+["N","Welche Wirkungen hat Calcitriol?","Steigert die Kalzium- und Phosphataufnahme im Darm, fördert die Knochenmineralisation und hemmt bei ausreichendem Kalzium die Parathormon-Ausschüttung."],
+["N","Wodurch wird die 1α-Hydroxylase gesteigert bzw. gehemmt?","Gesteigert durch Parathormon, niedriges Kalzium und niedriges Phosphat. Gehemmt durch FGF23, hohes Phosphat und Calcitriol selbst."],
+["N","Welche Folgen hat eine chronische Niereninsuffizienz für den Knochen?","Weniger Calcitriol, dadurch weniger Kalziumaufnahme, Parathormon steigt (sekundärer Hyperparathyreoidismus), es entsteht eine renale Osteodystrophie."],
+["N","Welche Hormone wirken auf die Niere?","U. a. ADH, Aldosteron, Renin, Parathormon und Kalzitonin."],
+["N","Wie ist das Körperwasser verteilt?","Etwa 2/3 intrazellulär, der Rest extrazellulär in drei Räumen: Plasmaraum (intravasal), Interstitium (inkl. Lymphe) und transzellulärer Raum (Liquor, Speichel, Verdauungssäfte, Schweiß, Endharn)."],
+["N","Wie setzt sich die tägliche Wasserabgabe zusammen?","Urin ca. 1.500 ml, Atemluft 500 ml, Haut (Schwitzen) 300 ml, Stuhl 200 ml, zusammen ca. 2,5 l."],
+["N","Wie setzt sich die tägliche Wasseraufnahme zusammen?","Trinken ca. 1.500 ml, feste Nahrung ca. 600 ml und Oxidationswasser ca. 400 ml, zusammen ca. 2,5 l."],
+["N","Was ist Oxidationswasser?","Wasser, das bei der biologischen Oxidation (Abbau) der Nahrungsstoffe entsteht, ca. 400 ml pro Tag."],
+["N","Wodurch wird das RAAS aktiviert?","Durch verminderte Nierendurchblutung bei niedrigem Blutdruck, niedrigem Natrium oder Flüssigkeitsmangel, etwa bei Blutung, Durchfall, Erbrechen oder Schwitzen."],
+["N","Beschreibe die Kaskade des RAAS.","Die Niere setzt Renin frei. Renin wandelt Angiotensinogen aus der Leber in Angiotensin I um; ACE (v. a. aus der Lunge) wandelt dieses in Angiotensin II um."],
+["N","Welche Wirkungen hat Angiotensin II?","Starke Vasokonstriktion und damit Blutdrucksteigerung, Freisetzung von Aldosteron aus der Nebennierenrinde und von ADH aus der Hypophyse."],
+["N","Wie wirken Aldosteron und ADH (Adiuretin)?","Aldosteron steigert die Na⁺- und damit Wasserrückresorption am Tubulus. ADH vermindert die Wasserausscheidung in den Sammelrohren. Beides normalisiert das extrazelluläre Volumen."],
+["N","Wie verändert sich die Niere im Alter?","Zwischen 30 und 70 Jahren sinkt die Nephronzahl um ca. 35 %. Filtration, Sekretion und Rückresorption nehmen ab, was bei Medikamenten mit renaler Ausscheidung zu beachten ist."],
+["N","Was gehört zu den ableitenden Harnwegen und womit sind sie ausgekleidet?","Nierenkelche, Nierenbecken, Harnleiter, Harnblase und Harnröhre; ausgekleidet mit Übergangsepithel."],
+["N","Wie viele Nierenkelche hat eine Niere und was machen sie?","Etwa zehn. Jeder umgibt trichterförmig mehrere Papillen, fängt den Harn auf und leitet ihn ins Nierenbecken."],
+["N","Wie ist der Harnleiter aufgebaut?","Paarig, 25–30 cm lang, 4–7 mm Durchmesser, sternförmiges Lumen. Er mündet schräg in die Blase; die Mündung wirkt als Ventil gegen Rückfluss."],
+["N","Wo liegt die Harnblase und was sind ihre Nachbarn?","Im kleinen Becken hinter der Symphyse. Dorsal bei der Frau Scheide und Gebärmutter, beim Mann Enddarm. Kaudal bei der Frau Beckenboden, beim Mann Prostata."],
+["N","Wann tritt Harndrang auf und wie viel fasst die Blase?","Harndrang ab 250–500 ml; maximal bis 1.500 ml (dann bis Nabelhöhe). Sie füllt sich um ca. 50 ml pro Stunde."],
+["N","Welche Schließmuskeln verschließen die Harnblase?","M. sphincter internus und M. sphincter externus; der externe besteht aus quergestreifter Beckenbodenmuskulatur und ist willkürlich steuerbar."],
+["N","Wie läuft die Miktion ab?","Der M. detrusor vesicae kontrahiert, verschließt dabei die Harnleiter, beide Schließmuskeln erschlaffen und der Harn tritt in die Harnröhre. Speicherung ist passiv (Sympathikus), Entleerung aktiv und willkürlich."],
+["N","Wie unterscheidet sich die Harnröhre bei Frau und Mann?","Frau: 2,5–4 cm, mündet in den Scheidenvorhof. Mann: 20–25 cm; nach ca. 3 cm mündet der Samenleiter (Harn-Samen-Röhre), umgeben von Prostata und Schwellkörpern."],
+
+["L","Was gehört zum lymphatischen System und welche Aufgaben hat es?","Lymphbahnen, Lymphknoten, Milz, Thymus, lymphatisches Gewebe des Darms (Peyer-Plaques) und der lymphatische Rachenring. Aufgaben: Immunabwehr, Fetttransport und Flüssigkeitsrücktransport."],
+["L","Welche Organe sind primäre lymphatische Organe und was passiert dort?","Rotes Knochenmark (Bildung der Vorläufer, Reifung der B-Lymphozyten) und Thymus (Reifung und Selektion der T-Lymphozyten). Hier lernen Lymphozyten, eigen von fremd zu unterscheiden."],
+["L","Welche Organe sind sekundäre lymphatische Organe und was passiert dort?","Lymphknoten, Milz, Rachenring, MALT und Immunsystem der Haut. Hier finden Antigenerkennung, Vermehrung der Lymphozyten und Differenzierung in Effektor-, Gedächtnis- und regulatorische Zellen statt."],
+["L","Worauf reagieren die einzelnen sekundären lymphatischen Organe?","Lymphknoten auf Antigene aus der Lymphe, Milz auf Antigene aus dem Blut, Rachenring auf Keime über Mund und Nase, MALT auf Antigene, die die Schleimhaut passieren."],
+["L","Wo befindet sich rotes Knochenmark in welchem Lebensalter?","Neugeborene: in allen Knochen. Kindheit/Jugend: zunehmend durch gelbes Fettmark ersetzt (reversibel). Erwachsene: v. a. Wirbel, Rippen, Brustbein, Becken, Schädel und proximale Humerus/Femur."],
+["L","Welche Zellen bildet das rote Knochenmark?","Alle Blutzellreihen: Erythrozyten, Granulozyten, Monozyten, Thrombozyten und Lymphozyten."],
+["L","Wo liegt der Thymus und wie verändert er sich?","Hinter dem Brustbein im vorderen oberen Mediastinum. Er wächst bis zur Pubertät, ist bei Kleinkindern relativ besonders groß und wird danach teilweise durch Fett ersetzt; funktionelles Gewebe bleibt erhalten."],
+["L","Wie unterscheiden sich Lymphkapillaren von Blutkapillaren?","Lymphkapillaren beginnen blind im Gewebe und vereinigen sich zu Lymphgefäßen und Lymphstämmen."],
+["L","Was ist die Cisterna chyli und wohin führt der Ductus thoracicus?","Zusammenfluss von Lenden- und Darmlymphstämmen auf Höhe L1/L2. Daraus geht der Ductus thoracicus hervor, der in den linken Venenwinkel mündet."],
+["L","Welches Gebiet drainiert der Ductus lymphaticus dexter?","Das rechte obere Körperviertel; er mündet in den rechten Venenwinkel. Der Ductus thoracicus drainiert den ganzen übrigen Körper."],
+["L","Woraus besteht Lymphe?","Aus interstitieller Flüssigkeit mit Wasser, Elektrolyten, Proteinen und Zellen. Darmlymphe enthält zusätzlich Nahrungsfette als Chylomikronen; nach den Lymphknoten mehr Lymphozyten und Immunglobuline."],
+["L","Welche Aufgaben haben Lymphknoten?","Sie filtern die Lymphe, erkennen und verarbeiten Antigene und Erreger (Makrophagen) und aktivieren B-Lymphozyten zur Antikörperbildung."],
+["L","Warum entsteht nach Lymphknotenentfernung ein Lymphödem und was hilft?","Der Lymphabfluss der Extremität ist gestört, z. B. nach Brustkrebs-OP oder durch Tumor. Bewegung und Hochlagerung fördern den Rückfluss."],
+["L","Welche Lymphknotengruppen sind besonders wichtig?","Zervikale, axilläre und inguinale Lymphknoten."],
+["L","Wo liegt die Milz und wie groß ist sie?","Im linken Oberbauch direkt unter dem Zwerchfell, intraperitoneal; ca. 11 × 7 × 4 cm. Anders als Lymphknoten ist sie in den Blutkreislauf eingebunden (A./V. lienalis am Hilus)."],
+["L","Was ist der Unterschied zwischen roter und weißer Pulpa?","Rote Pulpa: blutdurchströmtes Netzwerk, in dem alte Erythrozyten hängen bleiben und abgebaut werden. Weiße Pulpa: Milzknötchen um Zentralarterien mit Lymphozyten und Makrophagen, immunologische Aufgaben."],
+["L","Welche Aufgaben hat die Milz?","Filter für Antigene im Blut, Abbau alter Erythrozyten und Thrombozyten, Thrombozytenspeicher sowie Blutbildung beim Fetus (und pathologisch beim Erwachsenen)."],
+["L","Was sind Splenomegalie und Milzruptur?","Splenomegalie: Vergrößerung der Milz, unterhalb des Rippenbogens tastbar. Milzruptur: Riss von Gewebe und ggf. Kapsel mit lebensgefährlicher innerer Blutung."],
+["L","Was ist der Waldeyer-Rachenring und welche Aufgaben hat er?","Lymphatisches Gewebe im Mund-Nasen-Rachen-Raum (Rachen-, Gaumen-, Zungen- und Tubenmandeln, Seitenstränge). Er erkennt und wehrt Erreger ab und aktiviert B-Lymphozyten."],
+["L","Was ist die Rachenmandel und welche Erkrankung ist typisch?","Unpaares lymphatisches Gewebe am Dach/Hinterwand des Nasenrachens, verhindert das Eindringen von Bakterien. Typisch bei Kindern ist die adenoide Hyperplasie: behinderte Nasenatmung, Mundatmung, ausgetrocknete Schleimhaut, Katarrhe."],
+["L","Wo liegen die Gaumenmandeln und was sind Tonsillensteine?","Paarig in der Fossa tonsillaris zwischen vorderem und hinterem Gaumenbogen. In ihren Krypten können sich Leukozyten, Epithelzellen, Bakterien und Speisereste einlagern und Tonsillensteine bilden."],
+["L","Welche Erkrankungen betreffen die Gaumenmandeln?","Tonsillitis bzw. Angina tonsillaris, Scharlach, Diphtherie, infektiöse Mononukleose; außerdem Mundgeruch."],
+["L","Wo liegt die Zungenmandel und welche Aufgabe hat sie?","Unpaar in der Schleimhaut des Zungengrunds, auf der Zungenmuskulatur. Immunologische Überwachung des hinteren Mundraums."],
+["L","Was ist MALT und wie wirkt es?","Schleimhautassoziiertes lymphatisches Gewebe v. a. in Verdauungs-, Harn- und Atemtrakt. M-Zellen nehmen Antigene auf; Lymphozyten bilden v. a. sekretorisches IgA, das das Einnisten von Bakterien verhindert."],
+["L","Wie wird MALT eingeteilt und was zählt dazu?","NALT (Nase), BALT (Bronchien), GALT (Magen-Darm), VALT (Vulva/Vagina). Dazu zählen auch Tonsillen, Peyer-Plaques und die Appendix."],
+
+["B","Welche Aufgaben hat das Blut?","Transport (O₂, CO₂, Nährstoffe, Hormone, Stoffwechselprodukte, Wärme), Wärmeregulation, Immunabwehr, Flüssigkeitshaushalt, Blutgerinnung und Pufferung im Säure-Basen-Haushalt."],
+["B","Wie groß ist das Blutvolumen?","Etwa 7–8 % des Körpergewichts, bei 70 kg also 4–6 l."],
+["B","Was ist der Hämatokrit?","Der Volumenanteil der Blutzellen am Gesamtblut, ca. 0,40–0,45 (geschlechtsabhängig). Die restlichen 55–60 % sind Plasma."],
+["B","Woraus besteht das Blutplasma?","Klare gelbe Flüssigkeit aus ca. 90 % Wasser, 7 % Plasmaproteinen (Albumin, Globuline), Elektrolyten (z. B. Na⁺, K⁺) und kleinmolekularen Stoffen (Glukose, Hormone, Vitamine)."],
+["B","In welche Gruppen lassen sich Plasmaproteine trennen und welche Funktionen haben sie?","Per Eiweißelektrophorese in Albumine, α1-, α2-, β- und γ-Globuline. Funktionen: Transport, Schutz vor Blutverlust und Abwehr."],
+["B","Was sind die wichtigsten Fakten zu Erythrozyten?","Über 99 % der Blutzellen, ca. 5 Mio./µl. Aufgaben: O₂/CO₂-Transport und pH-Regulation. Gebildet im roten Knochenmark, Lebensdauer 100–120 Tage, danach Abbau durch Phagozytose."],
+["B","Was kennzeichnet Leukozyten?","4.000–10.000/µl, besitzen einen Zellkern, stammen aus dem Knochenmark und dienen der Abwehr. Drei Hauptgruppen: Granulozyten, Monozyten, Lymphozyten."],
+["B","Was sind Granulozyten?","45–75 % der Leukozyten, Mikrophagen der unspezifischen zellulären Abwehr, können ins Gewebe auswandern. Lebensdauer 1–7 Tage, Abbau durch Makrophagen."],
+["B","Welche Aufgaben haben neutrophile, eosinophile und basophile Granulozyten?","Neutrophile: allgemeine Phagozytose. Eosinophile: Parasitenabwehr. Basophile: Freisetzung von Histamin (gefäßerweiternd) und Heparin (gerinnungshemmend)."],
+["B","Was sind Monozyten?","3–7 % der Leukozyten, größte Blutzellen mit nierenförmigem Kern. Sie bleiben 1–3 Tage im Blut und wandeln sich im Gewebe zu Makrophagen um, die Monate leben."],
+["B","Was sind Lymphozyten und wie werden sie eingeteilt?","25–40 % der Leukozyten, kleinste Leukozyten, spezifische Abwehr. T-Lymphozyten (80 %, wirken vor Ort), B-Lymphozyten (15 %, bilden Antikörper), NK-Zellen (5 %, töten virusbefallene Zellen)."],
+["B","Wo befinden sich die Lymphozyten?","Nur ca. 4 % im Blut, ca. 70 % in lymphatischen Organen, ca. 10 % im Knochenmark; der Rest zirkuliert zwischen Gewebe, Lymphe und Blut."],
+["B","Was sind die wichtigsten Fakten zu Thrombozyten?","Kernlose Zellfragmente (1–4 µm), 150.000–400.000/µl, Lebensdauer 5–12 Tage, Abbau v. a. in der Milz. Sie werden durch Gefäßverletzung aktiviert und dienen der Blutstillung."],
+["B","Worauf beruhen die Blutgruppen?","Auf Glykoproteinen (Blutgruppenantigenen) an der Erythrozytenmembran; klinisch wichtig sind das AB0- und das Rhesus-System."],
+["B","Wie sind die AB0-Blutgruppen in Deutschland verteilt?","A 44 %, 0 42 %, B 10 %, AB 4 %."],
+["B","Welche Antikörper hat man im Serum bei welcher Blutgruppe?","A: Anti-B. B: Anti-A. AB: keine. 0: Anti-A und Anti-B. Man hat jeweils Antikörper gegen das Antigen, das auf den eigenen Erythrozyten fehlt."],
+["B","Was ist das Rhesus-System?","Rh-positiv (ca. 85 %) tragen das Antigen D auf den Erythrozyten, Rh-negativ (ca. 15 %) nicht. Anders als im AB0-System entstehen Antikörper erst nach Kontakt mit dem Antigen."],
+["B","Wer ist Universalspender und wer Universalempfänger?","Universalspender: Blutgruppe 0 (Erythrozyten ohne AB0-Antigene). Universalempfänger: AB (keine AB0-Antikörper im Serum). Ideal ist Blut gleicher Gruppe."],
+["B","Aus welchen vier Prozessen besteht die Blutstillung?","Vasokonstriktion, zelluläre Hämostase (Thrombozyten), plasmatische Hämostase (Gerinnung) und Fibrinolyse."],
+["B","Wie läuft die primäre (zelluläre) Hämostase ab?","Thrombozyten heften sich an die verletzte Gefäßwand (Adhäsion) und verkleben zum weißen Thrombus (Aggregation), abgeschlossen in 1–4 Minuten (Blutungszeit). Freigesetztes Serotonin verstärkt die Aggregation und verengt Gefäße."],
+["B","Wie läuft die plasmatische Gerinnung ab?","Als Enzymkaskade, ausgelöst durch einen Endotheldefekt: Prothrombin → Thrombin, das Fibrinogen in Fibrin umwandelt."],
+["B","Was ist die Fibrinolyse?","Sie begrenzt den Thrombus auf den Verletzungsort und löst Fibrin auf: Plasminogenaktivatoren wandeln Plasminogen in Plasmin um. Therapeutisch genutzt bei Thrombosen und Embolien."]
+];
+
+const MC = [
+["A","Auf Höhe welches Wirbels teilt sich die Trachea?",["5. Brustwirbel","7. Halswirbel","10. Brustwirbel","1. Lendenwirbel"],"Die Bifurkation liegt auf Höhe Th5."],
+["A","Welcher Hauptbronchus ist steiler und weiter?",["Der rechte","Der linke","Beide gleich","Das hängt von der Körperlage ab"],"Deshalb landen Fremdkörper meist rechts."],
+["A","Wie viele Segmente hat die linke Lunge?",["9","10","8","12"],"Links 2 Lappen mit 9, rechts 3 Lappen mit 10 Segmenten."],
+["A","Welche Zellen produzieren Surfactant?",["Pneumozyten Typ II","Pneumozyten Typ I","Alveolarmakrophagen","Becherzellen"],"Typ I bilden das eigentliche Alveolarepithel."],
+["A","Wie groß ist die Vitalkapazität ungefähr?",["4,5 l","6 l","3 l","7,5 l"],"AZV 0,5 + IRV 2,5 + ERV 1,5 = 4,5 l."],
+["A","Wie groß ist das Residualvolumen?",["1,5 l","0,5 l","3 l","2,5 l"],"3 l ist die funktionelle Residualkapazität."],
+["A","Wie hoch ist das Atemminutenvolumen in Ruhe?",["7,5 l/min","5 l/min","15 l/min","0,5 l/min"],"0,5 l × 15/min."],
+["A","Welche Muskeln sind für die Ruheeinatmung verantwortlich?",["Zwerchfell und Mm. intercostales externi","Mm. intercostales interni","Bauchmuskulatur","Nur die Atemhilfsmuskulatur"],"Interni und Bauchmuskeln unterstützen die Ausatmung."],
+["A","Wo liegt das Atemzentrum?",["Medulla oblongata","Kleinhirn","Hypothalamus","Großhirnrinde"],"Zusätzlich beteiligt ist das obere Halsmark."],
+["A","Über welche Hirnnerven gelangen Signale der peripheren Chemorezeptoren zum Atemzentrum?",["IX und X","VII und VIII","V und VII","XI und XII"],"N. glossopharyngeus und N. vagus."],
+["A","Welche Veränderung steigert die Atmung NICHT?",["Anstieg des pH-Werts","Anstieg des CO₂","Abfall des O₂","Abfall des pH-Werts"],"Ein steigender pH (Alkalose) würde die Atmung eher dämpfen."],
+["A","Welcher Knorpel gehört NICHT zum formgebenden Kehlkopfgerüst?",["Cartilago cuneiformis","Cartilago cricoidea","Cartilago thyroidea","Cartilago epiglottica"],"Keil-, Hörnchen- und Weizenknorpel sind nicht formgebend."],
+["A","In welche Rachenetage mündet die Tuba auditiva?",["Pars nasalis","Pars oralis","Pars laryngea","Sie mündet in den Kehlkopf"],"Sie ermöglicht den Druckausgleich zum Mittelohr."],
+["A","Welche Clearance wirkt in den kleinen Bronchien?",["Nur die mukoziliäre Clearance","Nur die Husten-Clearance","Beide gleich stark","Keine"],"Husten ist nur bis zu den größeren Bronchien effektiv."],
+["A","Wie lange kann die alveoläre Clearance dauern?",["24 Stunden bis 100 Tage","Wenige Minuten","1–2 Stunden","Über ein Jahr"],"Sie ist der langsamste Reinigungsmechanismus."],
+["A","Wie viele Alveolen haben beide Lungen zusammen?",["ca. 300 Millionen","ca. 3 Millionen","ca. 30 Millionen","ca. 3 Milliarden"],"Innere Oberfläche 80–100 m²."],
+["A","Welche Funktion haben die Nasennebenhöhlen NICHT?",["Geruchswahrnehmung","Gewichtsersparnis des Schädels","Resonanzorgan","Erwärmung der Atemluft"],"Geruchswahrnehmung ist eine Funktion der Nasenhöhle."],
+["A","Welche Schicht gehört NICHT zur Blut-Luft-Schranke?",["Pleura visceralis","Alveolarepithel","Basalmembran","Kapillarendothel"],"Die Pleura überzieht die Lunge außen."],
+["A","Was passiert bei einem Pneumothorax?",["Die Lunge kollabiert durch ihre Eigenelastizität","Die Lunge überbläht sich","Der Pleuraspalt verklebt","Das Zwerchfell reißt"],"Das Lungenvolumen sinkt auf etwa ein Drittel."],
+["K","Welche Herzhälfte ist die Pumpe des Körperkreislaufs?",["Die linke","Die rechte","Beide abwechselnd","Die Vorhöfe"],"Die rechte Hälfte versorgt den Lungenkreislauf."],
+["K","Welcher Gefäßwandschicht fehlt den Kapillaren?",["Tunica media","Tunica interna","Endothel","Basalmembran"],"Kapillaren bestehen nur aus Endothel (auf Basalmembran)."],
+["K","Welche Gefäße nennt man Kapazitätsgefäße?",["Venen","Arterien","Kapillaren","Arteriolen"],"Sie enthalten über 2/3 des Blutvolumens."],
+["K","Welche Gefäße sind Windkesselgefäße?",["Aorta und große Arterien","Kapillaren","Venolen","Kleine muskuläre Arterien"],"Elastischer Typ, dehnt sich beim Auswurf."],
+["K","Wie wirkt der Sympathikus über α-Rezeptoren auf die Gefäße?",["Vasokonstriktion, v. a. in Haut und Niere","Vasodilatation in der Muskulatur","Keine Wirkung","Vasodilatation in der Haut"],"Über β-Rezeptoren wirkt er gefäßerweiternd."],
+["K","Wie viel Flüssigkeit wird täglich an den Kapillaren filtriert bzw. reabsorbiert?",["20 l / 18 l","180 l / 178 l","10 l / 9 l","2 l / 1,5 l"],"Die restlichen 2 l fließen als Lymphe ab."],
+["K","Welche Substanz wirkt gefäßverengend?",["Angiotensin II","Bradykinin","Histamin","CO₂"],"Die anderen drei wirken gefäßerweiternd."],
+["K","Wohin führt die Pfortader das Blut?",["Zur Leber","Zur Milz","Zur Niere","Direkt zum rechten Herzen"],"Zwei Kapillarsysteme hintereinander."],
+["K","In welche Arterien teilt sich die A. poplitea?",["A. tibialis anterior und posterior","A. radialis und ulnaris","A. iliaca interna und externa","A. femoralis und dorsalis pedis"],"Die A. tibialis anterior endet als A. dorsalis pedis."],
+["K","Welche Gefäße gehen aus dem Truncus brachiocephalicus hervor?",["Rechte A. subclavia und rechte A. carotis communis","Linke A. subclavia und linke A. carotis","Beide Aa. carotides","A. axillaris und A. brachialis"],"Links entspringen die Gefäße direkt aus dem Aortenbogen."],
+["K","Welcher Blutdruck gilt als normal?",["120/80 mmHg","140/100 mmHg","100/40 mmHg","160/90 mmHg"],"Systolisch/diastolisch."],
+["K","Welcher Druck treibt die Flüssigkeit im venösen Kapillarschenkel zurück ins Gefäß?",["Kolloidosmotischer Druck","Hydrostatischer Druck","Intrapleuraler Druck","Venendruck"],"Er entsteht durch die Plasmaproteine."],
+["K","Was unterstützt den venösen Rückstrom NICHT?",["Vasokonstriktion der Arteriolen","Venenklappen","Skelettmuskelpumpe","Sogwirkung des Herzens"],"Auch die Pulsation benachbarter Arterien hilft."],
+["H","Welche Herzklappe hat zwei Segel?",["Mitralklappe","Trikuspidalklappe","Aortenklappe","Pulmonalklappe"],"Die Trikuspidalklappe hat drei Segel."],
+["H","Welche Struktur ist der primäre Schrittmacher des Herzens?",["Sinusknoten","AV-Knoten","His-Bündel","Purkinje-Fasern"],"Er liegt in der Wand des rechten Vorhofs."],
+["H","Was ist die Hauptaufgabe des AV-Knotens?",["Die Erregung zu verzögern","Die Erregung zu beschleunigen","Den Rhythmus vorzugeben","Die Klappen zu steuern"],"So kontrahieren die Vorhöfe vor den Kammern."],
+["H","Was beschreibt die Dromotropie?",["Erregungsleitungsgeschwindigkeit","Herzfrequenz","Schlagkraft","Füllung des Herzens"],"Chronotropie = Frequenz, Inotropie = Kraft."],
+["H","Wie hoch ist das Herzminutenvolumen in Ruhe?",["ca. 5 l/min","ca. 7,5 l/min","ca. 1 l/min","ca. 15 l/min"],"70/min × 70 ml ≈ 4,9 l/min."],
+["H","Wie ist der Zustand der Klappen in der Anspannungsphase?",["Alle Klappen geschlossen","Alle Klappen offen","Segelklappen offen, Taschenklappen zu","Taschenklappen offen, Segelklappen zu"],"Druck baut sich auf, bis die Taschenklappen öffnen."],
+["H","Was besagt der Frank-Starling-Mechanismus?",["Mehr Füllung führt zu kräftigerer Kontraktion","Höhere Frequenz führt zu mehr Füllung","Mehr Nachlast senkt den Blutdruck","Der Sympathikus senkt das Schlagvolumen"],"Stärkere Dehnung, höheres Schlagvolumen."],
+["H","Was entspricht der Nachlast?",["Dem Druck in der Aorta bzw. A. pulmonalis","Der enddiastolischen Füllung","Der Herzfrequenz","Dem Venendruck"],"Die Vorlast ist die Füllung."],
+["H","Wohin münden die Koronarvenen?",["Über den Sinus coronarius in den rechten Vorhof","In den linken Vorhof","In die Aorta","In die V. cava superior"],"Sie verlaufen parallel zu den Arterien."],
+["H","Welchen Transmitter setzt der Parasympathikus am Herzen frei?",["Acetylcholin","Noradrenalin","Adrenalin","Histamin"],"Der Sympathikus nutzt Noradrenalin."],
+["H","Welche Herzfrequenz ist bei Säuglingen normal?",["120–160/min","60–100/min","75–100/min","200–240/min"],"Bei Erwachsenen 60–100/min."],
+["N","Wie viel Primärharn entsteht pro Tag?",["ca. 180 l","ca. 18 l","ca. 2 l","ca. 1.800 l"],"Davon werden ca. 178 l rückresorbiert."],
+["N","Wie hoch ist die glomeruläre Filtrationsrate?",["ca. 120 ml/min","ca. 12 ml/min","ca. 1,2 l/min","ca. 50 ml/h"],"Entspricht 180 l/Tag."],
+["N","Wo wird Renin gebildet?",["In den juxtaglomerulären Zellen der Arteriola afferens","In der Macula densa","In der Leber","In der Lunge"],"Die Macula densa misst die NaCl-Konzentration."],
+["N","Wo wird ACE hauptsächlich gebildet?",["In der Lunge","In der Niere","In der Leber","In der Nebenniere"],"ACE wandelt Angiotensin I in Angiotensin II um."],
+["N","Wie wirkt Aldosteron?",["Steigert die Na⁺- und Wasserrückresorption am Tubulus","Senkt den Blutdruck","Steigert die Erythrozytenbildung","Hemmt die Reninfreisetzung direkt"],"Es wird aus der Nebennierenrinde freigesetzt."],
+["N","Welche ist die aktive Form des Vitamin D?",["Calcitriol","Calcidiol","Cholecalciferol","7-Dehydrocholesterin"],"Leber speichert (Calcidiol), Niere aktiviert (Calcitriol)."],
+["N","Ab welcher Füllmenge tritt Harndrang auf?",["250–500 ml","50–100 ml","1.000–1.500 ml","2.000 ml"],"Maximal fasst die Blase ca. 1.500 ml."],
+["N","Welcher Schließmuskel ist willkürlich steuerbar?",["M. sphincter externus","M. sphincter internus","M. detrusor vesicae","Beide Sphinkteren"],"Er besteht aus quergestreifter Beckenbodenmuskulatur."],
+["N","Wie viel Wasser gibt der Körper täglich über die Atemluft ab?",["ca. 500 ml","ca. 50 ml","ca. 1.500 ml","ca. 200 ml"],"Urin 1.500, Haut 300, Stuhl 200 ml."],
+["N","Um wie viel sinkt die Nephronzahl zwischen 30 und 70 Jahren?",["ca. 35 %","ca. 5 %","ca. 70 %","gar nicht"],"Wichtig für die Medikamentendosierung."],
+["N","Was misst die Macula densa?",["Die NaCl-Konzentration im distalen Tubulus","Den Blutdruck in der Aorta","Den O₂-Gehalt","Die Harnmenge in der Blase"],"Sie reguliert Filtration und Reninfreisetzung."],
+["N","Wo liegen die Nieren?",["Retroperitoneal","Intraperitoneal","Im kleinen Becken","Im Mediastinum"],"Dicht unter dem Zwerchfell beidseits der Wirbelsäule."],
+["L","Wohin mündet der Ductus thoracicus?",["In den linken Venenwinkel","In den rechten Venenwinkel","In die V. cava inferior","In die Cisterna chyli"],"Er entspringt aus der Cisterna chyli."],
+["L","Welches Organ ist ein primäres lymphatisches Organ?",["Thymus","Milz","Lymphknoten","Gaumenmandel"],"Das zweite ist das rote Knochenmark."],
+["L","Worauf reagiert die Milz?",["Auf Antigene aus dem Blut","Auf Antigene aus der Lymphe","Nur auf Keime aus dem Mund","Auf Antigene der Haut"],"Lymphknoten reagieren auf Antigene aus der Lymphe."],
+["L","Wo werden alte Erythrozyten in der Milz abgebaut?",["Rote Pulpa","Weiße Pulpa","Milzhilus","Milzkapsel"],"Die weiße Pulpa hat immunologische Aufgaben."],
+["L","Was bildet das MALT vor allem?",["Sekretorisches IgA","Erythrozyten","Surfactant","Renin"],"Es verhindert das Einnisten von Bakterien im Epithel."],
+["L","Auf welcher Höhe liegt die Cisterna chyli?",["L1/L2","Th5","C7","S1"],"Zusammenfluss von Lenden- und Darmlymphstämmen."],
+["L","Welche Erkrankung betrifft typischerweise die Rachenmandel bei Kindern?",["Adenoide Hyperplasie","Splenomegalie","Tonsillensteine","Lymphödem"],"Folge: behinderte Nasenatmung."],
+["B","Wie hoch ist der normale Hämatokrit?",["40–45 %","10–15 %","55–60 %","90 %"],"55–60 % sind Plasma."],
+["B","Wie lange leben Erythrozyten?",["100–120 Tage","5–12 Tage","1–7 Tage","Mehrere Jahre"],"5–12 Tage gilt für Thrombozyten."],
+["B","Welchen Anteil der Leukozyten machen Lymphozyten aus?",["25–40 %","45–75 %","3–7 %","über 90 %"],"45–75 % sind Granulozyten."],
+["B","Was ist die Hauptaufgabe der eosinophilen Granulozyten?",["Abwehr von Parasiten","Bildung von Antikörpern","Freisetzung von Heparin","O₂-Transport"],"Basophile setzen Histamin und Heparin frei."],
+["B","Welche Zellen bilden Antikörper?",["B-Lymphozyten","T-Lymphozyten","NK-Zellen","Monozyten"],"T-Lymphozyten wirken direkt vor Ort."],
+["B","Welche Blutgruppe ist Universalspender?",["0","AB","A","B"],"AB ist Universalempfänger."],
+["B","Welche Antikörper hat ein Mensch mit Blutgruppe A im Serum?",["Anti-B","Anti-A","Anti-A und Anti-B","Keine"],"Antikörper richten sich gegen das fehlende Antigen."],
+["B","Wann entstehen Rhesus-Antikörper?",["Erst nach Kontakt mit dem Antigen D","Schon von Geburt an","Nie","Nur bei Blutgruppe 0"],"Im AB0-System sind sie natürlich vorhanden."],
+["B","Wie viele Thrombozyten enthält ein µl Blut?",["150.000–400.000","4.000–10.000","ca. 5 Millionen","1.000–2.000"],"4.000–10.000 sind die Leukozyten."],
+["B","Was entsteht in der Fibrinolyse aus Plasminogen?",["Plasmin","Thrombin","Fibrin","Prothrombin"],"Plasmin löst Fibrinfäden auf."],
+["B","Was ist das Endprodukt der plasmatischen Gerinnung?",["Fibrin","Thrombin","Plasmin","Serotonin"],"Thrombin wandelt Fibrinogen in Fibrin um."]
+];
+
+const OPEN = [
+["A","Erkläre den Unterschied zwischen Ein- und Ausatmung.","Die Einatmung ist aktiv: Zwerchfell und Mm. intercostales externi erweitern den Thorax. Die Ausatmung ist in Ruhe passiv durch die Eigenelastizität von Lunge und Thorax; bei forcierter Ausatmung helfen Mm. intercostales interni und Bauchmuskeln."],
+["A","Nenne die drei Reinigungsmechanismen der Lunge und wo sie jeweils wirken.","Mukoziliäre Clearance im gesamten Tracheobronchialbaum inkl. kleiner Bronchien; Husten-Clearance nur in oberen Luftwegen bis zu den größeren Bronchien; alveoläre Clearance in den Alveolen über Surfactant und Alveolarmakrophagen (langsam, bis 100 Tage)."],
+["A","Was passiert bei einem Pneumothorax und warum?","Die Pleura wird verletzt, Luft gelangt in den Pleuraspalt, die Haftung geht verloren. Durch ihre Eigenelastizität kollabiert die Lunge auf ca. 1/3 und folgt den Thoraxbewegungen nicht mehr."],
+["A","Warum können Frühgeborene vor der 32. SSW oft nicht selbstständig atmen?","Die Pneumozyten Typ II bilden noch zu wenig Surfactant. Ohne ihn ist die Oberflächenspannung hoch und die Alveolen kollabieren."],
+["A","Beschreibe den Regelkreis der Atmung bei einem CO₂-Anstieg im Blut.","Chemorezeptoren (Glomus caroticum, Glomera aortica) melden über N. IX und X an die Medulla oblongata. Das Atemzentrum steigert über Halsmark und periphere Nerven die Atemtätigkeit, CO₂ wird abgeatmet, der pH normalisiert sich."],
+["A","Rechne: Atemfrequenz 12/min, Atemzugvolumen 0,6 l. Wie hoch ist das Atemminutenvolumen?","12 × 0,6 l = 7,2 l/min."],
+["K","Beschreibe den Weg eines Erythrozyten vom linken Ventrikel durch den Körper zurück in den linken Ventrikel.","LV → Aorta → Arterien → Arteriolen → Kapillaren → Venolen → Venen → V. cava → RA → Trikuspidalklappe → RV → Pulmonalklappe → Truncus pulmonalis → Lungenkapillaren → Vv. pulmonales → LA → Mitralklappe → LV."],
+["K","Erkläre Filtration und Reabsorption an der Kapillare und die Rolle der Lymphe.","Arteriell überwiegt der hydrostatische Druck, Flüssigkeit wird ins Gewebe filtriert (ca. 20 l/Tag). Venös überwiegt der kolloidosmotische Druck, ca. 18 l werden reabsorbiert. Die restlichen 2 l führt das Lymphsystem zurück."],
+["K","Welche Mechanismen fördern den venösen Rückstrom? Warum ist das für die Physiotherapie relevant?","Venenklappen, Skelettmuskelpumpe, Pulsation benachbarter Arterien und die Sogwirkung des Herzens. Bewegung und Muskelaktivität unterstützen damit direkt den Rückstrom, z. B. zur Thromboseprophylaxe."],
+["H","Beschreibe die vier Phasen des Herzzyklus mit Klappenstellung.","Anspannungsphase (alle zu, Druckanstieg), Austreibungsphase (Taschenklappen offen), Entspannungsphase (alle zu, Druckabfall), Füllungsphase (Segelklappen offen, Vorhofkontraktion)."],
+["H","Beschreibe das Erregungsbildungs- und Leitungssystem.","Sinusknoten (Schrittmacher, rechter Vorhof) → Vorhöfe → AV-Knoten (Verzögerung) → His-Bündel → Tawara-Schenkel → Purkinje-Fasern → Kammermuskulatur."],
+["H","Wie beeinflussen Sympathikus und Parasympathikus das Herz?","Der Sympathikus (Noradrenalin über β-Rezeptoren, Adrenalin) wirkt positiv chronotrop, inotrop und dromotrop. Der Parasympathikus (N. vagus, Acetylcholin) wirkt negativ auf Frequenz, Kraft und Überleitung."],
+["H","Rechne: Herzfrequenz 80/min, Schlagvolumen 75 ml. Wie groß ist das HZV?","80 × 75 ml = 6.000 ml = 6 l/min."],
+["N","Erkläre das RAAS von Auslöser bis Wirkung.","Niedriger Blutdruck, Natriummangel oder Volumenmangel → Renin aus dem JGA → Angiotensinogen wird zu Angiotensin I → ACE (Lunge) bildet Angiotensin II → Vasokonstriktion, Aldosteron (Na⁺/Wasser-Rückresorption) und ADH (weniger Wasserausscheidung) → Blutdruck und Volumen steigen."],
+["N","Beschreibe die Bildung und Aktivierung von Vitamin D.","Haut: UVB wandelt 7-Dehydrocholesterin in Vitamin D₃. Leber: 25-Hydroxylierung zu Calcidiol (Speicherform). Niere: 1α-Hydroxylierung zu Calcitriol (aktive Form), das Kalziumaufnahme und Knochenmineralisation fördert."],
+["N","Wie wird aus 180 l Primärharn etwa 1,5–2 l Endharn?","Im Glomerulus wird ein zellfreies Filtrat gebildet. In proximalem Tubulus, Henle-Schleife, distalem Tubulus und Sammelrohr werden ca. 178 l Wasser und viele Stoffe rückresorbiert, gesteuert u. a. durch Aldosteron und ADH."],
+["N","Beschreibe den Ablauf der Miktion.","Der M. detrusor vesicae kontrahiert und verschließt die Harnleitermündungen, M. sphincter internus und externus erschlaffen (externus willkürlich), der Harn fließt in die Harnröhre."],
+["L","Warum entsteht nach einer Lymphknotenentfernung ein Lymphödem und was kann man therapeutisch tun?","Die ca. 2 l Lymphe pro Tag können aus der Extremität nicht mehr ausreichend abfließen, Flüssigkeit staut sich im Interstitium. Bewegung und Hochlagerung fördern den Lymphrückfluss."],
+["L","Vergleiche primäre und sekundäre lymphatische Organe.","Primär (Knochenmark, Thymus): Bildung und Reifung der Lymphozyten, Lernen von eigen/fremd. Sekundär (Lymphknoten, Milz, Rachenring, MALT): Antigenkontakt, Vermehrung und Differenzierung reifer Lymphozyten."],
+["B","Vergleiche AB0- und Rhesus-System.","AB0: Antigene A/B; Antikörper gegen das fehlende Antigen sind von Natur aus vorhanden. Rhesus: Antigen D (85 % Rh+); Antikörper entstehen erst nach Kontakt. Beide führen bei falscher Transfusion zu Unverträglichkeitsreaktionen."],
+["B","Beschreibe den Ablauf der Blutstillung.","Vasokonstriktion, dann primäre Hämostase (Thrombozytenadhäsion und -aggregation zum weißen Thrombus, 1–4 min), plasmatische Gerinnung (Prothrombin → Thrombin, Fibrinogen → Fibrin) und schließlich Fibrinolyse (Plasmin löst Fibrin auf)."]
+];
+
+/* Ergänzung: Verdauungssystem, Magen (am Ende angehängt, damit bisheriger Fortschritt erhalten bleibt) */
+CARDS.push(
+["M","Wie ist die Magenwand von innen nach außen aufgebaut?","Mukosa, Submukosa, Muskularis und Serosa bzw. Adventitia."],
+["M","Womit ist der Magen oben und unten verbunden?","Oben mit dem Ösophagus über die Kardia, unten mit dem Duodenum über den Pylorus."],
+["M","Welche Hauptaufgaben hat der Magen?","Speicherung, Durchmischung und Ansäuerung der Nahrung sowie die beginnende Verdauung."],
+["M","Was sind Kardia und Fundus?","Die Kardia ist der Übergangsbereich zwischen Ösophagus und Magen, der Fundus der kuppelförmige obere Abschnitt."],
+["M","Welcher Magenabschnitt ist der größte und was passiert dort?","Der Corpus; hier wird der Magensaft produziert."],
+["M","Welche Aufgaben haben Antrum und Pylorus?","Als unterer Magenteil sorgen sie für die mechanische Durchmischung der Nahrung und regulieren die Weitergabe ins Duodenum."],
+["M","Was bilden die Belegzellen?","Salzsäure (HCl), die für das saure Milieu sorgt, und den Intrinsic Factor, der für die Vitamin-B12-Aufnahme im terminalen Ileum nötig ist."],
+["M","Was bilden die Hauptzellen?","Pepsinogen, das zu Pepsin aktiviert wird und die Proteinverdauung beginnt."],
+["M","Was bilden G-Zellen und ECL-Zellen?","G-Zellen bilden Gastrin, das die Magensäuresekretion fördert. ECL-Zellen bilden Histamin, das die Belegzellen stimuliert."],
+["M","Was enthält der Magensaft und welche Funktionen hat er?","Salzsäure (niedriger pH-Wert) und Pepsinogen bzw. Pepsin. Er unterstützt die Proteinverdauung und wehrt Mikroorganismen ab."],
+["M","Welche drei Substanzen stimulieren die Magensäuresekretion?","Acetylcholin (Parasympathikus), Gastrin (G-Zellen) und Histamin (ECL-Zellen)."],
+["M","Wie schützt sich die Magenwand vor der eigenen Säure?","Schleim bildet eine Barriere zwischen Magenwand und Säure, Bicarbonat neutralisiert die Säure, und das intakte Epithel verhindert ihr Eindringen."],
+["M","Wie wird die Magenentleerung reguliert?","Der Pylorus reguliert die Weitergabe des Chymus. Beeinflusst wird die Entleerung durch Zusammensetzung, Fettgehalt, Säuregehalt und Volumen der Nahrung sowie durch Signale aus dem Duodenum."],
+["M","Welchen Einfluss hat fettreiche Nahrung auf die Magenentleerung?","Sie verlangsamt die Magenentleerung."],
+["M","Was passiert mit der Nahrung im Magen?","Speicherung, mechanische Durchmischung, Vermischung mit Magensaft, Ansäuerung und Beginn der Proteinverdauung. Daraus entsteht Chymus, der portionsweise über den Pylorus ins Duodenum abgegeben wird."],
+["M","Wie werden Proteine im Magen verdaut?","Die Salzsäure denaturiert die Proteine, Pepsinogen wird zu Pepsin aktiviert und spaltet sie. Weiter geht es im Dünndarm durch Enzyme des Pankreas."],
+["M","Wie werden Fette im Magen verdaut?","Durch die Magenlipase, der größere Teil der Fettverdauung findet aber im Dünndarm statt."],
+["M","Wo beginnt die Kohlenhydratverdauung und was passiert im Magen?","Bereits im Mund durch die α-Amylase. Im Magen wird sie durch die Säure eingeschränkt."]
+);
+MC.push(
+["M","Welche Zellen bilden Salzsäure?",["Belegzellen","Hauptzellen","G-Zellen","ECL-Zellen"],"Sie bilden zusätzlich den Intrinsic Factor."],
+["M","Was bilden die Hauptzellen?",["Pepsinogen","Gastrin","Histamin","Intrinsic Factor"],"Pepsinogen wird zu Pepsin aktiviert."],
+["M","Wo wird Vitamin B12 mithilfe des Intrinsic Factors aufgenommen?",["Im terminalen Ileum","Im Magen","Im Duodenum","Im Kolon"],"Der Intrinsic Factor stammt aus den Belegzellen."],
+["M","Welcher ist der größte Magenabschnitt?",["Corpus","Fundus","Antrum","Kardia"],"Im Corpus wird der Magensaft gebildet."],
+["M","Über welchen Abschnitt geht der Magen ins Duodenum über?",["Pylorus","Kardia","Fundus","Corpus"],"Die Kardia ist der Übergang vom Ösophagus."],
+["M","Was setzen ECL-Zellen frei?",["Histamin","Gastrin","Pepsin","Bicarbonat"],"Histamin stimuliert die Belegzellen."],
+["M","Welche Nahrung verlangsamt die Magenentleerung?",["Fettreiche Nahrung","Flüssigkeit","Kleine Portionen","Kohlenhydratarme Nahrung"],"Auch Säuregehalt, Volumen und Signale aus dem Duodenum spielen mit."],
+["M","Was neutralisiert die Säure an der Magenwand?",["Bicarbonat","Pepsin","Histamin","Gastrin"],"Zusammen mit Schleim und intaktem Epithel."],
+["M","Welche Schicht der Magenwand liegt ganz innen?",["Mukosa","Submukosa","Muskularis","Serosa"],"Von innen: Mukosa, Submukosa, Muskularis, Serosa/Adventitia."],
+["M","Welche Substanz stimuliert die Magensäuresekretion NICHT?",["Bicarbonat","Acetylcholin","Gastrin","Histamin"],"Bicarbonat neutralisiert Säure."],
+["M","Wo beginnt die Kohlenhydratverdauung?",["Im Mund","Im Magen","Im Duodenum","Im Dickdarm"],"Durch die α-Amylase; im Magen wird sie durch die Säure gebremst."]
+);
+OPEN.push(
+["M","Beschreibe den Weg der Nahrung durch den Magen.","Speicherung, mechanische Durchmischung, Vermischung mit Magensaft, Ansäuerung, Beginn der Proteinverdauung, Bildung von Chymus und portionsweise Abgabe über den Pylorus ins Duodenum."],
+["M","Nenne die vier Zelltypen des Magens und ihre Produkte.","Belegzellen: HCl und Intrinsic Factor. Hauptzellen: Pepsinogen. G-Zellen: Gastrin. ECL-Zellen: Histamin."],
+["M","Wie schützt sich der Magen davor, sich selbst zu verdauen?","Schleim als Barriere zwischen Magenwand und Säure, Bicarbonat zur Neutralisation und ein intaktes Epithel, das das Eindringen der Säure verhindert."]
+);
+const SYS={A:"Atmung",K:"Kreislauf & Gefäße",H:"Herz",N:"Harnsystem",L:"Lymphsystem",B:"Blut",M:"Magen"};
+const $=id=>document.getElementById(id);
+const store={get(k,d){try{const v=localStorage.getItem(k);return v?JSON.parse(v):d}catch(e){return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+const DAY=864e5, STEPS=[0,1,3,7,14,30]; /* Tage bis zur nächsten Wiederholung je Stufe */
+function migrate(k){const s={};Object.keys(k||{}).forEach(i=>s[i]={b:1,d:Date.now()+DAY});return s}
+let srs=store.get("physio-srs",null)||migrate(store.get("physio-known",{}));
+let answers=store.get("physio-answers",{});
+let cloud=null,saveT=null,retryT=null;
+let session=store.get("physio-session",null);
+function status(msg){$("saveNote").textContent=msg}
+const hhmm=()=>new Date().toLocaleTimeString("de-DE",{hour:"2-digit",minute:"2-digit"});
+function snapshot(){return {srs,answers,session,updated:Date.now()}}
+function saveNow(){
+  clearTimeout(saveT);saveT=null;
+  if(!cloud)return;
+  cloud.set(snapshot()).then(()=>status("Im Konto gespeichert um "+hhmm()+" Uhr.")).catch(()=>{
+    status("Konto gerade nicht erreichbar, auf diesem Gerät ist alles gesichert. Neuer Versuch läuft …");
+    clearTimeout(retryT);retryT=setTimeout(saveNow,4000);
+  });
+}
+function persist(){
+  store.set("physio-srs",srs);store.set("physio-answers",answers);store.set("physio-session",session);
+  if(!cloud){status("Auf diesem Gerät gespeichert um "+hhmm()+" Uhr.");return}
+  clearTimeout(saveT);saveT=setTimeout(saveNow,400);
+}
+/* Beim Schließen, Wechseln der App oder Sperren des Handys sofort sichern */
+document.addEventListener("visibilitychange",()=>{if(document.visibilityState==="hidden"&&saveT)saveNow()});
+window.addEventListener("pagehide",()=>{if(saveT)saveNow()});
+async function initCloud(){
+  try{
+    const [db,user]=await Promise.all([claude.use("db"),claude.use("user")]);
+    if(!db||!user)return;
+    const id=await user.id();if(!id)return;
+    /* data/users/<id> ist eine Sammlung, das Dokument liegt eine Ebene darunter */
+    const ref=db.doc("data/users/"+id+"/progress");
+    const snap=await ref.get();
+    if(snap.exists){
+      const d=snap.data()||{};
+      const cs=d.srs||migrate(d.known);
+      Object.keys(cs).forEach(k=>{const a=srs[k],c=cs[k];if(!a||(c.d>a.d&&c.b>=a.b))srs[k]=c});
+      answers=Object.assign({},d.answers||{},answers);
+      if(d.session&&(!session||d.session.t>session.t))session=d.session;
+    }
+    cloud=ref;resume();renderQuiz();saveNow();
+  }catch(e){
+    status("Speichern im Konto gerade nicht möglich, Fortschritt wird auf diesem Gerät gesichert.");
+  }
+}
+function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+
+function chips(el,onChange){
+  let sel="all";
+  const opts=[["all","Alle"]].concat(Object.entries(SYS));
+  el.innerHTML=opts.map(([k,n])=>`<button class="chip" data-k="${k}" aria-pressed="${k==="all"}" style="--c:var(--${k==="all"?"ink":k})">${k==="all"?"":'<span class="dot"></span>'}${n}</button>`).join("");
+  el.addEventListener("click",e=>{const b=e.target.closest(".chip");if(!b)return;sel=b.dataset.k;el.querySelectorAll(".chip").forEach(c=>c.setAttribute("aria-pressed",c===b));onChange(sel)});
+  return k=>{sel=k;el.querySelectorAll(".chip").forEach(c=>c.setAttribute("aria-pressed",c.dataset.k===k))};
+}
+
+/* Karteikarten mit Wiederholungssystem:
+   Nicht gewusst -> kommt in dieser Runde nach ein paar Karten wieder, bis sie sitzt.
+   Gewusst -> nächste Stufe, Wiederholung nach 1, 3, 7, 14, 30 Tagen. */
+let deck=[],pos=0,sysSel="all",mixed=false;
+const pool=()=>CARDS.map((c,i)=>i).filter(i=>sysSel==="all"||CARDS[i][0]===sysSel);
+const isDue=i=>!srs[i]||srs[i].d<=Date.now();
+function build(){
+  const p=pool(),now=Date.now();
+  if($("mode").value==="all"){deck=mixed?shuffle(p):p}
+  else{
+    let rev=p.filter(i=>srs[i]&&srs[i].d<=now).sort((a,b)=>srs[a].d-srs[b].d);
+    let neu=p.filter(i=>!srs[i]);
+    if(mixed){rev=shuffle(rev);neu=shuffle(neu)}
+    deck=rev.concat(neu);
+  }
+  pos=0;saveSession();render();
+}
+function saveSession(){session={deck,pos,mode:$("mode").value,sys:sysSel,t:Date.now(),day:new Date().toDateString()}}
+function resume(){
+  /* Angefangene Runde vom selben Tag fortsetzen, sonst neue Runde */
+  if(session&&session.day===new Date().toDateString()&&session.pos<session.deck.length){
+    sysSel=session.sys;setCardChip(sysSel);$("mode").value=session.mode;
+    deck=session.deck.filter(i=>CARDS[i]);pos=Math.min(session.pos,deck.length);render();
+  }else build();
+}
+function fmtDays(ms){const d=Math.max(1,Math.round(ms/DAY));return d===1?"morgen":`in ${d} Tagen`}
+function render(){
+  const p=pool(),now=Date.now();
+  const learned=p.filter(i=>srs[i]&&srs[i].b>0).length;
+  const due=p.filter(i=>srs[i]&&srs[i].d<=now).length;
+  const neu=p.filter(i=>!srs[i]).length;
+  const firm=p.filter(i=>srs[i]&&srs[i].b>=4).length;
+  $("prog").style.width=(p.length?learned/p.length*100:0)+"%";
+  $("stats").textContent=`${due} zur Wiederholung fällig, ${neu} neu, ${learned} gelernt, davon ${firm} gefestigt`;
+  if(pos>=deck.length){
+    $("deck").hidden=true;$("done").hidden=false;
+    const next=p.filter(i=>srs[i]&&srs[i].d>now).map(i=>srs[i].d).sort((a,b)=>a-b)[0];
+    $("doneTitle").textContent=$("mode").value==="all"?"Stapel durch":"Für heute geschafft";
+    $("doneText").textContent=next?`Die nächsten Karten sind ${fmtDays(next-now)} wieder dran.`:"Alle Karten in diesem Bereich sind gelernt.";
+    return;
+  }
+  $("deck").hidden=false;$("done").hidden=true;
+  const i=deck[pos],[s,q,a]=CARDS[i],st=srs[i];
+  $("card").classList.remove("flipped");
+  $("card").style.setProperty("--c",`var(--${s})`);
+  $("fSys").textContent=$("bSys").textContent=SYS[s];
+  const left=deck.length-pos;
+  const lvl=!st?"neu":st.b===0?"nicht gewusst, nochmal":`Stufe ${st.b} von 5`;
+  $("fPos").textContent=$("bPos").textContent=`noch ${left}`;
+  $("fHint").textContent=`Tippen zum Umdrehen (${lvl})`;
+  $("fQ").textContent=q;$("bQ").textContent=q;$("bA").textContent=a;
+}
+function flip(){$("card").classList.toggle("flipped")}
+function mark(ok){
+  if(pos>=deck.length)return;
+  const i=deck[pos],now=Date.now();
+  if(ok){const b=Math.min((srs[i]?srs[i].b:0)+1,5);srs[i]={b,d:now+STEPS[b]*DAY}}
+  else{srs[i]={b:0,d:now};deck.splice(Math.min(pos+5,deck.length),0,i)}
+  pos++;saveSession();persist();render();
+}
+$("card").addEventListener("click",flip);
+$("known").onclick=()=>mark(true);
+$("again").onclick=()=>mark(false);
+$("shuffle").onclick=()=>{mixed=true;build();persist()};
+$("mode").onchange=()=>{build();persist()};
+$("resetCards").onclick=()=>{if(confirm("Lernfortschritt aller Karten zurücksetzen?")){srs={};persist();build()}};
+$("redoAll").onclick=()=>{$("mode").value="all";build();persist()};
+document.addEventListener("keydown",e=>{
+  if($("v-cards").hidden||/INPUT|SELECT/.test(e.target.tagName))return;
+  if(e.key===" "||e.key==="Enter"){if(document.activeElement.tagName==="BUTTON")return;e.preventDefault();flip()}
+  else if(e.key==="1")mark(false);
+  else if(e.key==="2")mark(true);
+});
+const setCardChip=chips($("chips-cards"),s=>{sysSel=s;build();persist()});
+
+/* Quiz */
+let qSel="all";
+function renderQuiz(){
+  const list=MC.map((m,i)=>i).filter(i=>qSel==="all"||MC[i][0]===qSel);
+  let fresh=false;
+  $("mc").innerHTML=list.map((i,n)=>{
+    const [s,q,o,e]=MC[i];
+    const order=answers[i]?answers[i].order:shuffle([0,1,2,3]);
+    if(!answers[i]){answers[i]={order,pick:null};fresh=true}
+    const pick=answers[i].pick;
+    return `<div class="qcard" style="--c:var(--${s})" data-i="${i}"><div class="num">${n+1}. ${SYS[s]}</div><p class="qt">${q}</p><div class="opts">${order.map(k=>{
+      let cls="opt";if(pick!==null){if(k===0)cls+=" right";else if(k===pick)cls+=" wrong"}
+      return `<button class="${cls}" data-k="${k}" ${pick!==null?"disabled":""}>${o[k]}</button>`}).join("")}</div>${pick!==null?`<p class="expl">${pick===0?"Richtig. ":"Falsch. "}${e}</p>`:""}</div>`}).join("");
+  $("open").innerHTML=OPEN.filter(x=>qSel==="all"||x[0]===qSel).map(([s,q,a])=>`<details class="open" style="--c:var(--${s})"><summary>${q}</summary><p class="sol">${a}</p></details>`).join("");
+  if(fresh)store.set("physio-answers",answers);
+  score(list);
+}
+function score(list){list=list||MC.map((m,i)=>i).filter(i=>qSel==="all"||MC[i][0]===qSel);const done=list.filter(i=>answers[i]&&answers[i].pick!==null);$("st").textContent=done.length;$("sc").textContent=done.filter(i=>answers[i].pick===0).length}
+$("mc").addEventListener("click",e=>{
+  const b=e.target.closest(".opt");if(!b||b.disabled)return;
+  const card=b.closest(".qcard"),i=+card.dataset.i,k=+b.dataset.k;
+  answers[i].pick=k;
+  card.querySelectorAll(".opt").forEach(x=>{x.disabled=true;const kk=+x.dataset.k;if(kk===0)x.classList.add("right");else if(kk===k)x.classList.add("wrong")});
+  const p=document.createElement("p");p.className="expl";p.textContent=(k===0?"Richtig. ":"Falsch. ")+MC[i][3];card.appendChild(p);
+  persist();score();
+});
+$("resetQuiz").onclick=()=>{if(!confirm("Alle Quiz-Antworten löschen und neu starten?"))return;answers={};renderQuiz();persist();window.scrollTo(0,0)};
+chips($("chips-quiz"),s=>{qSel=s;renderQuiz()});
+
+/* Tabs */
+function tab(which){const c=which==="cards";$("t-cards").setAttribute("aria-selected",c);$("t-quiz").setAttribute("aria-selected",!c);$("v-cards").hidden=!c;$("v-quiz").hidden=c;store.set("physio-tab",which)}
+$("t-cards").onclick=()=>tab("cards");$("t-quiz").onclick=()=>tab("quiz");
+
+resume();renderQuiz();tab(store.get("physio-tab","cards"));
+if(window.claude&&claude.use)initCloud();
+</script>
+</body>
+</html>
