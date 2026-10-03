@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" fill="#15203a"/>
+  <g transform="translate(256 256) scale(.78) translate(-256 -256)">
+    <g transform="rotate(-8 256 256)"><rect x="132" y="150" width="270" height="200" rx="22" fill="#3a4ea0" opacity=".55"/></g>
+    <rect x="110" y="166" width="292" height="208" rx="22" fill="#ffffff"/>
+    <rect x="110" y="166" width="26" height="208" rx="10" fill="#bf3a2b"/>
+    <text x="270" y="310" font-family="Georgia, 'Times New Roman', serif" font-size="150" font-weight="500" text-anchor="middle" fill="#15203a">Ph</text>
+  </g>
+</svg>

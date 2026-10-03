@@ -323,6 +323,35 @@ async function oeffneMenue() {
   $("menu").showModal();
 }
 
+/* ---------- Offline-Betrieb (PWA) ---------- */
+
+function registriereServiceWorker() {
+  if (!("serviceWorker" in navigator)) return;
+  const hatteKontrolle = !!navigator.serviceWorker.controller;
+  let neuGeladen = false;
+  navigator.serviceWorker.addEventListener("controllerchange", () => {
+    if (!hatteKontrolle || neuGeladen) return;
+    neuGeladen = true;
+    sofortSichern();
+    location.reload();
+  });
+  navigator.serviceWorker.register("sw.js").then(reg => {
+    const angebot = wartend => zeigeHinweis("update", "Eine neue Version der App ist verfügbar.",
+      [["Jetzt neu laden", () => wartend.postMessage("aktivieren")]], "info");
+    const beobachte = neu => {
+      if (!neu) return;
+      if (neu.state === "installed" && navigator.serviceWorker.controller) return angebot(neu);
+      neu.addEventListener("statechange", () => { if (neu.state === "installed" && navigator.serviceWorker.controller) angebot(neu); });
+    };
+    // Ein Update kann schon während des Seitenaufrufs gefunden worden sein
+    beobachte(reg.waiting);
+    beobachte(reg.installing);
+    reg.addEventListener("updatefound", () => beobachte(reg.installing));
+    // Beim Zurückkehren zur App nach Updates schauen
+    document.addEventListener("visibilitychange", () => { if (document.visibilityState === "visible") reg.update().catch(() => {}); });
+  }).catch(() => { /* ohne Service Worker läuft die App trotzdem, nur nicht offline */ });
+}
+
 /* ---------- Start ---------- */
 
 function verdrahten() {
@@ -401,6 +430,7 @@ async function start() {
   renderQuiz();
   tab(erinnere("physio-tab") === "quiz" ? "quiz" : "cards");
   if (!hatFortschritt(stand)) zeigeHinweis("ersterStart", "Noch kein Lernstand auf diesem Gerät. Du kannst deinen bisherigen Fortschritt über „Fortschritt → Importieren“ übernehmen.", [["Importieren …", () => $("importFile").click()]], "info");
+  registriereServiceWorker();
   try { await navigator.storage?.persist?.(); } catch { /* nur ein Wunsch an den Browser */ }
   window.dispatchEvent(new CustomEvent("lernapp-bereit"));
 }
