@@ -109,3 +109,4 @@ dialog::backdrop{background:rgba(10,15,30,.45)}
 .dlg th{color:var(--muted);font-weight:400}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
 .fehlerseite{background:var(--surface);border-radius:18px;padding:24px}
+.dlg a{color:var(--K);text-underline-offset:3px}

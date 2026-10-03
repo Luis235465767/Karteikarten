@@ -4,6 +4,7 @@ import { kartenpool, baueStapel, neueRunde, fortsetzbareRunde, beantworte, stati
 import { erzeugeSpeicher } from "./speicher.js";
 import { erkenneFormat, pruefeStand, fuehreZusammen, beschreibe, exportiere, exportDateiname } from "./fortschritt.js";
 import { migriereLegacy, MigrationsFehler } from "./migration.js";
+import { erzeugeSync } from "./sync-gist.js";
 
 const $ = id => document.getElementById(id);
 const jetzt = () => Date.now();
@@ -35,7 +36,7 @@ let inhalte, SYS, gueltigeKarten;
 let stand;
 let lokalStatus = null;   // { ok, zeit?, fehler? }
 let syncStatus = null;    // wird von der Synchronisierung gesetzt: { text, zustand: "ok" | "warten" | "fehler" }
-let sync = null;          // optionale Synchronisierung (siehe sync-gist.js)
+let sync = null;          // Synchronisierung über ein privates Gist (siehe sync-gist.js)
 const speicher = erzeugeSpeicher({ storage: browserSpeicher, beiStatus: s => { lokalStatus = s; zeigeStatus(); } });
 
 /* ---------- Inhalte ---------- */
@@ -67,7 +68,7 @@ function aendern(veraendere) {
   stand.updated = jetzt();
   const ok = speicher.speichern(stand);
   zeigeSpeicherFehler(ok ? null : lokalStatus.fehler);
-  if (sync) sync.geaendert(stand);
+  if (sync) sync.geaendert();
 }
 
 function zeigeStatus() {
@@ -100,7 +101,7 @@ function sofortSichern() {
   if (!stand) return;
   const ok = speicher.speichern(stand);
   zeigeSpeicherFehler(ok ? null : lokalStatus.fehler);
-  if (sync) sync.sofort(stand);
+  if (sync) sync.sofort();
 }
 
 /* ---------- Export / Import ---------- */
@@ -191,10 +192,12 @@ let sysSel = "all", gemischt = false;
 const pool = () => kartenpool(inhalte.karten, sysSel);
 const kartenNachId = new Map();
 
-function bauen() {
+function bauen({ automatisch = false } = {}) {
   const now = jetzt();
   const stapel = baueStapel({ pool: pool(), karten: stand.karten, modus: $("mode").value, gemischt, now });
   stand.session = neueRunde({ stapel, modus: $("mode").value, thema: sysSel, now });
+  // Eine automatisch gebaute Runde (ohne Zutun) soll beim Abgleich nie eine echte Runde eines anderen Geräts verdrängen
+  if (automatisch) stand.session.t = 0;
   render();
 }
 
@@ -204,7 +207,7 @@ function fortsetzen() {
     stand.session = r;
     sysSel = r.sys; setzeKartenChip(sysSel); $("mode").value = r.mode;
     render();
-  } else bauen();
+  } else bauen({ automatisch: true });
 }
 
 function render() {
@@ -319,7 +322,7 @@ async function oeffneMenue() {
   let dauerhaft = "";
   try { if (navigator.storage?.persisted) dauerhaft = (await navigator.storage.persisted()) ? " Der Browser hat dauerhaften Speicher zugesagt." : " Der Browser hat keinen dauerhaften Speicher zugesagt, daher regelmäßig exportieren oder synchronisieren."; } catch { /* egal */ }
   $("menuStand").textContent = `${d.karten} Karten mit Lernstand, ${d.beantworteteFragen} Quizfragen beantwortet${d.updated ? ", zuletzt geändert " + datumZeit(d.updated) : ""}.${dauerhaft}`;
-  if (sync) sync.zeigeEinstellungen($("syncBereich"));
+  zeigeSyncEinstellungen();
   $("menu").showModal();
 }
 
@@ -397,16 +400,43 @@ function verdrahten() {
   window.addEventListener("pagehide", sofortSichern);
 }
 
-/** Wird von der Synchronisierung aufgerufen, wenn ein zusammengeführter Stand von außen kommt. */
-export function uebernehmeStand(neu) {
+/* ---------- Synchronisierung ---------- */
+
+/** Übernimmt einen zusammengeführten Stand von anderen Geräten. */
+function uebernehmeStand(neu) {
   const vorher = JSON.stringify(stand);
   stand = neu;
-  speicher.speichern(stand);
+  const ok = speicher.speichern(stand);
+  zeigeSpeicherFehler(ok ? null : lokalStatus.fehler);
   if (JSON.stringify(stand) !== vorher) { fortsetzen(); renderQuiz(); }
 }
-export const aktuellerStand = () => stand;
-export function setzeSyncStatus(s) { syncStatus = s; zeigeStatus(); }
-export function setzeSync(s) { sync = s; }
+
+function zeigeSyncEinstellungen() {
+  const bereich = $("syncBereich");
+  if (sync.verbunden()) {
+    bereich.replaceChildren(
+      el("p", { class: "klein" }, "Dieses Gerät ist verbunden. Der Fortschritt wird nach jeder Änderung und beim Öffnen der App mit deinem privaten Gist abgeglichen. ",
+        el("a", { href: sync.gistUrl(), target: "_blank", rel: "noopener" }, "Gist ansehen"), `. Gerätekennung: ${sync.geraet()}`),
+      el("div", { class: "row" },
+        el("button", { class: "btn", onclick: () => sync.synchronisiere() }, "Jetzt synchronisieren"),
+        el("button", { class: "btn", onclick: () => { if (confirm("Synchronisierung auf diesem Gerät beenden? Dein Fortschritt bleibt hier und im Gist erhalten.")) { sync.trenne(); zeigeSyncEinstellungen(); } } }, "Trennen")));
+    return;
+  }
+  const feld = el("input", { type: "password", id: "syncToken", autocomplete: "off", spellcheck: "false", placeholder: "github_pat_…", "aria-label": "GitHub-Token" });
+  const meldung = el("p", { class: "klein", role: "status" });
+  const knopf = el("button", { class: "btn known" }, "Verbinden");
+  knopf.onclick = async () => {
+    if (!feld.value.trim()) { meldung.textContent = "Bitte zuerst ein Token eintragen."; return; }
+    knopf.disabled = true; meldung.textContent = "Verbinde …";
+    try { await sync.verbinde(feld.value); zeigeSyncEinstellungen(); }
+    catch (e) { meldung.textContent = "Verbinden fehlgeschlagen: " + e.message + "."; knopf.disabled = false; }
+  };
+  bereich.replaceChildren(
+    el("p", { class: "klein" }, "Gleicht deinen Fortschritt über ein privates Gist in deinem GitHub-Konto zwischen Geräten ab. Dafür einmal pro Gerät ein Token eintragen, das nur Gists lesen und schreiben darf: ",
+      el("a", { href: "https://github.com/settings/personal-access-tokens/new", target: "_blank", rel: "noopener" }, "Token erstellen"),
+      " → Ablaufdatum wählen → unter „Permissions“ bei „Gists“ (Account) „Read and write“ wählen → erstellen und hier einfügen. Das Token bleibt nur auf diesem Gerät."),
+    feld, el("div", { class: "row" }, knopf), meldung);
+}
 
 async function start() {
   try {
@@ -430,6 +460,14 @@ async function start() {
   renderQuiz();
   tab(erinnere("physio-tab") === "quiz" ? "quiz" : "cards");
   if (!hatFortschritt(stand)) zeigeHinweis("ersterStart", "Noch kein Lernstand auf diesem Gerät. Du kannst deinen bisherigen Fortschritt über „Fortschritt → Importieren“ übernehmen.", [["Importieren …", () => $("importFile").click()]], "info");
+  sync = erzeugeSync({
+    holeStand: () => stand,
+    uebernimm: uebernehmeStand,
+    status: s => { syncStatus = s; zeigeStatus(); },
+    konfig: { lies: erinnere, schreib: (k, v) => { try { v == null ? window.localStorage.removeItem(k) : window.localStorage.setItem(k, v); } catch { /* unten sichtbar, wenn Speichern nicht geht */ } } },
+  });
+  sync.start();
+  document.addEventListener("visibilitychange", () => { if (document.visibilityState === "visible") sync.synchronisiere(); });
   registriereServiceWorker();
   try { await navigator.storage?.persist?.(); } catch { /* nur ein Wunsch an den Browser */ }
   window.dispatchEvent(new CustomEvent("lernapp-bereit"));
