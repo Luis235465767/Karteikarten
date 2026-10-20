@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+/* Farben als Variablen, Dark Mode folgt der Systemeinstellung. */
+:root {
+  color-scheme: light;
+  --seite: #f4f4f1;
+  --karte: #fcfcfb;
+  --karte2: #efeee9;
+  --text: #0b0b0b;
+  --text2: #52514e;
+  --muted: #6f6d68;
+  --linie: #e1e0d9;
+  --achse: #c3c2b7;
+  --akzent: #2a78d6;
+  --akzent-text: #ffffff;
+  --kraft: #2a78d6;
+  --handball: #eb6834;
+  --spiel: #1baf7a;
+  --gut: #006300;
+  --gefahr: #c22f2f;
+  --rekord: #b86e00;
+  --rekord-bg: #fff3d6;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --seite: #0d0d0d;
+    --karte: #1a1a19;
+    --karte2: #262624;
+    --text: #f0efec;
+    --text2: #c3c2b7;
+    --muted: #98968f;
+    --linie: #2c2c2a;
+    --achse: #383835;
+    --akzent: #3987e5;
+    --akzent-text: #ffffff;
+    --kraft: #3987e5;
+    --handball: #d95926;
+    --spiel: #199e70;
+    --gut: #0ca30c;
+    --gefahr: #e66767;
+    --rekord: #fab219;
+    --rekord-bg: #3a2c0a;
+  }
+}
+
+@theme inline {
+  --color-seite: var(--seite);
+  --color-karte: var(--karte);
+  --color-karte2: var(--karte2);
+  --color-text: var(--text);
+  --color-text2: var(--text2);
+  --color-muted: var(--muted);
+  --color-linie: var(--linie);
+  --color-achse: var(--achse);
+  --color-akzent: var(--akzent);
+  --color-akzent-text: var(--akzent-text);
+  --color-kraft: var(--kraft);
+  --color-handball: var(--handball);
+  --color-spiel: var(--spiel);
+  --color-gut: var(--gut);
+  --color-gefahr: var(--gefahr);
+  --color-rekord: var(--rekord);
+  --color-rekord-bg: var(--rekord-bg);
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+html, body, #root { min-height: 100%; }
+body {
+  margin: 0;
+  background: var(--seite);
+  color: var(--text);
+  font-family: var(--font-sans);
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior-y: none;
+}
+input, select, textarea, button { font: inherit; color: inherit; }
+/* iOS zoomt bei Eingabefeldern unter 16px hinein */
+input, select, textarea { font-size: 16px; }
+input[type="number"]::-webkit-inner-spin-button { -webkit-appearance: none; }
+.tabular { font-variant-numeric: tabular-nums; }
+.pb-safe { padding-bottom: env(safe-area-inset-bottom); }
+.pt-safe { padding-top: env(safe-area-inset-top); }
+
+@keyframes aufblitzen {
+  0% { transform: scale(0.96); box-shadow: 0 0 0 0 var(--rekord); }
+  40% { transform: scale(1.02); box-shadow: 0 0 0 6px color-mix(in srgb, var(--rekord) 35%, transparent); }
+  100% { transform: scale(1); box-shadow: 0 0 0 0 transparent; }
+}
+.rekord-blitz { animation: aufblitzen 1.2s ease-out; }
+@keyframes hoch { from { transform: translateY(100%); } to { transform: translateY(0); } }
+.sheet { animation: hoch 0.2s ease-out; }
+@keyframes einblenden { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: none; } }
+.toast { animation: einblenden 0.2s ease-out; }
+@media (prefers-reduced-motion: reduce) {
+  .rekord-blitz, .sheet, .toast { animation: none; }
+}
