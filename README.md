@@ -4,6 +4,8 @@ Lernapp mit Karteikarten (Leitner-Wiederholungssystem), Multiple-Choice-Quiz und
 
 **App:** https://luis235465767.github.io/Karteikarten/
 
+Im selben Repo liegt außerdem das **Trainingstagebuch** (Krafttraining und Handball): https://luis235465767.github.io/Karteikarten/training/ – siehe [`training/README.md`](training/README.md).
+
 Die App läuft komplett im Browser, funktioniert offline und lässt sich auf dem Handy über „Zum Home-Bildschirm“ wie eine App installieren. Auf dem iPhone ist das wichtig: Safari löscht die Daten normaler Webseiten nach 7 Tagen ohne Besuch, eine installierte App ist davon ausgenommen.
 
 ## Fortschritt
@@ -75,6 +77,7 @@ node scripts/baue-site.js      # veröffentlichte Seite nach _site/ bauen
 | `legacy/` | Ursprüngliche claude.ai-Version und eingefrorene Zuordnung alter Indizes zu IDs |
 | `sw.js`, `manifest.webmanifest`, `icons/` | Offline-Betrieb und Installation |
 | `scripts/` | Inhaltsprüfung, Seitenbau, Migrations- und Extraktionswerkzeuge |
+| `training/` | Trainingstagebuch (eigene App mit React/Vite, wird beim Seitenbau nach `_site/training/` kopiert) |
 
 ### Wiederholungssystem
 

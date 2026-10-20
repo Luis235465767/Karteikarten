@@ -47,3 +47,5 @@ export const formatKurz = (tag: string) => {
 
 export const tageZwischen = (von: string, bis: string) =>
   Math.round((ausTag(bis).getTime() - ausTag(von).getTime()) / 86400000);
+
+export const formatMittel = (tag: string) => `${tag.slice(8, 10)}.${tag.slice(5, 7)}.${tag.slice(2, 4)}`;

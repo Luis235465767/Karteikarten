@@ -27,6 +27,17 @@ jobs:
         run: npm test
       - name: Inhaltsprüfung
         run: npm run pruefen
+      - name: Trainings-App installieren
+        working-directory: training
+        run: npm ci
+      - name: Trainings-App testen
+        working-directory: training
+        run: npm test
+      - name: Trainings-App bauen
+        working-directory: training
+        run: npm run build
+        env:
+          BASE: /${{ github.event.repository.name }}/training/
       - name: Seite bauen
         run: node scripts/baue-site.js "${GITHUB_SHA::12}"
       - name: Seite hochladen

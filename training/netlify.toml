@@ -1,0 +1,8 @@
+# Nur nötig, wenn die Trainings-App (zusätzlich) auf Netlify laufen soll.
+# In Netlify beim Import des Repos „Base directory“ auf training setzen.
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"

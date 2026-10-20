@@ -173,5 +173,5 @@ export function kalender(kraft: KraftEinheit[], handball: HandballEinheit[]): Ma
 
 export const runde = (x: number, stellen = 1) => Math.round(x * 10 ** stellen) / 10 ** stellen;
 
-const zahl = new Intl.NumberFormat("de-DE", { maximumFractionDigits: 1 });
+const zahl = new Intl.NumberFormat("de-DE", { maximumFractionDigits: 2 });
 export const fmt = (x: number) => zahl.format(x);

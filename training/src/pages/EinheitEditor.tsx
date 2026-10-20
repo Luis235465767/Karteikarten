@@ -211,21 +211,21 @@ function UebungsKarte({ index, anzahl, uebung, saetze, ziel, vorher, rekorde, bl
       {saetze.length > 0 && (
         <div className="space-y-2">
           <div className="flex text-xs text-muted px-1 gap-2">
-            <span className="w-6">Satz</span><span className="flex-1 text-center">Wdh.</span><span className="flex-1 text-center">Gewicht (kg)</span><span className="w-10" />
+            <span className="w-5">Satz</span><span className="flex-1 text-center">Wdh.</span><span className="flex-[1.25] text-center">Gewicht (kg)</span><span className="w-8" />
           </div>
           {saetze.map((s, j) => {
             const r = rekorde.get(`${index}-${j}`);
             const pr = r && (r.gewicht || r.e1rm);
             return (
               <div key={j} className={`rounded-xl ${pr ? "bg-rekord-bg p-1 -m-1" : ""} ${blitz.has(`${index}-${j}`) ? "rekord-blitz" : ""}`}>
-                <div className="flex items-center gap-2">
-                  <span className="w-6 text-center font-semibold text-text2 tabular">{j + 1}</span>
+                <div className="flex items-center gap-1.5">
+                  <span className="w-5 text-center font-semibold text-text2 tabular">{j + 1}</span>
                   <ZahlFeld label={`Satz ${j + 1} Wiederholungen`} wert={s.wdh} schritt={1} onChange={n => setze(j, { wdh: Math.round(n) })} />
-                  <ZahlFeld label={`Satz ${j + 1} Gewicht`} wert={s.kg} schritt={2.5} dezimal onChange={n => setze(j, { kg: n })} />
-                  <IconButton icon="x" label={`Satz ${j + 1} löschen`} className="!size-10" onClick={() => onSaetze(saetze.filter((_, k) => k !== j))} />
+                  <ZahlFeld label={`Satz ${j + 1} Gewicht`} wert={s.kg} schritt={2.5} dezimal onChange={n => setze(j, { kg: n })} className="flex-[1.25]" />
+                  <IconButton icon="x" label={`Satz ${j + 1} löschen`} className="!size-10 !w-8" onClick={() => onSaetze(saetze.filter((_, k) => k !== j))} />
                 </div>
                 {pr && (
-                  <p className="text-xs font-semibold text-rekord flex items-center gap-1 pl-8 pt-1">
+                  <p className="text-xs font-semibold text-rekord flex items-center gap-1 pl-7 pt-1">
                     <Icon name="pokal" className="size-4" /> Neue Bestleistung{r.gewicht ? " · schwerstes Gewicht" : ""}{r.e1rm ? " · bestes 1RM" : ""}
                   </p>
                 )}

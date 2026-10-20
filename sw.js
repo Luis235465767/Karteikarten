@@ -21,6 +21,8 @@ self.addEventListener("fetch", e => {
   const url = new URL(e.request.url);
   // Nur eigene Dateien; Anfragen an GitHub (Synchronisierung) gehen immer direkt ans Netz
   if (!DATEIEN.length || e.request.method !== "GET" || url.origin !== self.location.origin) return;
+  // Die Trainings-App unter training/ hat ihren eigenen Service Worker
+  if (url.pathname.startsWith(new URL("training/", self.registration.scope).pathname)) return;
   e.respondWith((async () => {
     const cache = await caches.open(CACHE);
     const anfrage = e.request.mode === "navigate" ? new URL("./", self.registration.scope).href : e.request;

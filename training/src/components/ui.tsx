@@ -82,8 +82,8 @@ export function parseZahl(s: string): number {
 }
 const zeigeZahl = (n: number) => (n ? String(n).replace(".", ",") : "");
 
-export function ZahlFeld({ wert, onChange, schritt, min = 0, label, einheit, dezimal = false }: {
-  wert: number; onChange: (n: number) => void; schritt: number; min?: number; label: string; einheit?: string; dezimal?: boolean;
+export function ZahlFeld({ wert, onChange, schritt, min = 0, label, einheit, dezimal = false, className = "flex-1" }: {
+  wert: number; onChange: (n: number) => void; schritt: number; min?: number; label: string; einheit?: string; dezimal?: boolean; className?: string;
 }) {
   const [text, setText] = useState(zeigeZahl(wert));
   useEffect(() => {
@@ -96,8 +96,8 @@ export function ZahlFeld({ wert, onChange, schritt, min = 0, label, einheit, dez
     onChange(r);
   };
   return (
-    <div className="flex items-stretch rounded-xl bg-karte2 border border-linie overflow-hidden flex-1 min-w-0">
-      <button type="button" aria-label={`${label} verringern`} onClick={() => setze(wert - schritt)} className="w-11 shrink-0 flex items-center justify-center text-text2 active:bg-linie">
+    <div className={`flex items-stretch rounded-xl bg-karte2 border border-linie overflow-hidden min-w-0 ${className}`}>
+      <button type="button" aria-label={`${label} verringern`} onClick={() => setze(wert - schritt)} className="w-9 shrink-0 flex items-center justify-center text-text2 active:bg-linie">
         <Icon name="minus" className="size-5" />
       </button>
       <div className="flex-1 min-w-0 relative">
@@ -112,11 +112,11 @@ export function ZahlFeld({ wert, onChange, schritt, min = 0, label, einheit, dez
             setText(t);
             onChange(Math.max(min, parseZahl(t)));
           }}
-          className="w-full h-12 bg-transparent text-center text-lg font-semibold tabular outline-none"
+          className="w-full h-12 bg-transparent text-center text-[17px] font-semibold tabular px-0 outline-none"
         />
         {einheit && <span className="absolute right-1 bottom-0.5 text-[10px] text-muted pointer-events-none">{einheit}</span>}
       </div>
-      <button type="button" aria-label={`${label} erhöhen`} onClick={() => setze(wert + schritt)} className="w-11 shrink-0 flex items-center justify-center text-text2 active:bg-linie">
+      <button type="button" aria-label={`${label} erhöhen`} onClick={() => setze(wert + schritt)} className="w-9 shrink-0 flex items-center justify-center text-text2 active:bg-linie">
         <Icon name="plus" className="size-5" />
       </button>
     </div>

@@ -1,6 +1,6 @@
 // Stellt die veröffentlichte Seite in _site/ zusammen und trägt Version und Dateiliste in den Service Worker ein.
 // Aufruf: node scripts/baue-site.js [version]
-import { cpSync, mkdirSync, readdirSync, readFileSync, rmSync, statSync, writeFileSync } from "node:fs";
+import { cpSync, existsSync, mkdirSync, readdirSync, readFileSync, rmSync, statSync, writeFileSync } from "node:fs";
 import { join, relative } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -28,5 +28,14 @@ const sw = readFileSync(join(WURZEL, "sw.js"), "utf8")
   .replace("const DATEIEN = [];", `const DATEIEN = ${JSON.stringify(liste)};`);
 if (!sw.includes(version) || sw.includes("const DATEIEN = [];")) throw new Error("Service Worker konnte nicht vorbereitet werden");
 writeFileSync(join(ZIEL, "sw.js"), sw);
+
+// Trainings-App (separat mit Vite gebaut) unter training/ dazulegen, nicht in den Offline-Speicher der Karteikarten
+const TRAINING = join(WURZEL, "training", "dist");
+if (existsSync(TRAINING)) {
+  cpSync(TRAINING, join(ZIEL, "training"), { recursive: true });
+  console.log("Trainings-App nach _site/training/ kopiert.");
+} else {
+  console.warn("Hinweis: training/dist fehlt, Trainings-App wird nicht veröffentlicht (vorher: cd training && npm run build).");
+}
 writeFileSync(join(ZIEL, ".nojekyll"), "");
 console.log(`_site/ gebaut: Version ${version}, ${liste.length} Dateien im Offline-Speicher.`);
